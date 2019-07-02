@@ -1,0 +1,47 @@
+Release Plan
+Product Name: Slug Hub
+Team Name: Slug Hub
+Release Name:  Initial Product Development Plan
+Release Date: July 25th, 2019
+Revision Number: 1.0
+Revision Date: July 1st, 2019
+
+(Talk to TA ABOUT: Security for login info, how to store login info, web scraping for course info, scalability of app)
+
+High level goals:
+Automatic sign in the portal and canvas
+Complete architecture navigation
+Customizable calendar and preferences
+Good UI
+Complete set of resources for students
+Scalable framework for any future development
+
+User stories for release:
+Sprint 1: (portal and canvas, skeleton, and academic info)
+(---) As a developer, I want to be able to edit pages and update the app easily, so that future development can continue
+(10) As a student, I want to know what classes are offered each quarter, so that I can graduate on time.
+(10) As a student, I want to know what class do I need to graduate, so that I can make plans.
+(9.5) As a student, I want to be able to sign in to canvas and portal once, so that I can save time
+(6.5) As a student, I want good UI/UX, so I can use the app comfortably
+
+Sprint 2: (signing up for stuff, calendar)
+(9) As a student, I want to be able to form study groups, so that I can meet with classmates
+(8) As a student, I want to see an academic calendar on my phone, that shows me when important deadlines and school events (OPERS fest, concerts) are approaching
+(7.5) As a student, I want good UI/UX, so I can use the app comfortably
+
+Sprint 3: (Career, final touches (piazza, crowdgrader, grepthink) (UI and art) (etc))
+(8) As a student, I want good UI/UX, so I can use the app comfortably
+(7) As a student, I want to be able to access Handshake and Slug Hub in the same app
+(7) As a student, I want to be informed about upcoming Job Fairs, Resume Workshops etc.
+(7)As a student, I want to do research with professors so that I can get into a Masters Program
+(4) As a student, I want to be actively engaged, so I can make the most of my time at UCSC (academics, social life, entertainment)
+(4) As a graduating student, I want to be aware of job opportunities, so that i can be successful
+(4) As a student, I want to find summer internships, so that I can find jobs easier
+
+
+Product backlog: (empty)
+
+Project presentation: https://drive.google.com/file/d/19hTXkTF-fQYv7TN8th2JPCTxDp7TJ_Vt/view?usp=sharing 
+
+
+
