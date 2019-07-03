@@ -10,8 +10,9 @@ import { createAppContainer } from 'react-navigation';
 import { WelcomeScreen } from './components/pages/welcome';
 import { HomePageScreen } from './components/pages/homepage';
 import { AdvisingScreen} from './components/pages/advising';
-import { JBEScreen} from './components/pages/jbe';
+import { JBE_MajorsScreen} from './components/pages/jbe';
 import { CS_BSScreen} from './components/pages/cs_bs';
+import { JBE_MinorsScreen} from './components/pages/jbe_minors'
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -19,7 +20,8 @@ const FunStack = createStackNavigator({
   Welcome: {screen: WelcomeScreen},
   HomePage: {screen: HomePageScreen},
   Advising: {screen: AdvisingScreen},
-  JBE: {screen: JBEScreen},
+  JBE_Majors: {screen: JBE_MajorsScreen},
+  JBE_Minors: {screen: JBE_MinorsScreen},
   CS_BS: {screen: CS_BSScreen},
 });
 

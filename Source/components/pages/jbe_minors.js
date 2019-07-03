@@ -3,16 +3,16 @@ import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react
 import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
-export class JBE_MajorsScreen extends React.Component {
+export class JBE_MinorsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Majors',
+    title: 'Minors',
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
         <Button
-        title="Computer Science B.S."
+        title="Computer Science"
         color = "#e6f542"
         onPress={() => navigate('CS_BS')}
         />
