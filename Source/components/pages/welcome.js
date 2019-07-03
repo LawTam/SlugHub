@@ -1,9 +1,9 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
-export class HomeScreen extends React.Component {
+export class WelcomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Welcome to SlugHub!',
   };
