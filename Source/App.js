@@ -10,7 +10,7 @@ import { createAppContainer } from 'react-navigation';
 import { WelcomeScreen } from './components/pages/welcome';
 import { HomePageScreen } from './components/pages/homepage';
 import { AdvisingScreen} from './components/pages/advising';
-import { JBE_MajorsScreen} from './components/pages/jbe';
+import { JBE_MajorsScreen} from './components/pages/jbe_majors';
 import { CS_BSScreen} from './components/pages/cs_bs';
 import { JBE_MinorsScreen} from './components/pages/jbe_minors'
 

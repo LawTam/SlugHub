@@ -16,7 +16,7 @@ export class WelcomeScreen extends React.Component {
     <View style= {styles.container}>
     <Image source={pic} style={{width: 253, height: 160}}/>
         <Button
-        title="Enter"
+        title="Enter the App!"
         color = "#e6f542"
         onPress={() => navigate('HomePage')}
         />
