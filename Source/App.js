@@ -11,8 +11,12 @@ import { WelcomeScreen } from './components/pages/welcome';
 import { HomePageScreen } from './components/pages/homepage';
 import { AdvisingScreen} from './components/pages/advising';
 import { JBE_MajorsScreen} from './components/pages/jbe_majors';
-import { CS_BSScreen} from './components/pages/cs_bs';
 import { JBE_MinorsScreen} from './components/pages/jbe_minors'
+import { CS_BSScreen} from './components/pages/cs_bs';
+import { AM_MinorScreen} from './components/pages/am_minor';
+import { BE_ElecScreen} from './components/pages/be_bioelectronics';
+import { BE_ATScreen} from './components/pages/be_at_motor';
+import { BE_BiomoleScreen} from './components/pages/biomole';
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -23,6 +27,10 @@ const FunStack = createStackNavigator({
   JBE_Majors: {screen: JBE_MajorsScreen},
   JBE_Minors: {screen: JBE_MinorsScreen},
   CS_BS: {screen: CS_BSScreen},
+  AM_Minor: {screen: AM_MinorScreen},
+  BE_Elec: {screen: BE_ElecScreen},
+  BE_AT: {screen: BE_ATScreen},
+  BE_Biomole: {screen: BE_BiomoleScreen},
 });
 
 const App = createAppContainer(FunStack);

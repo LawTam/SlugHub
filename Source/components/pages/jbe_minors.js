@@ -13,8 +13,14 @@ export class JBE_MinorsScreen extends React.Component {
     <View style= {styles.container}>
         <Button
         title="Computer Science"
-        color = "#e6f542"
+        color = "#FF0000"
         onPress={() => navigate('CS_BS')}
+        />
+        
+        <Button
+        title="Applied Math"
+        color = "#FF7F00"
+        onPress={() => navigate('AM_Minor')}
         />
         
     </View>

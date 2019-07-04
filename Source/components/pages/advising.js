@@ -29,7 +29,7 @@ export class AdvisingScreen extends React.Component {
 <View style= {styles.majorButton}>
 <Button
         title="Majors"
-        color = "#ffffff"
+        color = "#008000"
         onPress={() => navigate('JBE_Majors')}
         />
         </View>
@@ -38,7 +38,7 @@ export class AdvisingScreen extends React.Component {
         <View style= {styles.minorButton}>
         <Button 
         title="Minors"
-        color = "#ffffff"
+        color = "#800080"
         onPress={() => navigate('JBE_Minors')}
         />
     </View>

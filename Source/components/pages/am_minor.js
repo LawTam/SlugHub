@@ -4,9 +4,9 @@ import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class CS_BSScreen extends React.Component {
+export class AM_MinorScreen extends React.Component {
   static navigationOptions = {
-    title: 'Computer Science B.S.',
+    title: 'Applied Math Minor',
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -15,7 +15,7 @@ export class CS_BSScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={cs_bs_curriculum}
+        onPress={AM_Minor_curriculum}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class CS_BSScreen extends React.Component {
 }
 
 
-function cs_bs_curriculum() {
+function AM_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BS_18-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/AppliedMath-Minor_18-19.pdf'
   );
 }
 
