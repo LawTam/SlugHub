@@ -18,25 +18,39 @@ export class JBE_MajorsScreen extends React.Component {
         />
 
         <Button
+        title="Computer Science B.A."
+        color = "#B22222"
+        onPress={() => navigate('CS_BA')}
+        />
+
+        <Button
+        title="Computer Science Game Design B.S."
+        color = "#DC143C"
+        onPress={() => navigate('CSGD_BS')}
+        />
+
+        <Button
         title="Bioengineering B.S. - Assistive Technology (Motor) Concentration"
         color = "#FF7F00"
         onPress={() => navigate('BE_AT')}
         />
-        
+
         <Button
         title="Bioengineering BS - Bioelectronics Concentration"
         color = "#F0E68C"
         onPress={() => navigate('BE_Elec')}
         />
-        
+
         <Button
         title="Biomolecular Engineering & Bioinformatics: Biomolecular"
         color = "#00FF00"
         onPress={() => navigate('BE_Biomole')}
         />
-        
+
+
+
     </View>
-    
+
     );
   }
 }

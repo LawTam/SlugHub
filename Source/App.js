@@ -13,6 +13,9 @@ import { AdvisingScreen} from './components/pages/advising';
 import { JBE_MajorsScreen} from './components/pages/jbe_majors';
 import { JBE_MinorsScreen} from './components/pages/jbe_minors'
 import { CS_BSScreen} from './components/pages/cs_bs';
+import { CS_BAScreen} from './components/pages/cs_ba';
+import { CSGD_BSScreen} from './components/pages/csgd_bs';
+import { CS_MinorScreen} from './components/pages/cs_minor';
 import { AM_MinorScreen} from './components/pages/am_minor';
 import { BE_ElecScreen} from './components/pages/be_bioelectronics';
 import { BE_ATScreen} from './components/pages/be_at_motor';
@@ -27,6 +30,9 @@ const FunStack = createStackNavigator({
   JBE_Majors: {screen: JBE_MajorsScreen},
   JBE_Minors: {screen: JBE_MinorsScreen},
   CS_BS: {screen: CS_BSScreen},
+  CS_BA: {screen: CS_BAScreen},
+  CSGD_BS: {screen: CSGD_BSScreen},
+  CS_Minor: {screen: CS_MinorScreen},
   AM_Minor: {screen: AM_MinorScreen},
   BE_Elec: {screen: BE_ElecScreen},
   BE_AT: {screen: BE_ATScreen},

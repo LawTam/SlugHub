@@ -2,25 +2,20 @@ import React , {Component} from '../../node_modules/react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
-export class JBE_MinorsScreen extends React.Component {
+export class CS_MinorScreen extends React.Component {
   static navigationOptions = {
-    title: 'Minors',
+    title: 'Computer Science Minor',
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
         <Button
-        title="Computer Science"
-        color = "#FF0000"
-        onPress={() => navigate('CS_Minor')}
-        />
-
-        <Button
-        title="Applied Math"
-        color = "#FF7F00"
-        onPress={() => navigate('AM_Minor')}
+        title="Curriculum Chart"
+        color = "#e6f542"
+        onPress={CS_Minor_curriculum}
         />
 
     </View>
@@ -28,6 +23,14 @@ export class JBE_MinorsScreen extends React.Component {
     );
   }
 }
+
+
+function CS_Minor_curriculum() {
+  WebBrowser.openBrowserAsync(
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS-Minor_18-19.pdf'
+  );
+}
+
 
 const styles = StyleSheet.create({
     container: {
