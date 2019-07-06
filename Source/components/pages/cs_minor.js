@@ -3,7 +3,7 @@ import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react
 import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
-export class CS_BSScreen extends React.Component {
+export class CS_MinorScreen extends React.Component {
   static navigationOptions = {
     title: 'Computer Science',
   };
@@ -14,7 +14,7 @@ export class CS_BSScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={() => navigate('CS_BS')}
+        onPress={() => navigate('CS_Minor')}
         />
         
     </View>
