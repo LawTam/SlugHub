@@ -80,7 +80,6 @@ export class JBE_MajorsScreen extends React.Component {
         onPress={() => navigate('TIM_BS')}
         />
         
-        
     </View>
     
     );

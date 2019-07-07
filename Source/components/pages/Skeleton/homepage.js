@@ -41,8 +41,15 @@ export class HomePageScreen extends React.Component {
         color = "#e6f542"
         onPress={() => navigate('Canvas')}
         />
+        
+        <Button
+        title="Login"
+        color = "#e6f342"
+        onPress={() => navigate('Login')}
+        />
 
         
+
     </View>
     
     );
