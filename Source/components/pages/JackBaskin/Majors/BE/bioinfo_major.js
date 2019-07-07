@@ -1,12 +1,12 @@
-import React , {Component} from '../../../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_BiomoleScreen extends React.Component {
+export class BioInfo_MajorScreen extends React.Component {
   static navigationOptions = {
-    title: 'Biomolecular',
+    title: 'Bioinformatics',
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -15,7 +15,7 @@ export class BE_BiomoleScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={BE_Biomole_curriculum}
+        onPress={bioinfo_major_curriculum}
         />
 
     </View>
@@ -24,10 +24,9 @@ export class BE_BiomoleScreen extends React.Component {
   }
 }
 
-
-function BE_Biomole_curriculum() {
+function bioinfo_major_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-10/BMEB%20Biomolecular%20Final%2018-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-01/BINF_17-18%2520%25281%2529.pdf'
   );
 }
 

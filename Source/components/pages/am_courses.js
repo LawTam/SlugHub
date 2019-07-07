@@ -1,21 +1,21 @@
-import React , {Component} from 'react';
+import React , {Component} from '../../node_modules/react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_ElecScreen extends React.Component {
+export class am_courseScreen extends React.Component {
   static navigationOptions = {
-    title: 'Bioelectronics',
+    title: 'Applied Math Courses',
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
         <Button
-        title="Curriculum Chart"
+        title="Course Offerings"
         color = "#e6f542"
-        onPress={BE_Elec_curriculum}
+        onPress={am_courses}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class BE_ElecScreen extends React.Component {
 }
 
 
-function BE_Elec_curriculum() {
+function am_courses() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/BENG-bioelectronics_18-19%5Bdraft%5D.pdf'
+    'https://courses.soe.ucsc.edu/courses/am'
   );
 }
 
