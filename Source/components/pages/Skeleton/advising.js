@@ -12,13 +12,6 @@ export class AdvisingScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
-    <TouchableHighlight onPress={jbe_home}>
-    <Image
-    source={require('../../../assets/images/jbe_logo.png')}
-    style={{height: 100, width: 200}}
-    resizeMode="contain"
-    />
-</TouchableHighlight>
 
           <TouchableHighlight onPress={jbe_home}>
             <Image
@@ -76,7 +69,7 @@ const styles = StyleSheet.create({
       alignSelf: 'flex-end',
       backgroundColor: 'gold',
       position: 'absolute',
-      bottom: 80,
+      bottom: 73,
       right: 10,
       width: 150,
     },
@@ -84,7 +77,7 @@ const styles = StyleSheet.create({
       alignSelf: 'flex-end',
       backgroundColor: 'gold',
       position: 'absolute',
-      bottom: 35,
+      bottom: 27,
       right: 10,
       width: 150,
     },
