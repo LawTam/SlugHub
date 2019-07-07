@@ -10,71 +10,72 @@ export class JBE_MajorsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-    <View style= {styles.container}>
-        <Button
-        title="Computer Science B.S."
-        color = "#e6f542"
-        onPress={() => navigate('CS_BS')}
-        />
+      <View style= {styles.container}>
 
-        <Button
-        title="Computer Science B.A."
-        color = "#B22222"
-        onPress={() => navigate('CS_BA')}
-        />
+      <Button
+      title="Bioengineering"
+      color = "#e6f542"
+      onPress={() => navigate('BE_page')}
+      />
 
-        <Button
-        title="Computer Engineering"
-        color = "#e6f542"
-        onPress={() => navigate('CE_Major')}
-        />
+      <Button
+      title="Computer Engineering"
+      color = "#e6f542"
+      onPress={() => navigate('CE_Major')}
+      />
 
-        <Button
-        title="Bioengineering"
-        color = "#e6f542"
-        onPress={() => navigate('BE_page')}
-        />
+      <Button
+      title="Computer Science B.S."
+      color = "#e6f542"
+      onPress={() => navigate('CS_BS')}
+      />
 
-        <Button
-        title="Computer Science Game Design B.S."
-        color = "#DC143C"
-        onPress={() => navigate('CSGD_BS')}
-        />
+      <Button
+      title="Computer Science B.A."
+      color = "#B22222"
+      onPress={() => navigate('CS_BA')}
+      />
 
-        <Button
-        title="Electrical Engineering"
-        color = "#e6f542"
-        onPress={() => navigate('EE_BS')}
-        />
-        <Button
-        title="Network and Digital Technology B.A. "
-        color = "#e6f542"
-        onPress={() => navigate('NDT_BA')}
-        />
-        <Button
-        title="Robotics Engineering B.S."
-        color = "#e6f542"
-        onPress={() => navigate('RE_BS')}
-        />
-        <Button
-        title="Technology and Information Management B.S."
-        color = "#e6f542"
-        onPress={() => navigate('TIM_BS')}
-        />
+      <Button
+      title="Computer Science Game Design B.S."
+      color = "#DC143C"
+      onPress={() => navigate('CSGD_BS')}
+      />
+
+      <Button
+      title="Electrical Engineering"
+      color = "#e6f542"
+      onPress={() => navigate('EE_BS')}
+      />
+      <Button
+      title="Network and Digital Technology B.A. "
+      color = "#e6f542"
+      onPress={() => navigate('NDT_BA')}
+      />
+      <Button
+      title="Robotics Engineering B.S."
+      color = "#e6f542"
+      onPress={() => navigate('RE_BS')}
+      />
+      <Button
+      title="Technology and Information Management B.S."
+      color = "#e6f542"
+      onPress={() => navigate('TIM_BS')}
+      />
 
 
-    </View>
+      </View>
 
     );
   }
 }
 
 const styles = StyleSheet.create({
-    container: {
-      justifyContent: "center",
-      fontSize: 30,
-      padding: 60,
-      backgroundColor: "#4287f5",
-      flex: 1
-    },
-  });
+  container: {
+    justifyContent: "center",
+    fontSize: 30,
+    padding: 60,
+    backgroundColor: "#4287f5",
+    flex: 1
+  },
+});
