@@ -1,11 +1,22 @@
 import React , {Component} from 'react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
 export class JBE_MajorsScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Majors',
+  static navigationOptions = ({ navigation }) => { 
+    return{
+      headerRight: (
+        <TouchableHighlight onPress={() => navigation.navigate('HomePage')}>
+         <Image
+           source={require('../../../assets/images/home_icon.png')}
+           style={{height: 30, width: 30}}
+           resizeMode="contain"
+         />
+        </TouchableHighlight>
+      ),
+      title: 'Majors',
+    };
   };
   render() {
     const {navigate} = this.props.navigation;

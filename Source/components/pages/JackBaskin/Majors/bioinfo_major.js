@@ -1,12 +1,23 @@
 import React , {Component} from 'react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
 export class BioInfo_MajorScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Bioinformatics',
+  static navigationOptions = ({ navigation }) => { 
+    return{
+      headerRight: (
+        <TouchableHighlight onPress={() => navigation.navigate('HomePage')}>
+         <Image
+           source={require('../../../../assets/images/home_icon.png')}
+           style={{height: 30, width: 30}}
+           resizeMode="contain"
+         />
+        </TouchableHighlight>
+      ),
+      title: 'Bioinformatics',
+    };
   };
   render() {
     const {navigate} = this.props.navigation;

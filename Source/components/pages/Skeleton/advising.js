@@ -4,8 +4,19 @@ import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
 export class AdvisingScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Advising',
+  static navigationOptions = ({ navigation }) => { 
+    return{
+      headerRight: (
+        <TouchableHighlight onPress={() => navigation.navigate('HomePage')}>
+         <Image
+           source={require('../../../assets/images/home_icon.png')}
+           style={{height: 30, width: 30}}
+           resizeMode="contain"
+         />
+        </TouchableHighlight>
+      ),
+      title: 'Advising',
+    };
   };
   render() {
     const {navigate} = this.props.navigation;
