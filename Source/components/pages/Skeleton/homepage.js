@@ -5,7 +5,7 @@ import { createAppContainer } from 'react-navigation';
 
 export class HomePageScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome to SlugHub!',
+    title: 'Home',
   };
   render() {
     const {navigate} = this.props.navigation;

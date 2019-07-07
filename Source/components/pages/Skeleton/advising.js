@@ -2,6 +2,7 @@ import React , {Component} from '../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class AdvisingScreen extends React.Component {
   static navigationOptions = {
@@ -9,40 +10,34 @@ export class AdvisingScreen extends React.Component {
   };
   render() {
     const {navigate} = this.props.navigation;
-    return (
-    <View style= {styles.container}>
-      {/* <Button
-        title="Curriculum Chart"
-        color = "#e6f542"
-        onPress={() => navigate('CS_BS')}
-        /> */}
-    <TouchableHighlight onPress={jbe_home}>
-    <Image
-    source={require('../../../assets/images/jbe_logo.png')}
-    style={{height: 100, width: 200}}
-    resizeMode="contain"
-    />
-</TouchableHighlight>
+      return (
+        <View style= {styles.container}>
 
+          <TouchableHighlight onPress={jbe_home}>
+            <Image
+            source={require('../../../assets/images/jbe_logo.png')}
+            style={{height: 100, width: 200}}
+            resizeMode="contain"
+            />
+          </TouchableHighlight>
 
-<View style= {styles.majorButton}>
-<Button
-        title="Majors"
-        color = "#008000"
-        onPress={() => navigate('JBE_Majors')}
-        />
-        </View>
+          <View style= {styles.majorButton}>
+            <Button
+            title="Majors"
+            color = "#008000"
+            onPress={() => navigate('JBE_Majors')}
+            />
+          </View>
 
+          <View style= {styles.minorButton}>
+            <Button 
+            title="Minors"
+            color = "#800080"
+            onPress={() => navigate('JBE_Minors')}
+            />
+          </View>
 
-        <View style= {styles.minorButton}>
-        <Button 
-        title="Minors"
-        color = "#800080"
-        onPress={() => navigate('JBE_Minors')}
-        />
-    </View>
-
-    </View>
+      </View>
 
     );
   }
@@ -74,16 +69,16 @@ const styles = StyleSheet.create({
       alignSelf: 'flex-end',
       backgroundColor: 'gold',
       position: 'absolute',
-      bottom: 25,
+      bottom: 80,
       right: 10,
-    width: 150,
-  },
-  minorButton: {
-    alignSelf: 'flex-end',
-    backgroundColor: 'gold',
-    position: 'absolute',
-    bottom: 73,
-    right: 10,
-    width: 150,
-},
+      width: 150,
+    },
+    minorButton: {
+      alignSelf: 'flex-end',
+      backgroundColor: 'gold',
+      position: 'absolute',
+      bottom: 35,
+      right: 10,
+      width: 150,
+    },
   });
