@@ -31,7 +31,7 @@ import { AdvisingScreen} from './components/pages/Skeleton/advising';
   import { BioInfo_MajorScreen}   from  './components/pages/JackBaskin/Majors/bioinfo_major'
     // Minors
   import { JBE_MinorsScreen} from './components/pages/JackBaskin/jbe_minors';
-  import { CS_MinorScreen} from './components/pages/cs_minor';
+  import { CS_MinorScreen} from './components/pages/JackBaskin/Minors/cs_minor';
   import { AM_MinorScreen} from './components/pages/JackBaskin/Minors/am_minor';
   import { Statistics_Minor_Screen} from './components/pages/JackBaskin/Minors/Statistics_Minor';
   import { TIM_Minor_Screen} from './components/pages/JackBaskin/Minors/TIM_Minor';

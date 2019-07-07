@@ -1,6 +1,6 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -15,21 +15,7 @@ export class BE_ElecScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-<<<<<<< HEAD:Source/components/pages/JackBaskin/Majors/be_bioelectronics.js
         onPress={BE_Elec_curriculum}
-=======
-        onPress={() => navigate('CS_Minor')}
-        />
-        <Button
-        title="Computer Engineering"
-        color = "#e6f542"
-        onPress={() => navigate('CE_Minor')}
-        />
-        <Button
-        title="Bioinformatics"
-        color = "#e6f542"
-        onPress={() => navigate('BioInfo_Minor')}
->>>>>>> bio/ce:Source/components/pages/jbe_minors.js
         />
 
     </View>
