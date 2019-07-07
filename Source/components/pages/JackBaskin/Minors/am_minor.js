@@ -1,16 +1,12 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
 export class AM_MinorScreen extends React.Component {
   static navigationOptions = {
-<<<<<<< HEAD:Source/components/pages/JackBaskin/Minors/am_minor.js
     title: 'Applied Math Minor',
-=======
-    title: 'Computer Science',
->>>>>>> bio/ce:Source/components/pages/cs_bs.js
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -21,7 +17,6 @@ export class AM_MinorScreen extends React.Component {
         color = "#e6f542"
         onPress={AM_Minor_curriculum}
         />
-
     </View>
 
     );
