@@ -9,11 +9,24 @@ export class JBE_MinorsScreen extends React.Component {
   };
   render() {
     const {navigate} = this.props.navigation;
+    return (
     <View style= {styles.container}>
         <Button
         title="Computer Science"
         color = "#FF0000"
         onPress={() => navigate('CS_Minor')}
+        />
+
+        <Button
+        title="Computer Engineering"
+        color = "#e6f542"
+        onPress={() => navigate('CE_Minor')}
+        />
+
+        <Button
+        title="Bioinformatics"
+        color = "#e6f542"
+        onPress={() => navigate('BioInfo_Minor')}
         />
 
         <Button

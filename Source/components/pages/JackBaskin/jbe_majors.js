@@ -16,11 +16,23 @@ export class JBE_MajorsScreen extends React.Component {
         color = "#e6f542"
         onPress={() => navigate('CS_BS')}
         />
-        
+
         <Button
         title="Computer Science B.A."
         color = "#B22222"
         onPress={() => navigate('CS_BA')}
+        />
+
+        <Button
+        title="Computer Engineering"
+        color = "#e6f542"
+        onPress={() => navigate('CE_Major')}
+        />
+
+        <Button
+        title="Bioinformatics"
+        color = "#e6f542"
+        onPress={() => navigate('BioInfo_Major')}
         />
 
         <Button
