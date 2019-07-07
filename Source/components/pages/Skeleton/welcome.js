@@ -1,36 +1,32 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
-import * as WebBrowser from 'expo-web-browser';
 
-export class BE_BiomoleScreen extends React.Component {
+export class WelcomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Biomolecular',
+    title: 'Welcome to SlugHub!',
   };
   render() {
     const {navigate} = this.props.navigation;
+    let pic = {
+      uri: "https://www.pngkit.com/png/full/237-2373114_slug-png.png"
+    };
     return (
     <View style= {styles.container}>
+    <Image source={pic} style={{width: 253, height: 160}}/>
         <Button
-        title="Curriculum Chart"
+        title="Enter the App!"
         color = "#e6f542"
-        onPress={BE_Biomole_curriculum}
+        onPress={() => navigate('HomePage')}
         />
 
+        
     </View>
-
+    
     );
   }
 }
-
-
-function BE_Biomole_curriculum() {
-  WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-10/BMEB%20Biomolecular%20Final%2018-19.pdf'
-  );
-}
-
 
 const styles = StyleSheet.create({
     container: {

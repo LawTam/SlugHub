@@ -1,12 +1,12 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class CS_BAScreen extends React.Component {
+export class RE_BS_Screen extends React.Component {
   static navigationOptions = {
-    title: 'Computer Science B.A.',
+    title: 'Robotics Engineering B.S.',
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -15,7 +15,7 @@ export class CS_BAScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={cs_ba_curriculum}
+        onPress={re_bs_curriculum}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class CS_BAScreen extends React.Component {
 }
 
 
-function cs_ba_curriculum() {
+function re_bs_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BA_18-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/ROBO_18-19.pdf'
   );
 }
 

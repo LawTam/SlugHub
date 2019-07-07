@@ -1,12 +1,12 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_ATScreen extends React.Component {
+export class TIM_Minor_Screen extends React.Component {
   static navigationOptions = {
-    title: 'Bioengineering: Assistive Technology (Motor)',
+    title: 'TIM Minor',
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -15,7 +15,7 @@ export class BE_ATScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={BE_AT_curriculum}
+        onPress={TIM_Minor_curriculum}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class BE_ATScreen extends React.Component {
 }
 
 
-function BE_AT_curriculum() {
+function TIM_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/BENG-motor_18-19%5Bdraft%5D.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/TIM-Minor_18-19%20%283%29.pdf'
   );
 }
 

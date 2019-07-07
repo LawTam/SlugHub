@@ -1,6 +1,6 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from '../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -19,7 +19,7 @@ export class AdvisingScreen extends React.Component {
         /> */}
     <TouchableHighlight onPress={jbe_home}>
     <Image
-    source={require('../../assets/images/jbe_logo.png')}
+    source={require('../../../assets/images/jbe_logo.png')}
     style={{height: 100, width: 200}}
     resizeMode="contain"
     />

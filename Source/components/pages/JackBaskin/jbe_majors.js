@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
 export class JBE_MajorsScreen extends React.Component {
@@ -13,10 +13,10 @@ export class JBE_MajorsScreen extends React.Component {
     <View style= {styles.container}>
         <Button
         title="Computer Science B.S."
-        color = "#FF0000"
+        color = "#e6f542"
         onPress={() => navigate('CS_BS')}
         />
-
+        
         <Button
         title="Computer Science B.A."
         color = "#B22222"
@@ -47,10 +47,30 @@ export class JBE_MajorsScreen extends React.Component {
         onPress={() => navigate('BE_Biomole')}
         />
 
-
-
+        <Button
+        title="Electrical Engineering"
+        color = "#e6f542"
+        onPress={() => navigate('EE_BS')}
+        />
+        <Button
+        title="Network and Digital Technology B.A. "
+        color = "#e6f542"
+        onPress={() => navigate('NDT_BA')}
+        />
+        <Button
+        title="Robotics Engineering B.S."
+        color = "#e6f542"
+        onPress={() => navigate('RE_BS')}
+        />
+        <Button
+        title="Technology and Information Management B.S."
+        color = "#e6f542"
+        onPress={() => navigate('TIM_BS')}
+        />
+        
+        
     </View>
-
+    
     );
   }
 }

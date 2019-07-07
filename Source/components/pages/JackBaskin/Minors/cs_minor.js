@@ -1,12 +1,12 @@
-import React , {Component} from '../../node_modules/react';
+import React , {Component} from '../../../../node_modules/react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class CSGD_BSScreen extends React.Component {
+export class CS_MinorScreen extends React.Component {
   static navigationOptions = {
-    title: 'Computer Science Game Design B.S.',
+    title: 'Computer Science Minor',
   };
   render() {
     const {navigate} = this.props.navigation;
@@ -15,7 +15,7 @@ export class CSGD_BSScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={csgd_bs_curriculum}
+        onPress={CS_Minor_curriculum}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class CSGD_BSScreen extends React.Component {
 }
 
 
-function csgd_bs_curriculum() {
+function CS_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/CSGD_BS_18-19_0.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS-Minor_18-19.pdf'
   );
 }
 

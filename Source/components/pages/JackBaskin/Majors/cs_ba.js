@@ -1,32 +1,36 @@
-import React , {Component} from 'react';
+import React , {Component} from '../../../../node_modules/react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
-export class WelcomeScreen extends React.Component {
+export class CS_BAScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome to SlugHub!',
+    title: 'Computer Science B.A.',
   };
   render() {
     const {navigate} = this.props.navigation;
-    let pic = {
-      uri: "https://www.pngkit.com/png/full/237-2373114_slug-png.png"
-    };
     return (
     <View style= {styles.container}>
-    <Image source={pic} style={{width: 253, height: 160}}/>
         <Button
-        title="Enter the App!"
+        title="Curriculum Chart"
         color = "#e6f542"
-        onPress={() => navigate('HomePage')}
+        onPress={cs_ba_curriculum}
         />
 
-        
     </View>
-    
+
     );
   }
 }
+
+
+function cs_ba_curriculum() {
+  WebBrowser.openBrowserAsync(
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BA_18-19.pdf'
+  );
+}
+
 
 const styles = StyleSheet.create({
     container: {
