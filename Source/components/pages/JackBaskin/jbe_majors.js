@@ -30,33 +30,15 @@ export class JBE_MajorsScreen extends React.Component {
         />
 
         <Button
-        title="Bioinformatics"
+        title="Bioengineering"
         color = "#e6f542"
-        onPress={() => navigate('BioInfo_Major')}
+        onPress={() => navigate('BE_page')}
         />
 
         <Button
         title="Computer Science Game Design B.S."
         color = "#DC143C"
         onPress={() => navigate('CSGD_BS')}
-        />
-
-        <Button
-        title="Bioengineering B.S. - Assistive Technology (Motor) Concentration"
-        color = "#FF7F00"
-        onPress={() => navigate('BE_AT')}
-        />
-
-        <Button
-        title="Bioengineering BS - Bioelectronics Concentration"
-        color = "#F0E68C"
-        onPress={() => navigate('BE_Elec')}
-        />
-
-        <Button
-        title="Biomolecular Engineering & Bioinformatics: Biomolecular"
-        color = "#00FF00"
-        onPress={() => navigate('BE_Biomole')}
         />
 
         <Button
@@ -79,10 +61,10 @@ export class JBE_MajorsScreen extends React.Component {
         color = "#e6f542"
         onPress={() => navigate('TIM_BS')}
         />
-        
-        
+
+
     </View>
-    
+
     );
   }
 }
