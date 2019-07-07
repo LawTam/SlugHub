@@ -27,6 +27,8 @@ import { AdvisingScreen} from './components/pages/Skeleton/advising';
   import { BE_ATScreen} from './components/pages/JackBaskin/Majors/be_at_motor';
   import { BE_BiomoleScreen} from './components/pages/JackBaskin/Majors/biomole';
   import { BE_ElecScreen} from './components/pages/JackBaskin/Majors/be_bioelectronics';
+  import { CE_MajorScreen}   from  './components/pages/JackBaskin/Majors/ce_major'
+  import { BioInfo_MajorScreen}   from  './components/pages/JackBaskin/Majors/bioinfo_major'
     // Minors
   import { JBE_MinorsScreen} from './components/pages/JackBaskin/jbe_minors';
   import { CS_MinorScreen} from './components/pages/cs_minor';
@@ -34,6 +36,8 @@ import { AdvisingScreen} from './components/pages/Skeleton/advising';
   import { Statistics_Minor_Screen} from './components/pages/JackBaskin/Minors/Statistics_Minor';
   import { TIM_Minor_Screen} from './components/pages/JackBaskin/Minors/TIM_Minor';
   import { EE_Minor_Screen} from './components/pages/JackBaskin/Minors/EE_Minor';
+  import { CE_MinorScreen } from './components/pages/JackBaskin/Minors/ce_minor';
+  import { BioInfo_MinorScreen } from './components/pages/JackBaskin/Minors/bioinfo_minor';
 
 
 
@@ -47,6 +51,8 @@ const FunStack = createStackNavigator({
 
     // JackBaskin Engineering Pages
     JBE_Majors: {screen: JBE_MajorsScreen},
+    JBE_Minors: {screen: JBE_MinorsScreen},
+      // Majors
     CS_BS: {screen: CS_BSScreen},
     TIM_BS: {screen: TIM_BS_Screen},
     EE_BS: {screen: EE_BS_Screen},
@@ -57,13 +63,17 @@ const FunStack = createStackNavigator({
     BE_Elec: {screen: BE_ElecScreen},
     BE_AT: {screen: BE_ATScreen},
     BE_Biomole: {screen: BE_BiomoleScreen},
-
-    JBE_Minors: {screen: JBE_MinorsScreen},
+    CE_Major: {screen: CE_MajorScreen},
+    BioInfo_Major: {screen: BioInfo_MajorScreen},
+      // Minors
     CS_Minor: {screen: CS_MinorScreen},
     AM_Minor: {screen: AM_MinorScreen},
     Statistics_Minor: {screen: Statistics_Minor_Screen},
     TIM_Minor: {screen: TIM_Minor_Screen},
     EE_Minor: {screen: EE_Minor_Screen},
+    CE_Minor: {screen: CE_MinorScreen},
+    BioInfo_Minor: {screen: BioInfo_MinorScreen}
+
 });
 
 const App = createAppContainer(FunStack);

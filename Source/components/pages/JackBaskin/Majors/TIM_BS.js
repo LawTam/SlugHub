@@ -17,7 +17,6 @@ export class TIM_BS_Screen extends React.Component {
         color = "#e6f542"
         onPress={TIM_BS_curriculum}
         />
-
     </View>
 
     );
