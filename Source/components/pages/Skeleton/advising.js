@@ -10,8 +10,15 @@ export class AdvisingScreen extends React.Component {
   };
   render() {
     const {navigate} = this.props.navigation;
-      return (
-        <View style= {styles.container}>
+    return (
+    <View style= {styles.container}>
+    <TouchableHighlight onPress={jbe_home}>
+    <Image
+    source={require('../../../assets/images/jbe_logo.png')}
+    style={{height: 100, width: 200}}
+    resizeMode="contain"
+    />
+</TouchableHighlight>
 
           <TouchableHighlight onPress={jbe_home}>
             <Image
