@@ -8,12 +8,13 @@ import ScrollPicker from '../../../../node_modules/react-native-wheel-scroll-pic
 // npm install react-native-wheel-scroll-picker --save
 // npm i react-native-wheel-picker --save
 import Picker from '../../../../node_modules/react-native-wheel-picker'
+
 var PickerItem = Picker.Item;
 var PickerItem2 = Picker.Item;
 var dict = new Map();
 dict.set("CMPS 5J", "CMPS 5J: Intro to Programming");
-dict.set("CMPS 12A/L", "CMPS 12A/L: Accelerated Programming");
-dict.set("CMPS 12B/M", "CMPS 12B/M: Intro to Data Structures");
+dict.set("CMPS 12A", "CMPS 12A/L: Accelerated Programming");
+dict.set("CMPS 12B", "CMPS 12B/M: Intro to Data Structures");
 dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
 dict.set("CMPS 111", "CMPS 111: Introduction to Operating Systems");
 
@@ -50,14 +51,25 @@ export class CS_BSScreen extends React.Component {
     var key = this.state.itemList[this.state.selectedItem]
     console.log(key);
     console.log(dict.get(key));
-  }
+	}
 
-  onAddItem2 = () => {
-    console.log(this.state.itemList1);
-    var key = this.state.itemList1[this.state.selectedItem1]
-    console.log(key);
-    console.log(dict.get(key));
-  }
+	select = () => {
+		console.log(this.state.itemList);
+		var key = this.state.itemList[this.state.selectedItem]
+		console.log(key);
+		return this.dict.key[this.setState.selectedItem];
+	}
+
+	get_SOE_Webpage(class_key) {
+		//console.log("JBE webpage for: ", class_key)
+		classKey = class_key.replace(/\s/g, '');	// remove spaces
+		link = "https://courses.soe.ucsc.edu/courses/" + classKey
+		//console.log(link)
+
+		WebBrowser.openBrowserAsync(
+			link
+		);
+	}
 
 	render () {
     const {navigate} = this.props.navigation;
@@ -76,20 +88,20 @@ export class CS_BSScreen extends React.Component {
 
         <View style={styles.lower_div_container}>
 				<Picker style={{width: 150, height: 180}}
-          selectedValue={this.state.selectedItem}
+          			selectedValue={this.state.selectedItem}
 					itemStyle={{color:"white", fontSize:26}}
 					onValueChange={(index) => this.onPickerSelect(index)}>
-						{this.state.itemList.map((value, i) => (
-							<PickerItem label={value} value={i} key={"money"+value}/>
-						))}
+					{this.state.itemList.map((value, i) => (
+						<PickerItem label={value} value={i} key={"money"+value}/>
+					))}
 				</Picker>
 				<Text style={{margin: 20, color: '#ffffff'}}>
-          {dict.get(this.state.itemList[this.state.selectedItem])}
+          			{dict.get(this.state.itemList[this.state.selectedItem])}
 				</Text>
 
-				<Text style={{margin: 10, color: '#ffffff'}}
-						onPress={this.onAddItem}>
-			Search for this class!
+				<Text style={{margin: 20, color: '#ffffff'}}
+					onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>
+					Search for this class!
 				</Text>
         </View>
 
