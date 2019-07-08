@@ -32,17 +32,17 @@ export class HomePageScreen extends React.Component {
         color = "#e6f542"
         onPress={() => navigate('Academic Calendar')}
         />
-<View style= {styles.myUCSC}> 
+<View style= {styles.myUCSCButton}> 
 <TouchableHighlight onPress={myUCSC}>
 <Image
     source={require('../../../assets/images/myUCSC_logo.png')}
     resizeMode="contain"
-    //style= {{height:50, width:130}}
+    style= {styles.myUCSC_image}
     /> 
     </TouchableHighlight>
     </View>
         
-    <View style= {styles.canvas_container}> 
+    <View style= {styles.canvasButton}> 
 <TouchableHighlight onPress={canvas}>
 <Image
     source={require('../../../assets/images/canvas_logo.png')}
@@ -79,38 +79,28 @@ const styles = StyleSheet.create({
       backgroundColor: "#4287f5",
       flex: 1
     },
-    myUCSC: {
-      
-    //   alignSelf: 'flex-end',
-    //   position: 'absolute',
-     //bottom: -130,
-     //right: 1,
+    myUCSC_image: {
+      height:50,
+      width:130,
+    },
+    myUCSCButton: {
+    justifyContent: "center",
+    flex: 0.3,
+    top: -30,
+    left: -60,
     height: 50,
     width: 130,
     },
-    canvas: {
-      
-        // alignSelf: 'flex-end',
-      //   position: 'absolute',
-       //bottom: -130,
-       //right: 1,
-      height: 100,
-      width: 130,
-      },
-      canvas_container: {
+      canvasButton: {
         justifyContent: "center",
         flex: 0.3,
-        bottom: 60,
-        right: -120,
+        top: -120,
+        left: 120,
         height:70, 
         width:180,
       },
       canvas_image: {
-        //alignSelf: 'flex-end',
-        //position: 'absolute',
-       // bottom: -130,
-        //right: 1,
         height:70, 
         width:180,
-      }
+      },
   });
