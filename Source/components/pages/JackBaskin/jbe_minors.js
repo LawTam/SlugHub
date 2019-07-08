@@ -1,11 +1,22 @@
 import React , {Component} from '../../../node_modules/react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
 export class JBE_MinorsScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Minors',
+  static navigationOptions = ({ navigation }) => {
+    return{
+      headerRight: (
+        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
+        <Image
+        source={require('../../../assets/images/home_icon.png')}
+        style={{height: 35, width: 35, margin: 10}}
+        resizeMode="contain"
+        />
+        </TouchableHighlight>
+      ),
+      title: 'Minors',
+    };
   };
   render() {
     const {navigate} = this.props.navigation;
