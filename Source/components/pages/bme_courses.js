@@ -1,21 +1,21 @@
-import React , {Component} from '../../../../node_modules/react';
+import React , {Component} from '../../node_modules/react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_BiomoleScreen extends React.Component {
+export class am_courseScreen extends React.Component {
   static navigationOptions = {
-    title: 'Biomolecular',
+    title: 'Biomolecular Engineering Courses',
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
         <Button
-        title="Curriculum Chart"
+        title="Course Offerings"
         color = "#e6f542"
-        onPress={BE_Biomole_curriculum}
+        onPress={am_courses}
         />
 
     </View>
@@ -25,9 +25,9 @@ export class BE_BiomoleScreen extends React.Component {
 }
 
 
-function BE_Biomole_curriculum() {
+function bme_courses() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-10/BMEB%20Biomolecular%20Final%2018-19.pdf'
+    'https://courses.soe.ucsc.edu/courses/bme'
   );
 }
 
