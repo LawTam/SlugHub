@@ -23,7 +23,6 @@ export class AdvisingScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
 
-
       <View style= {styles.screen_container}>
 
         <View style= {styles.jbe_container}>
@@ -54,23 +53,6 @@ export class AdvisingScreen extends React.Component {
 
         </View>
 
-    <View style= {styles.container}>
-          <TouchableHighlight onPress={jbe_home}>
-            <Image
-            source={require('../../../assets/images/jbe_logo.png')}
-            style={{height: 100, width: 200}}
-            resizeMode="contain"
-            />
-          </TouchableHighlight>
-
-
-          <View style= {styles.majorButton}>
-            <Button
-            title="Majors"
-            color = "#008000"
-            onPress={() => navigate('JBE_Majors')}
-            />
-          </View>
 
 
 
@@ -177,7 +159,7 @@ export class AdvisingScreen extends React.Component {
                   <Button
                   title="ART Majors"
                   color = "#008000"
-                  onPress={() => navigate('JBE_Majors')}
+                  //onPress={() => navigate('JBE_Majors')}
                   />
                   </View>
 
@@ -185,7 +167,7 @@ export class AdvisingScreen extends React.Component {
                   <Button
                   title="ART Minors"
                   color = "#800080"
-                  onPress={() => navigate('JBE_Minors')}
+                  //onPress={() => navigate('JBE_Minors')}
                   />
                   </View>
 
@@ -195,15 +177,60 @@ export class AdvisingScreen extends React.Component {
 
       </View>
 
-          <View style= {styles.minorButton}>
-            <Button
-            title="Minors"
-            color = "#800080"
-            onPress={() => navigate('JBE_Minors')}
-            />
-          </View>
+      //
+      //
+      // <TouchableHighlight onPress={hum_home}>
+      // <Image
+      // source={require('../../../assets/images/hum_logo.png')}
+      // style={{height: 100, width: 200}}
+      // resizeMode="contain"
+      // />
+      // </TouchableHighlight>
+      //
+      // <View style= {styles.majorButton4}>
+      // <Button
+      // title="HUM Majors"
+      // color = "#008000"
+      // onPress={() => navigate('JBE_Majors')}
+      // />
+      // </View>
+      //
+      // <View style= {styles.minorButton4}>
+      // <Button
+      // title="HUM Minors"
+      // color = "#800080"
+      // onPress={() => navigate('JBE_Minors')}
+      // />
+      // </View>
+      //
+      //
+      //
+      // <TouchableHighlight onPress={art_home}>
+      // <Image
+      // source={require('../../../assets/images/art_logo.png')}
+      // style={{height: 100, width: 200}}
+      // resizeMode="contain"
+      // />
+      // </TouchableHighlight>
+      //
+      // <View style= {styles.majorButton5}>
+      // <Button
+      // title="HUM Majors"
+      // color = "#008000"
+      // onPress={() => navigate('JBE_Majors')}
+      // />
+      // </View>
+      //
+      // <View style= {styles.minorButton5}>
+      // <Button
+      // title="HUM Minors"
+      // color = "#800080"
+      // onPress={() => navigate('JBE_Minors')}
+      // />
+      // </View>
+      //
 
-      </View>
+      //</View>
 
 
     );
@@ -241,7 +268,6 @@ function art_home() {
 }
 
 const styles = StyleSheet.create({
-
 
   screen_container: {
     backgroundColor: "#4287f5",
@@ -345,36 +371,3 @@ const styles = StyleSheet.create({
 
 
 });
-
-    container: {
-      justifyContent: "center",
-      fontSize: 10,
-      padding: 10,
-      paddingTop: 10,
-      paddingRight: 160,
-      paddingBottom: 10,
-      backgroundColor: "#4287f5",
-      flex: 0.20
-    },
-    button: {
-      alignItems: 'center',
-      backgroundColor: '#DDDDDD',
-      padding: 10
-    },
-    majorButton: {
-      alignSelf: 'flex-end',
-      backgroundColor: 'gold',
-      position: 'absolute',
-      bottom: 73,
-      right: 10,
-      width: 150,
-    },
-    minorButton: {
-      alignSelf: 'flex-end',
-      backgroundColor: 'gold',
-      position: 'absolute',
-      bottom: 27,
-      right: 10,
-      width: 150,
-    },
-  });
