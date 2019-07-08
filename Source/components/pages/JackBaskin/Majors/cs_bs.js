@@ -11,14 +11,16 @@ import Picker from '../../../../node_modules/react-native-wheel-picker'
 var PickerItem = Picker.Item;
 var dict = new Map();
 dict.set("CMPS 5J", "CMPS 5J: Intro to Programming");
-
+dict.set("CMPS 12A/L", "CMPS 12A/L: Accelerated Programming");
+dict.set("CMPS 12B/M", "CMPS 12B/M: Intro to Data Structures");
+dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
 
 export class CS_BSScreen extends React.Component {
   constructor(props) {
 		super(props);
 		this.state = {
 			selectedItem : 0,
-			itemList: ['CMPS 5J', '张飞', '关羽', '赵云', '黄忠', '马超', '魏延', '诸葛亮']
+			itemList: ["CMPS 5J", "CMPS 12A/L", "CMPS 12B/M", "CMPS 101", '黄忠', '马超', '魏延', '诸葛亮']
 		};
 	}
 
@@ -32,13 +34,13 @@ export class CS_BSScreen extends React.Component {
     console.log(this.state.itemList);
     var key = this.state.itemList[this.state.selectedItem]
     console.log(key);
-    console.log(this.classes_dictionary[0]);
+    console.log(dict.get(key));
   }
   select = () => {
     console.log(this.state.itemList);
     var key = this.state.itemList[this.state.selectedItem]
     console.log(key);
-    return this.classes_dictionary.key[0];
+    return this.dict.key[this.setState.selectedItem];
   }
 
 	render () {
@@ -56,7 +58,7 @@ export class CS_BSScreen extends React.Component {
 						))}
 				</Picker>
 				<Text style={{margin: 20, color: '#ffffff'}}>
-					{dict.get(this.state.itemList[this.state.selectedItem])}
+          {dict.get(this.state.itemList[this.state.selectedItem])}
 				</Text>
 
 				<Text style={{margin: 20, color: '#ffffff'}}
