@@ -14,6 +14,7 @@ import { WelcomeScreen } from './components/pages/Skeleton/welcome';
 import { HomePageScreen } from './components/pages/Skeleton/homepage';
 import { AdvisingScreen} from './components/pages/Skeleton/advising';
 import { LoginScreen} from './components/pages/Skeleton/login/login';
+import { LogoutScreen} from './components/pages/Skeleton/login/login_test';
 
 
   // Jack Baskin Engineering Page Imports
@@ -51,6 +52,7 @@ const FunStack = createStackNavigator({
   HomePage: {screen: HomePageScreen},
   Advising: {screen: AdvisingScreen},
   Login: {screen: LoginScreen},
+  Logout: {screen: LogoutScreen},
   
     // JackBaskin Engineering Pages
     JBE_Majors: {screen: JBE_MajorsScreen},

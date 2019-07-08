@@ -1,20 +1,43 @@
 import React , {Component} from 'react';
-import {Button, StyleSheet, Text, TextInput, View, TouchableOpacity, StatusBar, KeyboardAvoidingView} from 'react-native';
+import {Button, Alert, Image, StyleSheet, Text, TextInput, View, TouchableOpacity, StatusBar, KeyboardAvoidingView} from 'react-native';
 
-
+//tcomb-form-native
 export class LoginScreen extends Component {
   static navigationOptions = {
     title: 'test',
   };
+  constructor(props) {
+      super(props);
+      this.state ={
+        TextInputEmail:'',
+        LoginState: false,
+      }
+  }
+  CheckTextInput = () => {
+      const {TextInputEmail} = this.state;
+      if (TextInputEmail === '') {alert('please enter Email')}
+      else {
+          //changeState
+          this.setState({LoginState: true})
+          this.props.navigation.navigate('Welcome')
+        }
+  }
   render() {
-      return (
+      let pic = { uri: "https://www.pngkit.com/png/full/237-2373114_slug-png.png"};
+    const {navigate} = this.props.navigation;
+    //const {LogState} = this.state.LoginState;
+    //console.log(LogState)
+    if (this.state.LoginState != true) {
+        return (
           <KeyboardAvoidingView behavior="padding" style={styles.container}>
               <View style={styles.container}>
+              <Image source={pic} style={{width: 253, height: 160}}/>
                 <Text>Logo Here</Text>
               </View>
               
               <View style={styles.container}>
                 <TextInput
+                onChangeText={TextInputEmail => this.setState({TextInputEmail})}
                 placeholder = "Email"
                 returnKeyType="next"
                 onSubmitEditing={() => this.passwordInput.focus()}
@@ -28,14 +51,33 @@ export class LoginScreen extends Component {
                 style={styles.input}
                 ref={(input) => this.passwordInput = input}
                 />
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>
-                        Login
-                    </Text>
-                </TouchableOpacity>
+                <Button
+                title ="Login"
+                color = "#e6f542"
+                onPress={this.CheckTextInput}
+                />
             </View>
           </KeyboardAvoidingView>
-      );
+        );
+    }
+    else {
+        return (
+            <KeyboardAvoidingView behavior="padding" style={styles.container}>
+                <View style={styles.container}>
+                  <Text>Welcome</Text>
+                </View>
+                
+                <View style={styles.container}>
+                  
+                  <TouchableOpacity style={styles.button}>
+                      <Text style={styles.buttonText}>
+                          Logout
+                      </Text>
+                  </TouchableOpacity>
+              </View>
+            </KeyboardAvoidingView>
+        );
+    }
   }
 }
 

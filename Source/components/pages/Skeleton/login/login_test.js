@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import {Button, StyleSheet, Text, TextInput, View, TouchableOpacity, StatusBar, KeyboardAvoidingView} from 'react-native';
 
 
-export class LoginScreen extends Component {
+export class LogoutScreen extends Component {
   static navigationOptions = {
     title: 'test',
   };
@@ -10,27 +10,14 @@ export class LoginScreen extends Component {
       return (
           <KeyboardAvoidingView behavior="padding" style={styles.container}>
               <View style={styles.container}>
-                <Text>Logo Here</Text>
+                <Text>Welcome</Text>
               </View>
               
               <View style={styles.container}>
-                <TextInput
-                placeholder = "Email"
-                returnKeyType="next"
-                onSubmitEditing={() => this.passwordInput.focus()}
-                keyboardType="email-address"
-                style={styles.input}
-                />
-                <TextInput
-                placeholder = "password"
-                returnKeyType="go"
-                secureTextEntry
-                style={styles.input}
-                ref={(input) => this.passwordInput = input}
-                />
+                
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>
-                        Login
+                        Logout
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -46,13 +33,6 @@ const styles = StyleSheet.create({
       padding: 60,
       backgroundColor: "#4287f5",
       flex: 1
-    },
-    input: {
-      height: 40,
-      backgroundColor: '#A3DCFF',
-      color: '#000FFF',
-      marginBottom: 15,
-      paddingVertical: 10
     },
     button: {
       backgroundColor: '#298FFF',
