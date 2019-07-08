@@ -5,8 +5,19 @@ import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
 export class AdvisingScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Advising',
+  static navigationOptions = ({ navigation }) => {
+    return{
+      headerRight: (
+        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
+        <Image
+        source={require('../../../assets/images/home_icon.png')}
+        style={{height: 35, width: 35, margin: 10}}
+        resizeMode="contain"
+        />
+        </TouchableHighlight>
+      ),
+      title: 'Advising',
+    };
   };
   render() {
     const {navigate} = this.props.navigation;
