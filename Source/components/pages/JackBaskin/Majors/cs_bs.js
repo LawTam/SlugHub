@@ -3,41 +3,89 @@ import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
+import ScrollPicker from '../../../../node_modules/react-native-wheel-scroll-picker';
+// npm install styled-components
+// npm install react-native-wheel-scroll-picker --save
+// npm i react-native-wheel-picker --save
+import Picker from '../../../../node_modules/react-native-wheel-picker'
+var PickerItem = Picker.Item;
+var dict = new Map();
+dict.set("CMPS 5J", "CMPS 5J: Intro to Programming");
+
 
 export class CS_BSScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Computer Science B.S.',
-  };
-  render() {
-    const {navigate} = this.props.navigation;
-    return (
-    <View style= {styles.container}>
-        <Button
-        title="Curriculum Chart"
-        color = "#e6f542"
-        onPress={cs_bs_curriculum}
-        />
+  constructor(props) {
+		super(props);
+		this.state = {
+			selectedItem : 0,
+			itemList: ['CMPS 5J', '张飞', '关羽', '赵云', '黄忠', '马超', '魏延', '诸葛亮']
+		};
+	}
 
-    </View>
+	onPickerSelect (index) {
+		this.setState({
+			selectedItem: index,
+		})
+	}
 
-    );
+	onAddItem = () => {
+    console.log(this.state.itemList);
+    var key = this.state.itemList[this.state.selectedItem]
+    console.log(key);
+    console.log(this.classes_dictionary[0]);
   }
-}
+  select = () => {
+    console.log(this.state.itemList);
+    var key = this.state.itemList[this.state.selectedItem]
+    console.log(key);
+    return this.classes_dictionary.key[0];
+  }
 
+	render () {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.welcome}>
+					Welcome to React Native!
+				</Text>
+				<Picker style={{width: 150, height: 180}}
+          selectedValue={this.state.selectedItem}
+					itemStyle={{color:"white", fontSize:26}}
+					onValueChange={(index) => this.onPickerSelect(index)}>
+						{this.state.itemList.map((value, i) => (
+							<PickerItem label={value} value={i} key={"money"+value}/>
+						))}
+				</Picker>
+				<Text style={{margin: 20, color: '#ffffff'}}>
+					{dict.get(this.state.itemList[this.state.selectedItem])}
+				</Text>
 
-function cs_bs_curriculum() {
-  WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BS_18-19.pdf'
-  );
+				<Text style={{margin: 20, color: '#ffffff'}}
+						onPress={this.onAddItem}>
+			Search for this class!
+				</Text>
+			</View>
+		);
+	}
+
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-      justifyContent: "center",
-      fontSize: 30,
-      padding: 60,
-      backgroundColor: "#4287f5",
-      flex: 1
-    },
-  });
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#1962dd',
+	},
+	welcome: {
+		fontSize: 20,
+		textAlign: 'center',
+		margin: 10,
+		color: '#ffffff',
+	},
+	instructions: {
+		textAlign: 'center',
+		color: '#333333',
+		marginBottom: 5,
+	},
+});
