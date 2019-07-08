@@ -351,6 +351,7 @@ const styles = StyleSheet.create({
     right: 10,
     width: 150,
     opacity: .9,
+    borderRadius: 7,
   },
   minorButton: {
     alignSelf: 'flex-end',
@@ -360,6 +361,7 @@ const styles = StyleSheet.create({
     right: 10,
     width: 150,
     opacity: .9,
+    borderRadius: 7,
   },
 
   pbsci_majorButton: {
