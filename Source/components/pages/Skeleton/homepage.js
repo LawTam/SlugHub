@@ -115,26 +115,24 @@ const styles = StyleSheet.create({
       backgroundColor: "#4287f5",
       flex: 1
     },
-    
+
     myUCSC_image: {
       height:50,
       width:130,
     },
 
     myUCSCButton: {
-    justifyContent: "center",
-    flex: 0.3,
-    top: -30,
-    left: -60,
-    height: 50,
-    width: 130,
+      top: '30%',
+      left: '13%',
+      position: "absolute",
+      height: 50,
+      width: 130,
     },
 
     canvasButton: {
-      justifyContent: "center",
-      flex: 0.3,
-      top: -120,
-      left: 120,
+      top: '30%',
+      left: '50%',
+      position: "absolute",
       height:70, 
       width:180,
     },
@@ -145,14 +143,14 @@ const styles = StyleSheet.create({
     },
 
     advising_button: {
-      top:  '5%',
+      top:  '10%',
       left: '5%',
       position: "absolute",
     },
 
     academic_button: {
-      top: '5%',
-      left: '55%',
+      top: '10%',
+      left: '50%',
       position: "absolute",
     }
 
