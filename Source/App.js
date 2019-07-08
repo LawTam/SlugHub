@@ -19,16 +19,17 @@ import { AdvisingScreen} from './components/pages/Skeleton/advising';
   import { JBE_MajorsScreen} from './components/pages/JackBaskin/jbe_majors';
   import { CS_BSScreen} from './components/pages/JackBaskin/Majors/cs_bs';
   import { CS_BAScreen} from './components/pages/JackBaskin/Majors/cs_ba';
-  import { CSGD_BSScreen} from './components/pages/JackBaskin/Majors/csgd_bs';  
+  import { CSGD_BSScreen} from './components/pages/JackBaskin/Majors/csgd_bs';
   import { TIM_BS_Screen} from './components/pages/JackBaskin/Majors/TIM_BS';
   import { EE_BS_Screen} from './components/pages/JackBaskin/Majors/ee_bs';
   import { RE_BS_Screen} from './components/pages/JackBaskin/Majors/robo_bs';
   import { NDT_BA_Screen} from './components/pages/JackBaskin/Majors/ndt_ba';
-  import { BE_ATScreen} from './components/pages/JackBaskin/Majors/be_at_motor';
-  import { BE_BiomoleScreen} from './components/pages/JackBaskin/Majors/biomole';
-  import { BE_ElecScreen} from './components/pages/JackBaskin/Majors/be_bioelectronics';
+  import { BE_ATScreen} from './components/pages/JackBaskin/Majors/BE/be_at_motor';
+  import { BE_BiomoleScreen} from './components/pages/JackBaskin/Majors/BE/biomole';
+  import { BE_ElecScreen} from './components/pages/JackBaskin/Majors/BE/be_bioelectronics';
   import { CE_MajorScreen}   from  './components/pages/JackBaskin/Majors/ce_major'
-  import { BioInfo_MajorScreen}   from  './components/pages/JackBaskin/Majors/bioinfo_major'
+  import { BioInfo_MajorScreen}   from  './components/pages/JackBaskin/Majors/BE/bioinfo_major'
+  import { BE_Screen} from './components/pages/JackBaskin/Majors/BE_page';
     // Minors
   import { JBE_MinorsScreen} from './components/pages/JackBaskin/jbe_minors';
   import { CS_MinorScreen} from './components/pages/JackBaskin/Minors/cs_minor';
@@ -65,6 +66,7 @@ const FunStack = createStackNavigator({
     BE_Biomole: {screen: BE_BiomoleScreen},
     CE_Major: {screen: CE_MajorScreen},
     BioInfo_Major: {screen: BioInfo_MajorScreen},
+    BE_page: {screen: BE_Screen},
       // Minors
     CS_Minor: {screen: CS_MinorScreen},
     AM_Minor: {screen: AM_MinorScreen},
