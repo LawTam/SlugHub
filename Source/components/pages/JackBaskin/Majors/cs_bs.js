@@ -10,7 +10,7 @@ import * as WebBrowser from 'expo-web-browser';
 import Picker from '../../../../node_modules/react-native-wheel-picker'
 
 var PickerItem = Picker.Item;
-var dict = {
+dict = {
 	"CMPS 5J": "CMPS 5J: Intro to Programming",
 	"CMPS 12A/L": "CMPS 12A/L: Accelerated Programming",
 	"CMPS 12B/L": "CMPS 12B/L: Intro to Data Structures",
@@ -61,7 +61,7 @@ export class CS_BSScreen extends React.Component {
 				<Picker style={{width: 150, height: 180}}
           			selectedClass = {this.state.selectedIndex}
 					itemStyle = {{color:"white", fontSize:26}}
-					onValueChange = {(selectedClass) => this.onPickerSelect(selectedClass)}>
+					onValueChange = {(index) => this.onPickerSelect(index)}>
 
 					{this.state.itemList.map((value, i) => (
 						<PickerItem label={value} value={i} key={value}/>
@@ -70,8 +70,7 @@ export class CS_BSScreen extends React.Component {
 
 				<Text style={{margin: 20, color: '#ffffff'}} dictionary = {dict}>
 					{
-						this.state.itemList.map((value, i) => (
-						dict[this.state.selectedItem]))
+						dict.get(this.state.itemList[this.state.selectedItem])
 					}
 				</Text>
 
