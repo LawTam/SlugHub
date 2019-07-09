@@ -19,29 +19,31 @@ dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
 dict.set("CMPS 111", "CMPS 111: Introduction to Operating Systems");
 
 export class CS_BSScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return{
-      headerRight: (
-        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
-        <Image
-        source={require('../../../../assets/images/home_icon.png')}
-        style={{height: 35, width: 35, margin: 10}}
-        resizeMode="contain"
-        />
-        </TouchableHighlight>
-      ),
-      title: 'Computer Science B.S.',
-    };
-  };
-  constructor(props) {
+  	static navigationOptions = ({ navigation }) => {
+		return{
+		headerRight: (
+			<TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
+			<Image
+			source={require('../../../../assets/images/home_icon.png')}
+			style={{height: 35, width: 35, margin: 10}}
+			resizeMode="contain"
+			/>
+			</TouchableHighlight>
+		),
+		title: 'Computer Science B.S.',
+    	};
+	};
+	  
+	  
+  	constructor(props) {
 		super(props);
 		this.state = {
 			selectedItem : 0,
-			itemList: ["CMPS 5J", "CMPS 12A/L", "CMPS 12B/M", "CMPS 101", '黄忠', '马超', '魏延', '诸葛亮'],
+			itemList: ["CMPS 5J", "CMPS 12A", "CMPS 12B", "CMPS 101"],
 			selectedItem1: 0,
 			itemList1: ["CMPS 101", "CMPS 111"]
-			};
-		}
+		};
+	}
 
 	onPickerSelect (index) {
 		this.setState({
@@ -104,14 +106,14 @@ export class CS_BSScreen extends React.Component {
 								<PickerItem label={value} value={i} key={"money"+value}/>
 							))}
 						</Picker>
+
 						<Text style={{margin: 20, color: '#ffffff'}}>
 							{dict.get(this.state.itemList[this.state.selectedItem])}
 						</Text>
 
-						<Text style={{margin: 20, color: '#ffffff'}}
-							onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>
-							Search for this class!
-						</Text>
+						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
+							onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>!
+						</Button>
 				</View>
 
 				
