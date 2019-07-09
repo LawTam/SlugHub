@@ -10,84 +10,147 @@ import * as WebBrowser from 'expo-web-browser';
 import Picker from '../../../../node_modules/react-native-wheel-picker'
 
 var PickerItem = Picker.Item;
-dict = {
-	"CMPS 5J": "CMPS 5J: Intro to Programming",
-	"CMPS 12A/L": "CMPS 12A/L: Accelerated Programming",
-	"CMPS 12B/L": "CMPS 12B/L: Intro to Data Structures",
-	"CMPS 101": "CMPS 101: Algorithms and Abstract Data Types",
-}
+var PickerItem2 = Picker.Item;
+var dict = new Map();
+dict.set("CMPS 5J", "CMPS 5J: Intro to Programming");
+dict.set("CMPS 12A", "CMPS 12A/L: Accelerated Programming");
+dict.set("CMPS 12B", "CMPS 12B/M: Intro to Data Structures");
+dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
+dict.set("CMPS 111", "CMPS 111: Introduction to Operating Systems");
 
 export class CS_BSScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Computer Science B.S.',
+  };
   constructor(props) {
 		super(props);
 		this.state = {
-			selectedIndex : 0,
-			itemList: ['CMPS 5J', 'CMPS 12A/L', 'CMPS 12B/L', 'CMPS 101', ]
-		};
-	}
+			selectedItem : 0,
+			itemList: ["CMPS 5J", "CMPS 12A/L", "CMPS 12B/M", "CMPS 101", '黄忠', '马超', '魏延', '诸葛亮'],
+			selectedItem1: 0,
+			itemList1: ["CMPS 101", "CMPS 111"]
+			};
+		}
 
 	onPickerSelect (index) {
 		this.setState({
-			selectedIndex: index,
+			selectedItem: index,
 		})
-	}
+	} 
+
+	onPickerSelect1 (index) {
+			this.setState({
+				selectedItem1: index,
+			})
+		}
 
 	onAddItem = () => {
-		console.log(this.state.itemList);
-		var key = this.state.itemList[this.state.selectedItem]
-		console.log(key);
-		console.log(this.classes_dictionary[0]);
+    console.log(this.state.itemList);
+    var key = this.state.itemList[this.state.selectedItem]
+    console.log(key);
+    console.log(dict.get(key));
 	}
 
 	select = () => {
 		console.log(this.state.itemList);
 		var key = this.state.itemList[this.state.selectedItem]
 		console.log(key);
-		return this.classes_dictionary.key[0];
+		return this.dict.key[this.setState.selectedItem];
 	}
 
-	direct_url = () => {
+	get_SOE_Webpage(class_key) {
+		//console.log("JBE webpage for: ", class_key)
+		classKey = class_key.replace(/\s/g, '');	// remove spaces
+		link = "https://courses.soe.ucsc.edu/courses/" + classKey
+		//console.log(link)
 
-	}
-
-	render () {
-		return (
-			<View style={styles.container}>
-
-				<Text style={styles.welcome}>
-					Computer Science Course Offerings
-				</Text>
-
-				<Picker style={{width: 150, height: 180}}
-          			selectedClass = {this.state.selectedIndex}
-					itemStyle = {{color:"white", fontSize:26}}
-					onValueChange = {(index) => this.onPickerSelect(index)}>
-
-					{this.state.itemList.map((value, i) => (
-						<PickerItem label={value} value={i} key={value}/>
-					))}
-				</Picker>
-
-				<Text style={{margin: 20, color: '#ffffff'}} dictionary = {dict}>
-					{
-						dict.get(this.state.itemList[this.state.selectedItem])
-					}
-				</Text>
-
-				<Text style={{margin: 20, color: '#ffffff'}}
-						onPress={this.onAddItem}>
-							Search for this class!
-				</Text>
-			</View>
+		WebBrowser.openBrowserAsync(
+			link
 		);
 	}
 
+	render () {
+    const {navigate} = this.props.navigation;
+		return (
+			<View style={styles.container}>
+				{/* <Text style={styles.welcome}>
+					Welcome to React Native!
+        			</Text> */}
+
+				<Button
+				title="Curriculum Chart"
+				style= {styles.button2}
+				color = "#e6f542"
+				onPress={cs_bs_curriculum}
+				/>
+
+				<View style={styles.lower_div_container}>
+						<Picker style={{width: 150, height: 180}}
+							selectedValue={this.state.selectedItem}
+							itemStyle={{color:"white", fontSize:26}}
+							onValueChange={(index) => this.onPickerSelect(index)}>
+							{this.state.itemList.map((value, i) => (
+								<PickerItem label={value} value={i} key={"money"+value}/>
+							))}
+						</Picker>
+						<Text style={{margin: 20, color: '#ffffff'}}>
+							{dict.get(this.state.itemList[this.state.selectedItem])}
+						</Text>
+
+						<Text style={{margin: 20, color: '#ffffff'}}
+							onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>
+							Search for this class!
+						</Text>
+				</View>
+
+				
+				<View style={styles.upper_div_container}>
+						<Picker style={{width: 150, height: 180}}
+							selectedValue={this.state.selectedItem1}
+							itemStyle={{color:"white", fontSize:26}}
+							onValueChange={(index) => this.onPickerSelect1(index)}>
+							{this.state.itemList1.map((value, i) => (
+								<PickerItem label={value} value={i} key={"money"+value}/>
+							))}
+						</Picker>
+
+						<Text style={{margin: 20, color: '#ffffff'}}>
+							{dict.get(this.state.itemList1[this.state.selectedItem1])}
+						</Text>
+
+						<Text style={{margin: 20, color: '#ffffff'}}
+							onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
+							Search2 for this class!
+						</Text>
+        		</View> 
+
+			</View> 			
+		);
+	}	
 }
 
+function cs_bs_curriculum() {
+  WebBrowser.openBrowserAsync(
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BS_18-19.pdf'
+  );
+}
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		justifyContent: 'center',
+		backgroundColor: '#1962dd',
+  },
+  lower_div_container: {
+    top: 0,
+    left: 0,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#1962dd',
+  },
+  upper_div_container: {
+    top: 0,
+    left: 0,
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '#1962dd',
@@ -102,5 +165,13 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		color: '#333333',
 		marginBottom: 5,
-	},
+  },
+  button2: {
+    justifyContent: "center",
+    flex: 0.3,
+    top: -120,
+    left: 120,
+    height:70, 
+    width:180,
+  },
 });
