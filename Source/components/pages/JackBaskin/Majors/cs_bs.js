@@ -99,10 +99,10 @@ export class CS_BSScreen extends React.Component {
           			{dict.get(this.state.itemList[this.state.selectedItem])}
 				</Text>
 
-				<Text style={{margin: 20, color: '#ffffff'}}
+        <Button style={{margin: 20, color: '#ffffff'}}
+          title = "Search for this class!"
 					onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>
-					Search for this class!
-				</Text>
+				</Button>
         </View>
 
 { 
