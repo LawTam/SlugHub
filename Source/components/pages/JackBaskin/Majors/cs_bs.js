@@ -1,5 +1,5 @@
-import React , {Component} from 'react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import React , {Component} from '../../../../node_modules/react';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
@@ -19,8 +19,19 @@ dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
 dict.set("CMPS 111", "CMPS 111: Introduction to Operating Systems");
 
 export class CS_BSScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Computer Science B.S.',
+  static navigationOptions = ({ navigation }) => {
+    return{
+      headerRight: (
+        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
+        <Image
+        source={require('../../../../assets/images/home_icon.png')}
+        style={{height: 35, width: 35, margin: 10}}
+        resizeMode="contain"
+        />
+        </TouchableHighlight>
+      ),
+      title: 'Computer Science B.S.',
+    };
   };
   constructor(props) {
 		super(props);
