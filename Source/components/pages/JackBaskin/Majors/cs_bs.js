@@ -40,9 +40,9 @@ export class CS_BSScreen extends React.Component {
 			selectedItem: index,
 		})
   } 
-  onPickerSelect2 (index) {
+  onPickerSelect1 (index) {
 		this.setState({
-			selectedItem: index,
+			selectedItem1: index,
 		})
 	}
 
@@ -110,9 +110,9 @@ export class CS_BSScreen extends React.Component {
 				<Picker style={{width: 150, height: 180}}
           selectedValue={this.state.selectedItem1}
 					itemStyle={{color:"white", fontSize:26}}
-					onValueChange={(index) => this.onPickerSelect(index)}>
-						{this.state.itemList1.map((value, i) => (
-							<PickerItem label={value} value={i} key={"money"+value}/>
+					onValueChange={(index1) => this.onPickerSelect1(index1)}>
+						{this.state.itemList1.map((value1, i1) => (
+							<PickerItem label={value1} value={i1} key={"money"+value1}/>
 						))}
 				</Picker>
 				<Text style={{margin: 20, color: '#ffffff'}}>
@@ -120,8 +120,8 @@ export class CS_BSScreen extends React.Component {
 				</Text>
 
 				<Text style={{margin: 20, color: '#ffffff'}}
-						onPress={this.onAddItem2}>
-			Search2 for this class!
+						onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
+			Search for this class!
 				</Text>
         </View> }
 			</View>
