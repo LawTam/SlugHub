@@ -73,8 +73,8 @@ export class HomePageScreen extends React.Component {
             </TouchableHighlight>
           </View>
 
-          <View style = {styles.academic_button}>
-            <TouchableHighlight onPress={() => navigate('Academic')}>
+          <View style = {styles.engagement_button}>
+            <TouchableHighlight onPress={() => navigate('Engagement')}>
               <Image
               source={require('../../../assets/images/robot-prod.png')}
               style={{height: 100, width: 200}}
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
       position: "absolute",
     },
 
-    academic_button: {
+    engagement_button: {
       top: '10%',
       left: '50%',
       position: "absolute",

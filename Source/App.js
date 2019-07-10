@@ -13,6 +13,7 @@ import { createAppContainer } from 'react-navigation';
 import { WelcomeScreen } from './components/pages/Skeleton/welcome';
 import { HomePageScreen } from './components/pages/Skeleton/homepage';
 import { AdvisingScreen} from './components/pages/Skeleton/advising';
+import { EngagementScreen} from './components/pages/Skeleton/engagement';
 
   // Jack Baskin Engineering Page Imports
     // Majors
@@ -49,6 +50,7 @@ const FunStack = createStackNavigator({
   Welcome: {screen: WelcomeScreen},
   HomePage: {screen: HomePageScreen},
   Advising: {screen: AdvisingScreen},
+  Engagement: {screen: EngagementScreen},
 
     // JackBaskin Engineering Pages
     JBE_Majors: {screen: JBE_MajorsScreen},
@@ -75,6 +77,8 @@ const FunStack = createStackNavigator({
     EE_Minor: {screen: EE_Minor_Screen},
     CE_Minor: {screen: CE_MinorScreen},
     BioInfo_Minor: {screen: BioInfo_MinorScreen}
+
+    // Engagement
 
 });
 
