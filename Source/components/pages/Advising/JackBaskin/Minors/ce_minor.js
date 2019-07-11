@@ -4,7 +4,7 @@ import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_BiomoleScreen extends React.Component {
+export class CE_MinorScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,7 +16,7 @@ export class BE_BiomoleScreen extends React.Component {
         />
         </TouchableHighlight>
       ),
-      title: 'Biomolecular',
+      title: 'Computer Engineering Minor',
     };
   };
   render() {
@@ -26,7 +26,7 @@ export class BE_BiomoleScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={BE_Biomole_curriculum}
+        onPress={ce_minor_curriculum}
         />
 
     </View>
@@ -35,13 +35,11 @@ export class BE_BiomoleScreen extends React.Component {
   }
 }
 
-
-function BE_Biomole_curriculum() {
-  WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-10/BMEB%20Biomolecular%20Final%2018-19.pdf'
-  );
-}
-
+function ce_minor_curriculum() {
+    WebBrowser.openBrowserAsync(
+      'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-02/CE-Minor_16-17_0.pdf'
+    );
+  }
 
 const styles = StyleSheet.create({
     container: {

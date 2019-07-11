@@ -1,22 +1,22 @@
-import React , {Component} from '../../../../node_modules/react';
+import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class CS_BAScreen extends React.Component {
+export class BE_BiomoleScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Computer Science B.A.',
+      title: 'Biomolecular',
     };
   };
   render() {
@@ -26,7 +26,7 @@ export class CS_BAScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={cs_ba_curriculum}
+        onPress={BE_Biomole_curriculum}
         />
 
     </View>
@@ -36,9 +36,9 @@ export class CS_BAScreen extends React.Component {
 }
 
 
-function cs_ba_curriculum() {
+function BE_Biomole_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BA_18-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-10/BMEB%20Biomolecular%20Final%2018-19.pdf'
   );
 }
 

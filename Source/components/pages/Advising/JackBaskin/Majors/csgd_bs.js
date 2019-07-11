@@ -1,10 +1,10 @@
-import React , {Component} from 'react';
+import React , {Component} from '../../../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_ATScreen extends React.Component {
+export class CSGD_BSScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,7 +16,7 @@ export class BE_ATScreen extends React.Component {
         />
         </TouchableHighlight>
       ),
-      title: 'Bioengineering: Assistive Technology (Motor)',
+      title: 'Computer Science Game Design B.S.',
     };
   };
   render() {
@@ -26,7 +26,7 @@ export class BE_ATScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={BE_AT_curriculum}
+        onPress={csgd_bs_curriculum}
         />
 
     </View>
@@ -36,9 +36,9 @@ export class BE_ATScreen extends React.Component {
 }
 
 
-function BE_AT_curriculum() {
+function csgd_bs_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/BENG-motor_18-19%5Bdraft%5D.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/CSGD_BS_18-19_0.pdf'
   );
 }
 

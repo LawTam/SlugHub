@@ -1,22 +1,22 @@
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class RE_BS_Screen extends React.Component {
+export class AM_MinorScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Robotics Engineering B.S.',
+      title: 'Minors',
     };
   };
   render() {
@@ -26,9 +26,8 @@ export class RE_BS_Screen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={re_bs_curriculum}
+        onPress={AM_Minor_curriculum}
         />
-
     </View>
 
     );
@@ -36,9 +35,9 @@ export class RE_BS_Screen extends React.Component {
 }
 
 
-function re_bs_curriculum() {
+function AM_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/ROBO_18-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/AppliedMath-Minor_18-19.pdf'
   );
 }
 

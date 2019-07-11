@@ -1,31 +1,32 @@
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class EE_Minor_Screen extends React.Component {
+export class EE_BS_Screen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Electrical Engineering Minor',
+      title: 'Electrical Engineering B.S.',
     };
-  };  render() {
+  };
+  render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={ee_minor_curriculum}
+        onPress={ee_bs_curriculum}
         />
 
     </View>
@@ -35,9 +36,9 @@ export class EE_Minor_Screen extends React.Component {
 }
 
 
-function ee_minor_curriculum() {
+function ee_bs_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/EE-Minor_18-19%20%281%29.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/EE_18-19%20%281%29.pdf'
   );
 }
 

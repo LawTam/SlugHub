@@ -1,6 +1,6 @@
-import React , {Component} from '../../../node_modules/react';
+import React , {Component} from '../../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
 export class JBE_MinorsScreen extends React.Component {
@@ -9,7 +9,7 @@ export class JBE_MinorsScreen extends React.Component {
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../assets/images/home_icon.png')}
+        source={require('../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
@@ -61,7 +61,7 @@ export class JBE_MinorsScreen extends React.Component {
         color = "#e6f542"
         onPress={() => navigate('TIM_Minor')}
         />
-        
+
     </View>
 
     );

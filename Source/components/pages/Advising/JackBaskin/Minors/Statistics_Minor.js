@@ -1,22 +1,22 @@
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class NDT_BA_Screen extends React.Component {
+export class Statistics_Minor_Screen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Network & Digital Technology B.A.',
+      title: 'Statistics Minor',
     };
   };
   render() {
@@ -26,7 +26,7 @@ export class NDT_BA_Screen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={ndt_ba_curriculum}
+        onPress={Statistics_Minor_curriculum}
         />
 
     </View>
@@ -36,9 +36,9 @@ export class NDT_BA_Screen extends React.Component {
 }
 
 
-function ndt_ba_curriculum() {
+function Statistics_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/BANDT_18-19%20%281%29.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/Stats-Minor_18-19.pdf'
   );
 }
 

@@ -1,13 +1,13 @@
-import React , {Component} from '../../../../node_modules/react';
+import React , {Component} from '../../../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 //import ScrollPicker from '../../../../../node_modules/react-native-wheel-scroll-picker';
 // npm install styled-components
 // npm install react-native-wheel-scroll-picker --save
 // npm i react-native-wheel-picker --save
-import Picker from '../../../../node_modules/react-native-wheel-picker'
+import Picker from '../../../../../node_modules/react-native-wheel-picker'
 
 var PickerItem = Picker.Item;
 var PickerItem2 = Picker.Item;
@@ -24,7 +24,7 @@ export class CS_BSScreen extends React.Component {
 		headerRight: (
 			<TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
 			<Image
-			source={require('../../../../assets/images/home_icon.png')}
+			source={require('../../../../../assets/images/home_icon.png')}
 			style={{height: 35, width: 35, margin: 10}}
 			resizeMode="contain"
 			/>
@@ -33,8 +33,8 @@ export class CS_BSScreen extends React.Component {
 		title: 'Computer Science B.S.',
     	};
 	};
-	  
-	  
+
+
   	constructor(props) {
 		super(props);
 		this.state = {
@@ -49,7 +49,7 @@ export class CS_BSScreen extends React.Component {
 		this.setState({
 			selectedItem: index,
 		})
-	} 
+	}
 
 	onPickerSelect1 (index) {
 			this.setState({
@@ -116,7 +116,7 @@ export class CS_BSScreen extends React.Component {
 						</Button>
 				</View>
 
-				
+
 				<View style={styles.upper_div_container}>
 						<Picker style={{width: 150, height: 180}}
 							selectedValue={this.state.selectedItem1}
@@ -135,11 +135,11 @@ export class CS_BSScreen extends React.Component {
 							onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
 							Search2 for this class!
 						</Text>
-        		</View> 
+        		</View>
 
-			</View> 			
+			</View>
 		);
-	}	
+	}
 }
 
 function cs_bs_curriculum() {
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     flex: 0.3,
     top: -120,
     left: 120,
-    height:70, 
+    height:70,
     width:180,
   },
 });

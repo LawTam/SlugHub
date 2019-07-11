@@ -4,7 +4,7 @@ import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class BE_ElecScreen extends React.Component {
+export class BioInfo_MinorScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,9 +16,10 @@ export class BE_ElecScreen extends React.Component {
         />
         </TouchableHighlight>
       ),
-      title: 'Bioelectronics',
+      title: 'Bioinformatics',
     };
   };
+
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -26,7 +27,7 @@ export class BE_ElecScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={BE_Elec_curriculum}
+        onPress={bioinfo_minor_curriculum}
         />
 
     </View>
@@ -35,12 +36,11 @@ export class BE_ElecScreen extends React.Component {
   }
 }
 
-
-function BE_Elec_curriculum() {
-  WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/BENG-bioelectronics_18-19%5Bdraft%5D.pdf'
-  );
-}
+function bioinfo_minor_curriculum() {
+    WebBrowser.openBrowserAsync(
+      'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/BINF-Minor_18-19.pdf'
+    );
+  }
 
 
 const styles = StyleSheet.create({

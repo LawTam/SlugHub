@@ -1,22 +1,22 @@
-import React , {Component} from 'react';
+import React , {Component} from '../../../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class EE_BS_Screen extends React.Component {
+export class CS_BAScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Electrical Engineering B.S.',
+      title: 'Computer Science B.A.',
     };
   };
   render() {
@@ -26,7 +26,7 @@ export class EE_BS_Screen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={ee_bs_curriculum}
+        onPress={cs_ba_curriculum}
         />
 
     </View>
@@ -36,9 +36,9 @@ export class EE_BS_Screen extends React.Component {
 }
 
 
-function ee_bs_curriculum() {
+function cs_ba_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/EE_18-19%20%281%29.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BA_18-19.pdf'
   );
 }
 

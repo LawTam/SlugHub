@@ -17,29 +17,29 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
 
   // Jack Baskin Engineering Page Imports
     // Majors
-  import { JBE_MajorsScreen} from './components/pages/JackBaskin/jbe_majors';
-  import { CS_BSScreen} from './components/pages/JackBaskin/Majors/cs_bs';
-  import { CS_BAScreen} from './components/pages/JackBaskin/Majors/cs_ba';
-  import { CSGD_BSScreen} from './components/pages/JackBaskin/Majors/csgd_bs';
-  import { TIM_BS_Screen} from './components/pages/JackBaskin/Majors/TIM_BS';
-  import { EE_BS_Screen} from './components/pages/JackBaskin/Majors/ee_bs';
-  import { RE_BS_Screen} from './components/pages/JackBaskin/Majors/robo_bs';
-  import { NDT_BA_Screen} from './components/pages/JackBaskin/Majors/ndt_ba';
-  import { BE_ATScreen} from './components/pages/JackBaskin/Majors/BE/be_at_motor';
-  import { BE_BiomoleScreen} from './components/pages/JackBaskin/Majors/BE/biomole';
-  import { BE_ElecScreen} from './components/pages/JackBaskin/Majors/BE/be_bioelectronics';
-  import { CE_MajorScreen}   from  './components/pages/JackBaskin/Majors/ce_major'
-  import { BioInfo_MajorScreen}   from  './components/pages/JackBaskin/Majors/BE/bioinfo_major'
-  import { BE_Screen} from './components/pages/JackBaskin/Majors/BE_page';
+  import { JBE_MajorsScreen} from './components/pages/Advising/JackBaskin/jbe_majors';
+  import { CS_BSScreen} from './components/pages/Advising/JackBaskin/Majors/cs_bs';
+  import { CS_BAScreen} from './components/pages/Advising/JackBaskin/Majors/cs_ba';
+  import { CSGD_BSScreen} from './components/pages/Advising/JackBaskin/Majors/csgd_bs';
+  import { TIM_BS_Screen} from './components/pages/Advising/JackBaskin/Majors/TIM_BS';
+  import { EE_BS_Screen} from './components/pages/Advising/JackBaskin/Majors/ee_bs';
+  import { RE_BS_Screen} from './components/pages/Advising/JackBaskin/Majors/robo_bs';
+  import { NDT_BA_Screen} from './components/pages/Advising/JackBaskin/Majors/ndt_ba';
+  import { BE_ATScreen} from './components/pages/Advising/JackBaskin/Majors/BE/be_at_motor';
+  import { BE_BiomoleScreen} from './components/pages/Advising/JackBaskin/Majors/BE/biomole';
+  import { BE_ElecScreen} from './components/pages/Advising/JackBaskin/Majors/BE/be_bioelectronics';
+  import { CE_MajorScreen}   from  './components/pages/Advising/JackBaskin/Majors/ce_major'
+  import { BioInfo_MajorScreen}   from  './components/pages/Advising/JackBaskin/Majors/BE/bioinfo_major'
+  import { BE_Screen} from './components/pages/Advising/JackBaskin/Majors/BE/BE_page';
     // Minors
-  import { JBE_MinorsScreen} from './components/pages/JackBaskin/jbe_minors';
-  import { CS_MinorScreen} from './components/pages/JackBaskin/Minors/cs_minor';
-  import { AM_MinorScreen} from './components/pages/JackBaskin/Minors/am_minor';
-  import { Statistics_Minor_Screen} from './components/pages/JackBaskin/Minors/Statistics_Minor';
-  import { TIM_Minor_Screen} from './components/pages/JackBaskin/Minors/TIM_Minor';
-  import { EE_Minor_Screen} from './components/pages/JackBaskin/Minors/EE_Minor';
-  import { CE_MinorScreen } from './components/pages/JackBaskin/Minors/ce_minor';
-  import { BioInfo_MinorScreen } from './components/pages/JackBaskin/Minors/bioinfo_minor';
+  import { JBE_MinorsScreen} from './components/pages/Advising/JackBaskin/jbe_minors';
+  import { CS_MinorScreen} from './components/pages/Advising/JackBaskin/Minors/cs_minor';
+  import { AM_MinorScreen} from './components/pages/Advising/JackBaskin/Minors/am_minor';
+  import { Statistics_Minor_Screen} from './components/pages/Advising/JackBaskin/Minors/Statistics_Minor';
+  import { TIM_Minor_Screen} from './components/pages/Advising/JackBaskin/Minors/TIM_Minor';
+  import { EE_Minor_Screen} from './components/pages/Advising/JackBaskin/Minors/EE_Minor';
+  import { CE_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/ce_minor';
+  import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
 
 

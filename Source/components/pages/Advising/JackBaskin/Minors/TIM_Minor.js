@@ -1,22 +1,22 @@
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class CE_MajorScreen extends React.Component {
+export class TIM_Minor_Screen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Computer Engineering',
+      title: 'Statistics Minor',
     };
   };
   render() {
@@ -26,20 +26,22 @@ export class CE_MajorScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={ce_major_curriculum}
+        onPress={TIM_Minor_curriculum}
         />
-        
+
     </View>
-    
+
     );
   }
 }
 
-function ce_major_curriculum() {
-    WebBrowser.openBrowserAsync(
-      'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CMPE_18-19%20%281%29.pdf'
-    );
-  }
+
+function TIM_Minor_curriculum() {
+  WebBrowser.openBrowserAsync(
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/TIM-Minor_18-19%20%283%29.pdf'
+  );
+}
+
 
 const styles = StyleSheet.create({
     container: {

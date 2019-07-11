@@ -1,24 +1,24 @@
-import React , {Component} from 'react';
+import React , {Component} from '../../../../../node_modules/react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
+import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class AM_MinorScreen extends React.Component {
+export class CS_MinorScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../../assets/images/home_icon.png')}
+        source={require('../../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Minors',
+      title: 'Computer Science Minor',
     };
-  };
+  }
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -26,8 +26,9 @@ export class AM_MinorScreen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={AM_Minor_curriculum}
+        onPress={CS_Minor_curriculum}
         />
+
     </View>
 
     );
@@ -35,9 +36,9 @@ export class AM_MinorScreen extends React.Component {
 }
 
 
-function AM_Minor_curriculum() {
+function CS_Minor_curriculum() {
   WebBrowser.openBrowserAsync(
-    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/AppliedMath-Minor_18-19.pdf'
+    'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS-Minor_18-19.pdf'
   );
 }
 
