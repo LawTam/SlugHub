@@ -52,6 +52,10 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
   import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
   import { PoliticalClubsScreen } from './components/pages/Engagement/Clubs/Political_Clubs/political_clubs';
+  import { ProfessionalClubsScreen } from './components/pages/Engagement/Clubs/Professional_Clubs/professional_clubs';
+  import { ReligiousClubsScreen } from './components/pages/Engagement/Clubs/Religous_Clubs/religious_clubs';
+  import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
+  import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
 
 
 
@@ -97,7 +101,11 @@ const FunStack = createStackNavigator({
     EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
     General_InterestClubs: {screen: General_InterestClubsScreen},
     Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen},
-    Political_Clubs: {screen: PoliticalClubsScreen}
+    Political_Clubs: {screen: PoliticalClubsScreen},
+    Professional_Clubs: {screen: ProfessionalClubsScreen},
+    ReligousClubs: {screen: ReligiousClubsScreen},
+    ServiceClubs: {screen: ServiceClubsScreen},
+    Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
 
 });
 
