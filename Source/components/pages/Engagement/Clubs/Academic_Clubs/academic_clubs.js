@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class AcademicClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -26,86 +27,87 @@ export class AcademicClubsScreen extends React.Component {
       <Button
       title="American Medical Student Association (AMSA)"
       color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
+      onPress={AMSA_page}
       />
 
       <Button
       title="Aspiring Physician Assistant Association (APAA)"
       color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
+      onPress={APAA_page}
       />
 
       <Button
       title="Association for Computing Machinery"
       color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
+      onPress={ACM_page}
       />
 
       <Button
       title="Association for Computing Machinery - Women"
       color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
+      onPress={ACM_page}
       />
 
       <Button
       title="Chemistry Club"
       color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
+      onPress={CC_page}
       />
 
       <Button
       title="Chican@s and Latin@s Educandose"
       color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
+      onPress={CLE_page}
       />
+
       <Button
       title="Cognitive Science Student Association"
       color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
+      onPress={CSSA_page}
       />
       <Button
       title="Community Unified Student Network (CUSN)"
       color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
+      onPress={CUSN_page}
       />
       <Button
       title="Crypto Currency Club"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      //onPress={CCC_page}
       />
       <Button
       title="Empowering Latino Advancement Through Education and Development (E.L.A.T.E.D.)"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      //onPress={ELA_page}
       />
       <Button
       title="eWomen at UC Santa Cruz"
       color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
+      //onPress={EW_page}
       />
 
       <Button
       title="Game Design & Art Collaborations (GDA)"
       color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
+      onPress={GDA_page}
       />
 
       <Button
       title="Golden Key International Honour Society"
       color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
+      onPress={GK_page}
       />
 
       <Button
       title="Hermanos Unidos de UCSC"
       color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
+      onPress={HU_page}
       />
 
       <Button
       title="Institute of Electrical and Electronics Engineers (IEEE)"
       color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
+      onPress={HU_page}S
       />
 
       <Button
@@ -176,6 +178,67 @@ export class AcademicClubsScreen extends React.Component {
     );
   }
 }
+
+function AMSA_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/groups/2200768448/'
+  );
+}
+
+function APAA_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/ucscapaa'
+  );
+}
+
+function ACM_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/groups/acmucsc/about/'
+  );
+}
+
+function CC_page() {
+  WebBrowser.openBrowserAsync(
+    'https://chemclubucsc.weebly.com/'
+  );
+}
+
+function CSSA_page() {
+  WebBrowser.openBrowserAsync(
+    'https://ucsccssa.wordpress.com/'
+  );
+}
+
+function CUSN_page() {
+  WebBrowser.openBrowserAsync(
+    'https://engagingeducation.org/community-unified-student-network-cusn'
+  );
+}
+
+function GDA_page() {
+  WebBrowser.openBrowserAsync(
+    'http://gdacollab.com/'
+  );
+}
+
+function GK_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.goldenkey.org/'
+  );
+}
+
+function HU_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/hudeucsc/'
+  );
+}
+
+function HU_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/hudeucsc/'
+  );
+}
+
 
 const styles = StyleSheet.create({
   container: {
