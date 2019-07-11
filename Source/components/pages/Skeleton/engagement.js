@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class EngagementScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -28,11 +29,35 @@ export class EngagementScreen extends React.Component {
           onPress={() => navigate('Clubs')}
           />
 
+        <Button
+          title="LSS Tutoring"
+          color = "#e6f542"
+          onPress={tutoring}
+          />
+          <Button
+          title="Library Room Booking"
+          color = "#e6f542"
+          onPress={library_room_reserve}
+          />
+
       </View>
 
     );
   }
 }
+
+function tutoring() {
+  WebBrowser.openBrowserAsync(
+    'https://sserc.ucsc.edu/slug-success'
+  );
+}
+
+function library_room_reserve() {
+  WebBrowser.openBrowserAsync(
+    'https://calendar.library.ucsc.edu/booking/mchmc'
+  );
+}
+
 
 const styles = StyleSheet.create({
   container: {
