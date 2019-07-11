@@ -44,6 +44,14 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { CE_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/ce_minor';
     import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
+  //Engagement
+  import {ClubsScreen} from './components/pages/Engagement/Clubs/clubs'
+  import {AcademicClubsScreen} from './components/pages/Engagement/Clubs/Academic_Clubs/academic_clubs'
+  import {CulturalClubsScreen} from './components/pages/Engagement/Clubs/Cultural_Clubs/cultural_clubs'
+  import {EnvironmentalClubsScreen} from './components/pages/Engagement/Clubs/Environmental_Clubs/environmental_clubs'
+  import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
+  import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
+
 
 
 // Every screen we have in our program must be in this stack,
@@ -79,10 +87,16 @@ const FunStack = createStackNavigator({
     TIM_Minor: {screen: TIM_Minor_Screen},
     EE_Minor: {screen: EE_Minor_Screen},
     CE_Minor: {screen: CE_MinorScreen},
-    BioInfo_Minor: {screen: BioInfo_MinorScreen}
+    BioInfo_Minor: {screen: BioInfo_MinorScreen},
 
-  // Engagement
-  
+    // Engagement
+    Clubs: {screen: ClubsScreen},
+    AcademicClubs: {screen: AcademicClubsScreen},
+    CulturalClubs: {screen: CulturalClubsScreen},
+    EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
+    General_InterestClubs: {screen: General_InterestClubsScreen},
+    Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen}
+
 });
 
 const App = createAppContainer(FunStack);

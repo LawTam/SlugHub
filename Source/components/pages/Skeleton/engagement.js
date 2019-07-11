@@ -22,7 +22,11 @@ export class EngagementScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-      
+      <Button
+          title="Clubs"
+          color = "#e6f542"
+          onPress={() => navigate('Clubs')}
+          />
 
       </View>
 
