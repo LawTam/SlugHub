@@ -25,15 +25,27 @@ export class gloMainScreen extends React.Component {
 
       <View style= {styles.container}>
           <Button
-            title="fraternity "
+            title="Cultural "
             color = "#e6f542"
-            onPress={() => navigate('fraternity_page')}
+            onPress={() => navigate('cultural_page')}
           />
 
           <Button
-            title="sorority"
+            title="Social"
             color = "#e6f542"
-            onPress={() => navigate('sorority_page')}
+            onPress={() => navigate('social_page')}
+          />
+
+          <Button
+            title="Professional "
+            color = "#e6f542"
+            onPress={() => navigate('professional_page')}
+          />
+
+          <Button
+            title="LGBTQ"
+            color = "#e6f542"
+            onPress={() => navigate('lgbtq_page')}
           />
       </View>
 

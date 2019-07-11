@@ -6,7 +6,6 @@ import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
   
 const Header_Maximum_Height = 0;
-const Header_Minimum_Height = 0;
 
 export class sororityScreen extends React.Component {
   constructor()   
