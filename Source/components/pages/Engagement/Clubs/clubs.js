@@ -56,7 +56,7 @@ export class ClubsScreen extends React.Component {
       <Button
       title="Political & Advocacy"
       color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
+      onPress={() => navigate('Political_Clubs')}
       />
       <Button
       title="Professional "

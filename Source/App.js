@@ -51,6 +51,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import {EnvironmentalClubsScreen} from './components/pages/Engagement/Clubs/Environmental_Clubs/environmental_clubs'
   import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
   import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
+  import { PoliticalClubsScreen } from './components/pages/Engagement/Clubs/Political_Clubs/political_clubs';
 
 
 
@@ -95,7 +96,8 @@ const FunStack = createStackNavigator({
     CulturalClubs: {screen: CulturalClubsScreen},
     EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
     General_InterestClubs: {screen: General_InterestClubsScreen},
-    Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen}
+    Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen},
+    Political_Clubs: {screen: PoliticalClubsScreen}
 
 });
 
