@@ -21,8 +21,12 @@ export class EngagementScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      
+        <View style= {styles.container}>
+        <Button
+          title="test"
+          color = "#FFFFFF"
+          onPress={() => navigate('gloMain')}
+        />
 
       </View>
 

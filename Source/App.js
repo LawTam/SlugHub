@@ -41,6 +41,14 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { CE_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/ce_minor';
   import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
+  // GLO
+  import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
+  // fraternity
+  import { fraternityScreen} from './components/pages/Engagement/GLO/fraternityMain';
+
+  // sorority
+  import { sororityScreen} from './components/pages/Engagement/GLO/sororityMain';
+
 
 
 // Every screen we have in our program must be in this stack,
@@ -76,9 +84,17 @@ const FunStack = createStackNavigator({
     TIM_Minor: {screen: TIM_Minor_Screen},
     EE_Minor: {screen: EE_Minor_Screen},
     CE_Minor: {screen: CE_MinorScreen},
-    BioInfo_Minor: {screen: BioInfo_MinorScreen}
+    BioInfo_Minor: {screen: BioInfo_MinorScreen},
 
-    // Engagement
+  // Engagement
+    // GLO
+    gloMain: {screen: gloMainScreen},
+      // fraternity
+      fraternity_page: {screen: fraternityScreen},
+
+      // sorority
+      sorority_page: {screen: sororityScreen},
+    
 
 });
 
