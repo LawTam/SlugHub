@@ -56,27 +56,27 @@ export class ClubsScreen extends React.Component {
       <Button
       title="Political & Advocacy"
       color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
+      onPress={() => navigate('Political_Clubs')}
       />
       <Button
       title="Professional "
       color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
+      onPress={() => navigate('Professional_Clubs')}
       />
       <Button
       title="Religious & Spiritual"
       color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
+      onPress={() => navigate('ReligousClubs')}
       />
       <Button
       title="Service"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      onPress={() => navigate('ServiceClubs')}
       />
       <Button
       title="Student Media"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      onPress={() => navigate('Student_Media_Clubs')}
       />
 
 

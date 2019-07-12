@@ -45,6 +45,11 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
   // Engagement
+    // Athletics
+    import {AthleticsScreen} from './components/pages/Engagement/Athletics/athletics'
+    import {Competitive_AthleticsScreen} from './components/pages/Engagement/Athletics/Competitive_Athletics/competitive_athletics'
+    import {Recreational_AthleticsScreen} from './components/pages/Engagement/Athletics/Recreational_Athletics/recreational_athletics'
+    import {Intramural_AthleticsScreen} from './components/pages/Engagement/Athletics/Intramural_Athletics/intramural_athletics'
     // Clubs
     import {ClubsScreen} from './components/pages/Engagement/Clubs/clubs'
     import {AcademicClubsScreen} from './components/pages/Engagement/Clubs/Academic_Clubs/academic_clubs'
@@ -52,11 +57,12 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import {EnvironmentalClubsScreen} from './components/pages/Engagement/Clubs/Environmental_Clubs/environmental_clubs'
     import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
     import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
-    // Athletics
-    import {AthleticsScreen} from './components/pages/Engagement/Athletics/athletics'
-    import {Competitive_AthleticsScreen} from './components/pages/Engagement/Athletics/Competitive_Athletics/competitive_athletics'
-    import {Recreational_AthleticsScreen} from './components/pages/Engagement/Athletics/Recreational_Athletics/recreational_athletics'
-    import {Intramural_AthleticsScreen} from './components/pages/Engagement/Athletics/Intramural_Athletics/intramural_athletics'
+    import { PoliticalClubsScreen } from './components/pages/Engagement/Clubs/Political_Clubs/political_clubs';
+    import { ProfessionalClubsScreen } from './components/pages/Engagement/Clubs/Professional_Clubs/professional_clubs';
+    import { ReligiousClubsScreen } from './components/pages/Engagement/Clubs/Religous_Clubs/religious_clubs';
+    import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
+    import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
+
 
 
 // Every screen we have in our program must be in this stack,
@@ -96,6 +102,11 @@ const FunStack = createStackNavigator({
       BioInfo_Minor: {screen: BioInfo_MinorScreen},
 
     // Engagement
+      // Athletics
+      Athletics: {screen: AthleticsScreen},
+      Competitive_Athletics: {screen: Competitive_AthleticsScreen},
+      Recreational_Athletics: {screen: Recreational_AthleticsScreen},
+      Intramural_Athletics: {screen: Intramural_AthleticsScreen},
       // Clubs
       Clubs: {screen: ClubsScreen},
       AcademicClubs: {screen: AcademicClubsScreen},
@@ -103,13 +114,11 @@ const FunStack = createStackNavigator({
       EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
       General_InterestClubs: {screen: General_InterestClubsScreen},
       Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen},
-
-      // Athletics
-      Athletics: {screen: AthleticsScreen},
-      Competitive_Athletics: {screen: Competitive_AthleticsScreen},
-      Recreational_Athletics: {screen: Recreational_AthleticsScreen},
-      Intramural_Athletics: {screen: Intramural_AthleticsScreen},
-
+      Political_Clubs: {screen: PoliticalClubsScreen},
+      Professional_Clubs: {screen: ProfessionalClubsScreen},
+      ReligousClubs: {screen: ReligiousClubsScreen},
+      ServiceClubs: {screen: ServiceClubsScreen},
+      Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
 
 });
 
