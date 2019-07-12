@@ -3,11 +3,11 @@ import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, Stat
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
-
 export class HomePageScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
   };
+  
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -82,6 +82,12 @@ export class HomePageScreen extends React.Component {
               />
             </TouchableHighlight>
           </View>
+          <Button
+          title="Academic Calendar"
+          color = "#e6f542"
+          onPress={() => navigate('Calendar')}
+          />
+          
           
       </ImageBackground> 
     </View>

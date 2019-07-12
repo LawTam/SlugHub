@@ -58,6 +58,10 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
 
 
+  //Calendar
+  import {CalendarScreen} from './components/pages/Calendar/calendar'
+
+
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -105,7 +109,10 @@ const FunStack = createStackNavigator({
     Professional_Clubs: {screen: ProfessionalClubsScreen},
     ReligousClubs: {screen: ReligiousClubsScreen},
     ServiceClubs: {screen: ServiceClubsScreen},
-    Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
+    Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
+
+    // Calendar
+    Calendar: {screen: CalendarScreen}
 
 });
 

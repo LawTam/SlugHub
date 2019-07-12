@@ -1,0 +1,31 @@
+@app.route("/SlugHub", methods= ['GET']))
+
+def respond_request():
+	if request.method == 'GET':
+		# Send response in JSON to client
+		# Read content of file and send it to the client
+		# Use jsonify on created dictionary
+		# Return resonse to client
+		# De-jsonify and convert to list
+		# Parse JSON response and show it as a table
+		# Get HTML page and parse it
+
+1. (Offline) Compute the course dictionary by parsing HTML and write into file (X)
+2. Send a request to the SlugHub endpoint
+3. SlugHub endpoint scans file and returns result to client
+4. Client application shows it to the user
+5. Create a new endpoint (such as update_file) which is the python code that generates the file
+@app.route("/Update_file", methods = ['GET'])
+
+# Whenever want to update information, do it using curl
+
+# Send get request to update file
+# Python code updates file
+# Sends request to slughub and retriweves that information
+
+
+get = retrieve information
+put = store information
+post = store new information
+
+
