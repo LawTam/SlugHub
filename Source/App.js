@@ -42,6 +42,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
 
+  import {StudyGroup_Screen} from './components/pages/Engagement/Study_Groups/studyGroup_page';
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -76,10 +77,10 @@ const FunStack = createStackNavigator({
     TIM_Minor: {screen: TIM_Minor_Screen},
     EE_Minor: {screen: EE_Minor_Screen},
     CE_Minor: {screen: CE_MinorScreen},
-    BioInfo_Minor: {screen: BioInfo_MinorScreen}
+    BioInfo_Minor: {screen: BioInfo_MinorScreen},
 
     // Engagement
-
+    Study_G: {screen: StudyGroup_Screen},
 });
 
 const App = createAppContainer(FunStack);

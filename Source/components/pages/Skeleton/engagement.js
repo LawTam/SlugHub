@@ -22,7 +22,21 @@ export class EngagementScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-      
+
+        <View style = {styles.advising_button}>
+          <TouchableHighlight onPress={() => navigate('Study_G')}>
+            <Image
+            source={require('../../../assets/images/logo.jpg')}
+            style={
+              {height: 100, width: 200}
+            }
+            resizeMode="contain"
+            />
+          </TouchableHighlight>
+        </View>
+
+
+
 
       </View>
 
@@ -38,4 +52,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#4287f5",
     flex: 1
   },
+
+  study: {
+    top: '30%',
+    left: '13%',
+    position: "absolute",
+    height: 50,
+    width: 130,
+  },
+
+
 });
