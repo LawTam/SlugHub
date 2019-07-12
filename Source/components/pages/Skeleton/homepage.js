@@ -82,6 +82,16 @@ export class HomePageScreen extends React.Component {
               />
             </TouchableHighlight>
           </View>
+
+          <View style = {styles.athletics_button}>
+            <TouchableHighlight onPress={() => navigate('Athletics')}>
+              <Image
+              source={require('../../../assets/images/athletic_slug.jpg')}
+              style={{height: 100, width: 200}}
+              resizeMode="contain"
+              />
+            </TouchableHighlight>
+          </View>
           
       </ImageBackground> 
     </View>
@@ -151,6 +161,12 @@ const styles = StyleSheet.create({
     engagement_button: {
       top: '10%',
       left: '50%',
+      position: "absolute",
+    },
+
+    athletics_button: {
+      top: '70%',
+      left: '10%',
       position: "absolute",
     }
 
