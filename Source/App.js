@@ -44,14 +44,19 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { CE_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/ce_minor';
     import { BioInfo_MinorScreen } from './components/pages/Advising/JackBaskin/Minors/bioinfo_minor';
 
-  //Engagement
-  import {ClubsScreen} from './components/pages/Engagement/Clubs/clubs'
-  import {AcademicClubsScreen} from './components/pages/Engagement/Clubs/Academic_Clubs/academic_clubs'
-  import {CulturalClubsScreen} from './components/pages/Engagement/Clubs/Cultural_Clubs/cultural_clubs'
-  import {EnvironmentalClubsScreen} from './components/pages/Engagement/Clubs/Environmental_Clubs/environmental_clubs'
-  import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
-  import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
-
+  // Engagement
+    // Clubs
+    import {ClubsScreen} from './components/pages/Engagement/Clubs/clubs'
+    import {AcademicClubsScreen} from './components/pages/Engagement/Clubs/Academic_Clubs/academic_clubs'
+    import {CulturalClubsScreen} from './components/pages/Engagement/Clubs/Cultural_Clubs/cultural_clubs'
+    import {EnvironmentalClubsScreen} from './components/pages/Engagement/Clubs/Environmental_Clubs/environmental_clubs'
+    import { General_InterestClubsScreen } from './components/pages/Engagement/Clubs/General_Interest_Clubs/general_interest_clubs';
+    import {Performing_ArtsClubsScreen} from './components/pages/Engagement/Clubs/Performing_Arts_Clubs/performing_arts_clubs';
+    // Athletics
+    import {AthleticsScreen} from './components/pages/Engagement/Athletics/athletics'
+    import {Competitive_AthleticsScreen} from './components/pages/Engagement/Athletics/Competitive_Athletics/competitive_athletics'
+    import {Recreational_AthleticsScreen} from './components/pages/Engagement/Athletics/Recreational_Athletics/recreational_athletics'
+    import {Intramural_AthleticsScreen} from './components/pages/Engagement/Athletics/Intramural_Athletics/intramural_athletics'
 
 
 // Every screen we have in our program must be in this stack,
@@ -63,39 +68,48 @@ const FunStack = createStackNavigator({
   Advising: {screen: AdvisingScreen},
   Engagement: {screen: EngagementScreen},
 
-    // JackBaskin Engineering Pages
-    JBE_Majors: {screen: JBE_MajorsScreen},
-    JBE_Minors: {screen: JBE_MinorsScreen},
-      // Majors
-    CS_BS: {screen: CS_BSScreen},
-    TIM_BS: {screen: TIM_BS_Screen},
-    EE_BS: {screen: EE_BS_Screen},
-    RE_BS: {screen: RE_BS_Screen},
-    NDT_BA: {screen: NDT_BA_Screen},
-    CS_BA: {screen: CS_BAScreen},
-    CSGD_BS: {screen: CSGD_BSScreen},
-    BE_Elec: {screen: BE_ElecScreen},
-    BE_AT: {screen: BE_ATScreen},
-    BE_Biomole: {screen: BE_BiomoleScreen},
-    CE_Major: {screen: CE_MajorScreen},
-    BioInfo_Major: {screen: BioInfo_MajorScreen},
-    BE_page: {screen: BE_Screen},
-      // Minors
-    CS_Minor: {screen: CS_MinorScreen},
-    AM_Minor: {screen: AM_MinorScreen},
-    Statistics_Minor: {screen: Statistics_Minor_Screen},
-    TIM_Minor: {screen: TIM_Minor_Screen},
-    EE_Minor: {screen: EE_Minor_Screen},
-    CE_Minor: {screen: CE_MinorScreen},
-    BioInfo_Minor: {screen: BioInfo_MinorScreen},
+    // Advising
+      // JackBaskin Engineering Pages
+      JBE_Majors: {screen: JBE_MajorsScreen},
+      JBE_Minors: {screen: JBE_MinorsScreen},
+        // Majors
+      CS_BS: {screen: CS_BSScreen},
+      TIM_BS: {screen: TIM_BS_Screen},
+      EE_BS: {screen: EE_BS_Screen},
+      RE_BS: {screen: RE_BS_Screen},
+      NDT_BA: {screen: NDT_BA_Screen},
+      CS_BA: {screen: CS_BAScreen},
+      CSGD_BS: {screen: CSGD_BSScreen},
+      BE_Elec: {screen: BE_ElecScreen},
+      BE_AT: {screen: BE_ATScreen},
+      BE_Biomole: {screen: BE_BiomoleScreen},
+      CE_Major: {screen: CE_MajorScreen},
+      BioInfo_Major: {screen: BioInfo_MajorScreen},
+      BE_page: {screen: BE_Screen},
+        // Minors
+      CS_Minor: {screen: CS_MinorScreen},
+      AM_Minor: {screen: AM_MinorScreen},
+      Statistics_Minor: {screen: Statistics_Minor_Screen},
+      TIM_Minor: {screen: TIM_Minor_Screen},
+      EE_Minor: {screen: EE_Minor_Screen},
+      CE_Minor: {screen: CE_MinorScreen},
+      BioInfo_Minor: {screen: BioInfo_MinorScreen},
 
     // Engagement
-    Clubs: {screen: ClubsScreen},
-    AcademicClubs: {screen: AcademicClubsScreen},
-    CulturalClubs: {screen: CulturalClubsScreen},
-    EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
-    General_InterestClubs: {screen: General_InterestClubsScreen},
-    Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen}
+      // Clubs
+      Clubs: {screen: ClubsScreen},
+      AcademicClubs: {screen: AcademicClubsScreen},
+      CulturalClubs: {screen: CulturalClubsScreen},
+      EnvironmentalClubs: {screen: EnvironmentalClubsScreen},
+      General_InterestClubs: {screen: General_InterestClubsScreen},
+      Performing_ArtsClubs: {screen: Performing_ArtsClubsScreen},
+
+      // Athletics
+      Athletics: {screen: AthleticsScreen},
+      Competitive_Athletics: {screen: Competitive_AthleticsScreen},
+      Recreational_Athletics: {screen: Recreational_AthleticsScreen},
+      Intramural_Athletics: {screen: Intramural_AthleticsScreen},
+
 
 });
 
