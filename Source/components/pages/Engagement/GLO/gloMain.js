@@ -10,7 +10,7 @@ export class gloMainScreen extends React.Component {
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
           <Image
-            source={require('../../../../assets/images/home_icon.png')}
+                source={require('../../../../assets/images/home_icon.png')}
             style={{height: 35, width: 35, margin: 10}}
             resizeMode="contain"
           />

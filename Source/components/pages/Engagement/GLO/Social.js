@@ -42,40 +42,48 @@ export class socialScreen extends React.Component {
           extrapolate: 'clamp'
         });
         
-// button test
         const actions = [
           {
-            text: "Accessibility",
-            icon: require("./images/ic_accessibility_white.png"),
-            name: "bt_accessibility",
-            position: 2
-          },
-          {
-            text: "Language",
-            icon: require("./images/ic_language_white.png"),
-            name: "bt_language",
+            text: "Greek letter Orgs",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "gloMain",
             position: 1
           },
           {
-            text: "Location",
-            icon: require("./images/ic_room_white.png"),
-            name: "bt_room",
+            text: "Cultural",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "cultural_page",
+            position: 2
+          },
+          {
+            text: "Social",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "social_page",
             position: 3
           },
           {
-            text: "Video",
-            icon: require("./images/ic_videocam_white.png"),
-            name: "bt_videocam",
+            text: "Professional",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "professional_page",
             position: 4
+          },
+          {
+            text: "LGBTQ",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "lgbtq_page",
+            position: 5
           }
         ];
-
-
 
         const {navigate} = this.props.navigation;
         return (
 
         <View style= {styles.screen_container}>
+          
+          <ImageBackground 
+          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          style={{width: '100%', height: '100%'}}>
+            
           <ScrollView 
            scrollEventThrottle = { 16 }
            contentContainerStyle = {{ paddingTop: 10 }}
@@ -84,7 +92,6 @@ export class socialScreen extends React.Component {
           )}>
 
 
-
           <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
@@ -215,11 +222,10 @@ export class socialScreen extends React.Component {
             </View>
           </View>
         
-
           <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/home_icon.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
@@ -241,25 +247,31 @@ export class socialScreen extends React.Component {
               />
             </View>
           </View>
+
         </ScrollView>
-
-        
-
-
 
         <FloatingAction
           actions={actions}
           onPressItem={name => {
-            console.log(`selected button: ${name}`);
+            navigate(`${name}`); 
           }}
         />
 
+        </ImageBackground>
+          
         </View>
     
         );
       }
     }
     
+
+    function jbe_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
 
     const styles = StyleSheet.create({
 
