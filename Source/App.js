@@ -43,11 +43,10 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
 
   // GLO
   import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
-  // fraternity
-  import { fraternityScreen} from './components/pages/Engagement/GLO/fraternityMain';
-
-  // sorority
-  import { sororityScreen} from './components/pages/Engagement/GLO/sororityMain';
+  import { culturalScreen} from './components/pages/Engagement/GLO/Cultural';
+  import { professionalScreen} from './components/pages/Engagement/GLO/Professional';
+  import { lgbtqScreen} from './components/pages/Engagement/GLO/lgbtq';
+  import { socialScreen} from './components/pages/Engagement/GLO/Social';
 
 
 
@@ -89,12 +88,10 @@ const FunStack = createStackNavigator({
   // Engagement
     // GLO
     gloMain: {screen: gloMainScreen},
-      // fraternity
-      fraternity_page: {screen: fraternityScreen},
-
-      // sorority
-      sorority_page: {screen: sororityScreen},
-    
+    cultural_page: {screen: culturalScreen},
+    professional_page: {screen: professionalScreen},
+    lgbtq_page: {screen: lgbtqScreen},
+    social_page: {screen: socialScreen},
 
 });
 

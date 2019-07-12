@@ -1,13 +1,13 @@
-//sorority
 import React , {Component} from 'react';
 import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
 //import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
+import { FloatingAction } from "react-native-floating-action";
   
 const Header_Maximum_Height = 0;
 
-export class sororityScreen extends React.Component {
+export class socialScreen extends React.Component {
   constructor()   
     {
         super();
@@ -26,7 +26,7 @@ export class sororityScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'sorority',
+          title: 'social',
         };
       };
       render() {
@@ -41,6 +41,37 @@ export class sororityScreen extends React.Component {
           outputRange: [ 5, 5 ],
           extrapolate: 'clamp'
         });
+        
+// button test
+        const actions = [
+          {
+            text: "Accessibility",
+            icon: require("./images/ic_accessibility_white.png"),
+            name: "bt_accessibility",
+            position: 2
+          },
+          {
+            text: "Language",
+            icon: require("./images/ic_language_white.png"),
+            name: "bt_language",
+            position: 1
+          },
+          {
+            text: "Location",
+            icon: require("./images/ic_room_white.png"),
+            name: "bt_room",
+            position: 3
+          },
+          {
+            text: "Video",
+            icon: require("./images/ic_videocam_white.png"),
+            name: "bt_videocam",
+            position: 4
+          }
+        ];
+
+
+
         const {navigate} = this.props.navigation;
         return (
 
@@ -212,6 +243,16 @@ export class sororityScreen extends React.Component {
           </View>
         </ScrollView>
 
+        
+
+
+
+        <FloatingAction
+          actions={actions}
+          onPressItem={name => {
+            console.log(`selected button: ${name}`);
+          }}
+        />
 
         </View>
     
@@ -261,7 +302,7 @@ export class sororityScreen extends React.Component {
         opacity: .9,
         borderRadius: 7,
       },
-    
+      
     
     });
     

@@ -1,11 +1,10 @@
-//fraternity
 import React , {Component} from 'react';
 import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 //import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
-export class fraternityScreen extends React.Component {
+export class lgbtqScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -17,7 +16,7 @@ export class fraternityScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'fraternity',
+          title: 'lgbtq',
         };
       };
       render() {
@@ -26,7 +25,7 @@ export class fraternityScreen extends React.Component {
     
           <View style= {styles.container}>
               <Button
-                title="fraternity "
+                title="test "
                 color = "#e6f542"
                 //onPress={() => navigate('fraternity_page')}
               />
