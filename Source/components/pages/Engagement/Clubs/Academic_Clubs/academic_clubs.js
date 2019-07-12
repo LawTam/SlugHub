@@ -57,7 +57,7 @@ export class AcademicClubsScreen extends React.Component {
       <Button
       title="Chican@s and Latin@s Educandose"
       color = "#e6f542"
-      onPress={CLE_page}
+      //onPress={CLE_page}
       />
 
       <Button
@@ -107,69 +107,69 @@ export class AcademicClubsScreen extends React.Component {
       <Button
       title="Institute of Electrical and Electronics Engineers (IEEE)"
       color = "#DC143C"
-      onPress={HU_page}S
+      onPress={IEEE_page}
       />
 
       <Button
       title="Information Systems Management Association (ISMA)"
       color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
+      onPress={ISMA_page}
       />
       <Button
       title="Kuya Ate Mentorship Program"
       color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
+      onPress={KAM_page}
       />
       <Button
       title="Model United Nations Club (SlugMUN)"
       color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
+      onPress={MUN_page}
       />
       <Button
       title="National Society of Black Engineers (NSBE)"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      onPress={NSBE_page}
       />
       <Button
       title="National Society of Collegiate Scholars (NSCS)"
       color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
+      onPress={NSCS_page}
       />
 
-<Button
+      <Button
       title="Philosophical Slug Society"
       color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
+      onPress={PSS_page}
       />
 
       <Button
       title="Slugs United by Mathematics (SUM)"
       color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
+      //onPress={PSS_page}
       />
 
       <Button
       title="Society for the Advancement of Chicanos and Native Americans in Science (SACNAS)"
       color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
+      onPress={SACN_page}
       />
 
       <Button
       title="Society of Women Engineers (SWESLUGS)"
       color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
+      onPress={SWE_page}
       />
 
       <Button
       title="Tau Beta Pi Engineering Honors Society"
       color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
+      onPress={TBP_page}
       />
 
       <Button
       title="Umoja"
       color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
+      onPress={Umoja_page}
       />
 
 </ScrollView>
@@ -233,9 +233,69 @@ function HU_page() {
   );
 }
 
-function HU_page() {
+function IEEE_page() {
   WebBrowser.openBrowserAsync(
-    'https://www.facebook.com/hudeucsc/'
+    'https://ieee.soe.ucsc.edu/'
+  );
+}
+
+function ISMA_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.ismaucsc.com/'
+  );
+}
+
+function KAM_page() {
+  WebBrowser.openBrowserAsync(
+    'https://engagingeducation.org/kuya-ate-mentorship-program'
+  );
+}
+
+function MUN_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/slugmun/'
+  );
+}
+
+function NSBE_page() {
+  WebBrowser.openBrowserAsync(
+    'https://nsbe.soe.ucsc.edu/home'
+  );
+}
+
+function NSCS_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.facebook.com/nscs.ucsc/'
+  );
+}
+
+function PSS_page() {
+  WebBrowser.openBrowserAsync(
+    'https://philoslugs.wordpress.com/'
+  );
+}
+
+function SACN_page() {
+  WebBrowser.openBrowserAsync(
+    'https://www.sacnas.org/'
+  );
+}
+
+function SWE_page() {
+  WebBrowser.openBrowserAsync(
+    'https://sweslugs.soe.ucsc.edu/'
+  );
+}
+
+function TBP_page() {
+  WebBrowser.openBrowserAsync(
+    'https://tbp.soe.ucsc.edu/'
+  );
+}
+
+function Umoja_page() {
+  WebBrowser.openBrowserAsync(
+    'https://engagingeducation.org/umoja'
   );
 }
 
