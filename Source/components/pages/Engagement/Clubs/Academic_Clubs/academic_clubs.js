@@ -233,12 +233,6 @@ function HU_page() {
   );
 }
 
-function HU_page() {
-  WebBrowser.openBrowserAsync(
-    'https://www.facebook.com/hudeucsc/'
-  );
-}
-
 
 const styles = StyleSheet.create({
   container: {

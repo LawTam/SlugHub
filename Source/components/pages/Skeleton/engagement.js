@@ -29,14 +29,12 @@ export class EngagementScreen extends React.Component {
           onPress={() => navigate('Clubs')}
           />
 
-<<<<<<< HEAD
       <Button
           title="Athletics / Recreational Clubs"
           color = "#e6f542"
           onPress={() => navigate('Athletics')}
           />
         
-=======
         <Button
           title="LSS Tutoring"
           color = "#e6f542"
@@ -47,7 +45,6 @@ export class EngagementScreen extends React.Component {
           color = "#e6f542"
           onPress={library_room_reserve}
           />
->>>>>>> 469f06f107f1bc2920acef8e629088cd1d72a5ff
 
       </View>
 
