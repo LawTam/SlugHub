@@ -92,6 +92,16 @@ export class HomePageScreen extends React.Component {
               />
             </TouchableHighlight>
           </View>
+
+          <View style = {styles.facility_button}>
+            <TouchableHighlight onPress={() => navigate('Facility')}>
+              <Image
+              source={require('../../../assets/images/facility_logo.jpg')}
+              style={{height: 100, width: 200}}
+              resizeMode="contain"
+              />
+            </TouchableHighlight>
+          </View>
           
       </ImageBackground> 
     </View>
@@ -167,6 +177,12 @@ const styles = StyleSheet.create({
     athletics_button: {
       top: '70%',
       left: '10%',
+      position: "absolute",
+    },
+    
+    facility_button: {
+      top: '70%',
+      right: '10%',
       position: "absolute",
     }
 

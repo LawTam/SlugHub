@@ -62,6 +62,12 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { ReligiousClubsScreen } from './components/pages/Engagement/Clubs/Religous_Clubs/religious_clubs';
     import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
     import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
+    //facilities
+    import {FacilityScreen} from './components/pages/Facilities/facility'
+    import {DiningScreen} from './components/pages/Facilities/Dining/dining'
+    import {DiningHallsScreen} from './components/pages/Facilities/Dining/dining_halls'
+    import {FitnessScreen} from './components/pages/Facilities/Fitness/fitness'
+    import {StudyScreen} from './components/pages/Facilities/Study locations/studyloc'
 
   // GLO
   import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
@@ -72,6 +78,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { sreviceScreen} from './components/pages/Engagement/GLO/Service';
 
 
+  import {StudyGroup_Screen} from './components/pages/Engagement/Study_Groups/studyGroup_page';
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -81,6 +88,36 @@ const FunStack = createStackNavigator({
   HomePage: {screen: HomePageScreen},
   Advising: {screen: AdvisingScreen},
   Engagement: {screen: EngagementScreen},
+
+
+    // JackBaskin Engineering Pages
+    JBE_Majors: {screen: JBE_MajorsScreen},
+    JBE_Minors: {screen: JBE_MinorsScreen},
+      // Majors
+    CS_BS: {screen: CS_BSScreen},
+    TIM_BS: {screen: TIM_BS_Screen},
+    EE_BS: {screen: EE_BS_Screen},
+    RE_BS: {screen: RE_BS_Screen},
+    NDT_BA: {screen: NDT_BA_Screen},
+    CS_BA: {screen: CS_BAScreen},
+    CSGD_BS: {screen: CSGD_BSScreen},
+    BE_Elec: {screen: BE_ElecScreen},
+    BE_AT: {screen: BE_ATScreen},
+    BE_Biomole: {screen: BE_BiomoleScreen},
+    CE_Major: {screen: CE_MajorScreen},
+    BioInfo_Major: {screen: BioInfo_MajorScreen},
+    BE_page: {screen: BE_Screen},
+      // Minors
+    CS_Minor: {screen: CS_MinorScreen},
+    AM_Minor: {screen: AM_MinorScreen},
+    Statistics_Minor: {screen: Statistics_Minor_Screen},
+    TIM_Minor: {screen: TIM_Minor_Screen},
+    EE_Minor: {screen: EE_Minor_Screen},
+    CE_Minor: {screen: CE_MinorScreen},
+    BioInfo_Minor: {screen: BioInfo_MinorScreen},
+
+    // Engagement
+    Study_G: {screen: StudyGroup_Screen},
 
     // Advising
       // JackBaskin Engineering Pages
@@ -127,6 +164,14 @@ const FunStack = createStackNavigator({
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
       Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
+<<<<<<< HEAD
+      //facility
+      Facility: {screen: FacilityScreen},
+      Dining: {screen: DiningScreen},
+      DiningHalls: {screen: DiningHallsScreen},
+      Fitness: {screen: FitnessScreen},
+      Study: {screen: StudyScreen}
+=======
       // GLO
       gloMain: {screen: gloMainScreen},
       cultural_page: {screen: culturalScreen},
@@ -134,6 +179,7 @@ const FunStack = createStackNavigator({
       lgbtq_page: {screen: lgbtqScreen},
       social_page: {screen: socialScreen},
       service_page: {screen: socialScreen},
+>>>>>>> b06962a0b99ab9314270acda3e22afc8a74752f3
 
 });
 

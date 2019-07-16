@@ -23,18 +23,24 @@ export class EngagementScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
+
+
+
+
+
       <Button
           title="Clubs"
           color = "#e6f542"
           onPress={() => navigate('Clubs')}
           />
 
+
       <Button
           title="Athletics / Recreational Clubs"
           color = "#e6f542"
           onPress={() => navigate('Athletics')}
           />
-        
+
         <Button
           title="LSS Tutoring"
           color = "#e6f542"
@@ -45,6 +51,14 @@ export class EngagementScreen extends React.Component {
           color = "#e6f542"
           onPress={library_room_reserve}
           />
+
+
+          <Button
+          title="Study Groups"
+          color = "#e6f542"
+          onPress={() => navigate('Study_G')}
+          />
+
 
         <Button
           title="Greek Letter Organization"
@@ -78,4 +92,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#4287f5",
     flex: 1
   },
+
+  study: {
+    top: '30%',
+    left: '13%',
+    position: "absolute",
+    height: 50,
+    width: 130,
+  },
+
+
 });

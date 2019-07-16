@@ -203,6 +203,12 @@ function CC_page() {
   );
 }
 
+function CLE_page() {
+  WebBrowser.openBrowserAsync(
+    'https://engagingeducation.org/chicans-and-latins-educandose-chale'
+  );
+}
+
 function CSSA_page() {
   WebBrowser.openBrowserAsync(
     'https://ucsccssa.wordpress.com/'
@@ -227,11 +233,7 @@ function GK_page() {
   );
 }
 
-function HU_page() {
-  WebBrowser.openBrowserAsync(
-    'https://www.facebook.com/hudeucsc/'
-  );
-}
+
 
 function IEEE_page() {
   WebBrowser.openBrowserAsync(
