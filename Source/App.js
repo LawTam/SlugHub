@@ -62,6 +62,20 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { ReligiousClubsScreen } from './components/pages/Engagement/Clubs/Religous_Clubs/religious_clubs';
     import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
     import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
+    //facilities
+    import {FacilityScreen} from './components/pages/Facilities/facility'
+    import {DiningScreen} from './components/pages/Facilities/Dining/dining'
+    import {DiningHallsScreen} from './components/pages/Facilities/Dining/dining_halls'
+    import {FitnessScreen} from './components/pages/Facilities/Fitness/fitness'
+    import {StudyScreen} from './components/pages/Facilities/Study locations/studyloc'
+
+  // GLO
+  import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
+  import { culturalScreen} from './components/pages/Engagement/GLO/Cultural';
+  import { professionalScreen} from './components/pages/Engagement/GLO/Professional';
+  import { lgbtqScreen} from './components/pages/Engagement/GLO/lgbtq';
+  import { socialScreen} from './components/pages/Engagement/GLO/Social';
+  import { sreviceScreen} from './components/pages/Engagement/GLO/Service';
 
 
   import {StudyGroup_Screen} from './components/pages/Engagement/Study_Groups/studyGroup_page';
@@ -149,7 +163,23 @@ const FunStack = createStackNavigator({
       Professional_Clubs: {screen: ProfessionalClubsScreen},
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
-      Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
+      Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
+<<<<<<< HEAD
+      //facility
+      Facility: {screen: FacilityScreen},
+      Dining: {screen: DiningScreen},
+      DiningHalls: {screen: DiningHallsScreen},
+      Fitness: {screen: FitnessScreen},
+      Study: {screen: StudyScreen}
+=======
+      // GLO
+      gloMain: {screen: gloMainScreen},
+      cultural_page: {screen: culturalScreen},
+      professional_page: {screen: professionalScreen},
+      lgbtq_page: {screen: lgbtqScreen},
+      social_page: {screen: socialScreen},
+      service_page: {screen: socialScreen},
+>>>>>>> b06962a0b99ab9314270acda3e22afc8a74752f3
 
 });
 

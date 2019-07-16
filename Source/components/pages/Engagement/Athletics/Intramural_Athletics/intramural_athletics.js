@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export class Intramural_AthleticsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -31,17 +32,21 @@ export class Intramural_AthleticsScreen extends React.Component {
         Registration process: Login to imleagues.com FIRST using your CruzID login credentials and create/join your team(s), then pay for your All-Access pass via campusrec.ucsc.edu. This method allows captains and participants to ensure they get into a desired league and time slot prior to payment.
       </Text>
 
-      <Button
-        title="More on Competitive Sports"
-        color = "#e6f542"
-        onPress={() => navigate('Competitive_Athletics')}
-      />
+      <Icon.Button 
+            name="trophy"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Competitive_Athletics')}
+          >
+            Click here for more on Competitive Sports
+      </Icon.Button>
 
-      <Button
-        title="More on Recreational Sports"
-        color = "#e6f542"
-        onPress={() => navigate('Recreational_Athletics')}
-      />
+      <Icon.Button 
+            name="pagelines"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Recreational_Athletics')}
+          >
+            Click here for more on Recreational Sports
+      </Icon.Button>
 
       </View>
 

@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export class AthleticsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -27,30 +28,39 @@ export class AthleticsScreen extends React.Component {
       UCSC offers both competitive and recreational sports clubs. Intramural competition is also popular at UC Santa Cruz.
       </Text>
 
-      <Button
-        title="Click here for more on Competitive Sports"
-        color = "#e6f542"
-        onPress={() => navigate('Competitive_Athletics')}
-      />
+      <Icon.Button 
+            name="trophy"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Competitive_Athletics')}
+          >
+            Click here for more on Competitive Sports
+      </Icon.Button>
 
       <Text>
+      {"\n"} {"\n"} 
         Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, Camp Kesem (camp for children with a parent who has cancer), cheer team, circus Slugs, dance team, grappling, judo, kayak, kendo, muay thai, ninjutsu, racquetball, table tennis, taekwondo, tango, track and field, triathlon, volleyball, and wushu.
       </Text>
 
-      <Button
-        title="Click here for more on Recreational Sports"
-        color = "#e6f542"
-        onPress={() => navigate('Recreational_Athletics')}
-      />
+      <Icon.Button 
+            name="pagelines"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Recreational_Athletics')}
+          >
+            Click here for more on Recreational Sports
+      </Icon.Button>
 
       <Text>
+        {"\n"} {"\n"} 
         Intramurals are structured for different skill levels and are conducted in a safe, supervised environment.  Participants do not need to be an experienced athlete to play! 
       </Text>
-      <Button
-        title="Click here for more on Intramural Competition"
-        color = "#e6f542"
-        onPress={() => navigate('Intramural_Athletics')}
-      />
+
+      <Icon.Button 
+            name="futbol-o"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Intramural_Athletics')}
+          >
+            Click here for more on Intramural Competition
+      </Icon.Button>
 
       </View>
 

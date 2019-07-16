@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class CulturalClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -26,25 +27,25 @@ export class CulturalClubsScreen extends React.Component {
       <Button
       title="A Step Forward"
       color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
+      onPress={ASF_page}
       />
 
       <Button
       title="African American Theater Arts Troupe (AATAT)"
       color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
+      onPress={AATAT_page}
       />
 
       <Button
       title="African Student Union"
       color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
+      //onPress={ASF_page}
       />
 
       <Button
       title="Armenian Student Association (ASA)"
       color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
+      //onPress={ASA_page}
       />
 
       <Button
@@ -238,6 +239,20 @@ export class CulturalClubsScreen extends React.Component {
     );
   }
 }
+
+function ASF_page() {
+  WebBrowser.openBrowserAsync(
+    'https://engagingeducation.org/a-step-forward'
+  );
+}
+
+function AATAT_page() {
+  WebBrowser.openBrowserAsync(
+    'http://www.cadrc.org/aatat.html'
+  );
+}
+
+
 
 const styles = StyleSheet.create({
   container: {

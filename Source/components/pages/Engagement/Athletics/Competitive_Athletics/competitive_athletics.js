@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export class Competitive_AthleticsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -29,17 +30,24 @@ export class Competitive_AthleticsScreen extends React.Component {
       Competitive clubs include ballroom dance, cross-country, cycling, disc golf, equestrian, fencing, ice hockey, men's and women's lacrosse, men's and women's rugby, sailing, men's and women's soccer, women's softball, surfing, tennis, men's and women's Ultimate Frisbee, and men's and women's water polo.
       </Text>
 
-      <Button
-        title="More on Recreational Sports"
-        color = "#e6f542"
-        onPress={() => navigate('Recreational_Athletics')}
-      />
+      <Text> {"\n"}</Text>
+      <Icon.Button 
+            name="pagelines"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Recreational_Athletics')}
+          >
+            Click here for more on Recreational Sports
+      </Icon.Button>
+    
+      <Text> {"\n"}</Text>
 
-      <Button
-        title="More on Intramural Competition"
-        color = "#e6f542"
-        onPress={() => navigate('Intramural_Athletics')}
-      />
+      <Icon.Button 
+            name="futbol-o"
+            backgroundColor="#ffcc33"
+            onPress={() => navigate('Intramural_Athletics')}
+          >
+            Click here for more on Intramural Competition
+      </Icon.Button>
     </View>
     );
   }
