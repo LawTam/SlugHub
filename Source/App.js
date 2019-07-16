@@ -75,7 +75,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { professionalScreen} from './components/pages/Engagement/GLO/Professional';
   import { lgbtqScreen} from './components/pages/Engagement/GLO/lgbtq';
   import { socialScreen} from './components/pages/Engagement/GLO/Social';
-  import { sreviceScreen} from './components/pages/Engagement/GLO/Service';
+  import { serviceScreen} from './components/pages/Engagement/GLO/Service';
 
 
   import {StudyGroup_Screen} from './components/pages/Engagement/Study_Groups/studyGroup_page';
@@ -164,22 +164,19 @@ const FunStack = createStackNavigator({
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
       Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
-<<<<<<< HEAD
       //facility
       Facility: {screen: FacilityScreen},
       Dining: {screen: DiningScreen},
       DiningHalls: {screen: DiningHallsScreen},
       Fitness: {screen: FitnessScreen},
-      Study: {screen: StudyScreen}
-=======
+      Study: {screen: StudyScreen},
       // GLO
       gloMain: {screen: gloMainScreen},
       cultural_page: {screen: culturalScreen},
       professional_page: {screen: professionalScreen},
       lgbtq_page: {screen: lgbtqScreen},
       social_page: {screen: socialScreen},
-      service_page: {screen: socialScreen},
->>>>>>> b06962a0b99ab9314270acda3e22afc8a74752f3
+      service_page: {screen: serviceScreen},
 
 });
 

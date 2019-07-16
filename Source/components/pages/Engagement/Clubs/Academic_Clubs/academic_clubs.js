@@ -98,11 +98,11 @@ export class AcademicClubsScreen extends React.Component {
       onPress={GK_page}
       />
 
-      <Button
+      {/* <Button
       title="Hermanos Unidos de UCSC"
       color = "#B22222"
       onPress={HU_page}
-      />
+      /> */}
 
       <Button
       title="Institute of Electrical and Electronics Engineers (IEEE)"
