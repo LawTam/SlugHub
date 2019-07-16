@@ -167,9 +167,9 @@ export class professionalScreen extends React.Component {
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('KGD_fb')}
+                onPress={() => navigate('KGD_ins')}
               />
             </View>
           </View>
@@ -185,9 +185,9 @@ export class professionalScreen extends React.Component {
             <Text>Phi Alpha Delta (ΦAΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('PAD_home')}
+                onPress={() => navigate('PAD_ins')}
               />
             </View>
 
@@ -247,63 +247,63 @@ export class professionalScreen extends React.Component {
     }
 
 
-function AKP_home() {
+    function AKP_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.ucscakpsi.com/'
       );
     }
 
 function AKP_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/akpsiucsc'
       );
     }
 
 function DSP_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.ucscdsp.org/'
       );
     }
 
 function DSP_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/ucscdsp/'
       );
     }
 
 function KGD_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.kgdatucsc.org/'
       );
     }
 
-function KGD_fb() {
+function KGD_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/ucsckgd'
       );
     }
 
-function PAD_home() {
+function PAD_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/ucsc_pad'
       );
     }
 
 function PAD_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/UCSCPhiAlphaDelta/'
       );
     }
 
 function SMD_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'http://www.sigmamudelta-gamma.com/'
       );
     }
 
 function SMD_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/gammasmd/'
       );
     }
     

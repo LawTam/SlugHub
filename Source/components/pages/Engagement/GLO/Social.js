@@ -110,7 +110,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('GPB_home')}
+                onPress={GPB_home}
               />
             </View>
 
@@ -118,7 +118,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('GPB_fb')}
+                onPress={GPB_fb}
               />
             </View>
           </View>
@@ -137,7 +137,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('KAT_home')}
+                onPress={KAT_home}
               />
             </View>
 
@@ -145,7 +145,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('KAT_fb')}
+                onPress={KAT_fb}
               />
             </View>
           </View>
@@ -163,15 +163,15 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('KKG_home')}
+                onPress={KKG_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('KKG_fb')}
+                onPress={KKG_ins}
               />
             </View>
           </View>
@@ -187,9 +187,9 @@ export class socialScreen extends React.Component {
             <Text>Alpha Epsilon Pi (AEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('AEP_home')}
+                onPress={AEP_ins}
               />
             </View>
 
@@ -197,7 +197,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('AEP_fb')}
+                onPress={AEP_fb}
               />
             </View>
           </View>
@@ -215,15 +215,15 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('AP_home')}
+                onPress={AP_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('AP_fb')}
+                onPress={AP_ins}
               />
             </View>
           </View>
@@ -241,7 +241,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('SAEP_home')}
+                onPress={SAEP_home}
               />
             </View>
 
@@ -249,7 +249,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('SAEP_fb')}
+                onPress={SAEP_fb}
               />
             </View>
           </View>
@@ -267,7 +267,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('SP_home')}
+                onPress={SP_home}
               />
             </View>
 
@@ -275,7 +275,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('SP_fb')}
+                onPress={SP_fb}
               />
             </View>
           </View>
@@ -293,7 +293,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('TKE_home')}
+                onPress={TKE_home}
               />
             </View>
 
@@ -301,7 +301,7 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('TKE_fb')}
+                onPress={TKE_fb}
               />
             </View>
           </View>
@@ -328,104 +328,103 @@ export class socialScreen extends React.Component {
       }
     }
     
-
     
 
-function GPB_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function GPB_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function KAT_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function KAT_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function KKG_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function KKG_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function AEP_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function AEP_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function AP_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function AP_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function SAEP_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function SAEP_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function SP_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function SP_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function TKE_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
-function TKE_fb() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
+    function GPB_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.ucscgammaphibeta.com/'
+      );
+    }
+    
+    function GPB_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/ucscgammaphibeta/'
+      );
+    }
+    
+    function KAT_home() {
+      WebBrowser.openBrowserAsync(
+        'https://ucsantacruz.kappaalphatheta.org/'
+      );
+    }
+    
+    function KAT_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/UCSCKappaAlphaTheta/'
+      );
+    }
+    
+    function KKG_home() {
+      WebBrowser.openBrowserAsync(
+        'http://ucsc.kappa.org/'
+      );
+    }
+    
+    function KKG_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/ucsckkg'
+      );
+    }
+    
+    function AEP_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/aepi.ucsc'
+      );
+    }
+    
+    function AEP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/UCSCAEPI/'
+      );
+    }
+    
+    function AP_home() {
+      WebBrowser.openBrowserAsync(
+        'https://alphapsiucsc.wixsite.com/alphapsiucsc'
+      );
+    }
+    
+    function AP_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/ucscalphapsi'
+      );
+    }
+    
+    function SAEP_home() {
+      WebBrowser.openBrowserAsync(
+        'http://ucscsaepi.weebly.com/'
+      );
+    }
+    
+    function SAEP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/ucscsaepi/'
+      );
+    }
+    
+    function SP_home() {
+      WebBrowser.openBrowserAsync(
+        'http://www.sigmapiucsc.org/'
+      );
+    }
+    
+    function SP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/sigmapiucsc/'
+      );
+    }
+    
+    function TKE_home() {
+      WebBrowser.openBrowserAsync(
+        'http://www.tkeucsc.org/'
+      );
+    }
+    
+    function TKE_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/UCSC-Tau-Kappa-Epsilon-Upsilon-Pi-Chapter-196555643715876/'
+      );
+    }
 
 
 

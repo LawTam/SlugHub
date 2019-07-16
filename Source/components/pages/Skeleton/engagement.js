@@ -23,8 +23,8 @@ export class EngagementScreen extends React.Component {
     return (
         <View style= {styles.container}>
         <Button
-          title="test"
-          color = "#FFFFFF"
+          title="Greek Letter Organization"
+          color = "#FFFF33"
           onPress={() => navigate('gloMain')}
         />
 

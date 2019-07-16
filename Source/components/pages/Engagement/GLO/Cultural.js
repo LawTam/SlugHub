@@ -109,15 +109,15 @@ export class culturalScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('AKDP_home')}
+                onPress={AKDP_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('AKDP_fb')}
+                onPress={AKDP_ins}
               />
             </View>
           </View>
@@ -136,15 +136,15 @@ export class culturalScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('DST_home')}
+                onPress={DST_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="national site"
                 color = "#FFFF33"
-                onPress={() => navigate('DST_fb')}
+                onPress={DST_national}
               />
             </View>
           </View>
@@ -162,15 +162,15 @@ export class culturalScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('KZ_home')}
+                onPress={KZ_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('KZ_fb')}
+                onPress={KZ_ins}
               />
             </View>
           </View>
@@ -183,12 +183,12 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Lambda Theta Alpha Latin Sorority, Inc. (ΛΘA)</Text>
+            <Text>Lambda Theta Alpha {'\n'}Latin Sorority, Inc. (ΛΘA)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('LTA_home')}
+                onPress={LTA_ins}
               />
             </View>
 
@@ -196,7 +196,7 @@ export class culturalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('LTA_fb')}
+                onPress={LTA_fb}
               />
             </View>
           </View>
@@ -209,20 +209,20 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Lambda Gamma National Sorority, Inc. (ΣΛΓ)</Text>
+            <Text>Sigma Lambda Gamma {'\n'}National Sorority, Inc. (ΣΛΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('SLG_home')}
+                onPress={SLG_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('SLG_fb')}
+                onPress={SLG_ins}
               />
             </View>
           </View>
@@ -238,9 +238,9 @@ export class culturalScreen extends React.Component {
             <Text>Sigma Omicron Pi (ΣOΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('SOP_home')}
+                onPress={SOP_ins}
               />
             </View>
 
@@ -248,7 +248,7 @@ export class culturalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('SOP_fb')}
+                onPress={SOP_fb}
               />
             </View>
           </View>
@@ -266,15 +266,7 @@ export class culturalScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('SPA_home')}
-              />
-            </View>
-
-            <View style= {styles.FacebookButton}>
-              <Button
-                title="Facebook"
-                color = "#FFFF33"
-                onPress={() => navigate('SPA_fb')}
+                onPress={SPA_home}
               />
             </View>
           </View>
@@ -292,15 +284,15 @@ export class culturalScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('ZPB_home')}
+                onPress={ZPB_home}
               />
             </View>
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('ZPB_fb')}
+                onPress={ZPB_ins}
               />
             </View>
           </View>
@@ -332,97 +324,91 @@ export class culturalScreen extends React.Component {
 
     function AKDP_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://ucscakdphi.wixsite.com/home'
       );
     }
     
-    function AKDP_fb() {
+    function AKDP_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/ucsc_akdphi'
       );
     }
     
     function DST_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'http://www.oocities.org/ucscgreeks/chapters/dst.html'
       );
     }
     
-    function DST_fb() {
+    function DST_national() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.deltasigmatheta.org/'
       );
     }
     
     function KZ_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://kappazetaucsc.wordpress.com/'
       );
     }
     
-    function KZ_fb() {
+    function KZ_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/kappazetaucsc'
       );
     }
     
-    function LTA_home() {
+    function LTA_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/lta_epsilonchi'
       );
     }
     
     function LTA_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/LTAEpsilonChi/'
       );
     }
     
     function SLG_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://sigmalambdagamma.com/'
       );
     }
     
-    function SLG_fb() {
+    function SLG_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/ucscgammas'
       );
     }
     
-    function SOP_home() {
+    function SOP_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/ucsc_sopi'
       );
     }
     
     function SOP_fb() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.facebook.com/ucscsopi/'
       );
     }
     
     function SPA_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
-      );
-    }
-    
-    function SPA_fb() {
-      WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://sigmapialpha.org/'
       );
     }
     
     function ZPB_home() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'http://zphib1920.org/'
       );
     }
     
-    function ZPB_fb() {
+    function ZPB_ins() {
       WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
+        'https://www.instagram.com/officialzeta1920'
       );
     }
 

@@ -99,7 +99,7 @@ export class lgbtqScreen extends React.Component {
           <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/theta_pi_sigma.png')}
+                source={require('../../../../assets/images/orgs/theta_pi_sigma.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
@@ -109,7 +109,7 @@ export class lgbtqScreen extends React.Component {
               <Button
                 title="official site"
                 color = "#FFFF33"
-                onPress={() => navigate('TPS_home')}
+                onPress={TPS_home}
               />
             </View>
 
@@ -117,7 +117,7 @@ export class lgbtqScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                onPress={() => navigate('TPS_fb')}
+                onPress={TPS_fb}
               />
             </View>
           </View>
@@ -146,13 +146,13 @@ export class lgbtqScreen extends React.Component {
     
 function TPS_home() {
   WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
+    'http://www.thetapisigma.org/'
   );
 }
 
 function TPS_fb() {
   WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
+    'https://www.facebook.com/thetapisigma/'
   );
 }
     

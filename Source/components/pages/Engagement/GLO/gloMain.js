@@ -16,7 +16,7 @@ export class gloMainScreen extends React.Component {
           />
         </TouchableHighlight>
       ),
-      title: 'Greek Letter Organization ',
+      title: 'Greek Letter Organization',
     };
   };
   render() {

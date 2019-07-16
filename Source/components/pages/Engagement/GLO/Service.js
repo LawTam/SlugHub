@@ -115,9 +115,9 @@ export class serviceScreen extends React.Component {
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('APO_fb')}
+                onPress={() => navigate('APO_ins')}
               />
             </View>
           </View>
@@ -167,9 +167,9 @@ export class serviceScreen extends React.Component {
 
             <View style= {styles.FacebookButton}>
               <Button
-                title="Facebook"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('SLB_fb')}
+                onPress={() => navigate('SLB_ins')}
               />
             </View>
           </View>
@@ -185,9 +185,9 @@ export class serviceScreen extends React.Component {
             <Text>Sigma Phi Zeta (ΣΦZ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Instagram"
                 color = "#FFFF33"
-                onPress={() => navigate('SPZ_home')}
+                onPress={() => navigate('SPZ_ins')}
               />
             </View>
 
@@ -222,52 +222,52 @@ export class serviceScreen extends React.Component {
     }
 
     function APO_home() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function APO_fb() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function PAP_home() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function PAP_fb() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function SLB_home() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function SLB_fb() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function SPZ_home() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
-    
-    function SPZ_fb() {
-          WebBrowser.openBrowserAsync(
-            'https://www.soe.ucsc.edu/'
-          );
-        }
+      WebBrowser.openBrowserAsync(
+        'http://ucscaphio.wix.com/agn'
+      );
+    }
+
+function APO_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/agnapo'
+      );
+    }
+
+function PAP_home() {
+      WebBrowser.openBrowserAsync(
+        'https://pialphaphi.publishpath.com/'
+      );
+    }
+
+function PAP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/Pi-Alpha-Phi-Zeta-Chapter-UCSC-98042141510/'
+      );
+    }
+
+function SLB_home() {
+      WebBrowser.openBrowserAsync(
+        'https://sites.google.com/site/sigmalambdabetaucsc/'
+      );
+    }
+
+function SLB_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/santacruzbetas'
+      );
+    }
+
+function SPZ_ins() {
+      WebBrowser.openBrowserAsync(
+        'https://www.instagram.com/sigmaphizeta_fraternity'
+      );
+    }
+
+function SPZ_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.facebook.com/sigmaphizeta/'
+      );
+    }
     
     const styles = StyleSheet.create({
       screen_container: {
