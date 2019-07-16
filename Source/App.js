@@ -126,7 +126,7 @@ const FunStack = createStackNavigator({
       Professional_Clubs: {screen: ProfessionalClubsScreen},
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
-      Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
+      Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
       // GLO
       gloMain: {screen: gloMainScreen},
       cultural_page: {screen: culturalScreen},
