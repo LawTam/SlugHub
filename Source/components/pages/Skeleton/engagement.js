@@ -35,7 +35,25 @@ export class EngagementScreen extends React.Component {
           onPress={() => navigate('Athletics')}
           />
         
+<<<<<<< HEAD
+=======
+        <Button
+          title="LSS Tutoring"
+          color = "#e6f542"
+          onPress={tutoring}
+          />
+        <Button
+          title="Library Room Booking"
+          color = "#e6f542"
+          onPress={library_room_reserve}
+          />
+>>>>>>> b06962a0b99ab9314270acda3e22afc8a74752f3
 
+        <Button
+          title="Greek Letter Organization"
+          color = "#FFFF33"
+          onPress={() => navigate('gloMain')}
+        />
       </View>
 
     );
