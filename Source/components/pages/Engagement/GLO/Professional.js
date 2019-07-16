@@ -39,7 +39,7 @@ export class professionalScreen extends React.Component {
           outputRange: [ 5, 5 ],
           extrapolate: 'clamp'
         });
-        
+
         const actions = [
           {
             text: "Greek letter Orgs",
@@ -60,10 +60,16 @@ export class professionalScreen extends React.Component {
             position: 3
           },
           {
+            text: "Service",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "service_page",
+            position: 4
+          },
+          {
             text: "Professional",
             icon: require('../../../../assets/images/home_icon.png'),
             name: "professional_page",
-            position: 4
+            position: 5
           },
           {
             text: "LGBTQ",
@@ -72,6 +78,7 @@ export class professionalScreen extends React.Component {
             position: 5
           }
         ];
+
         const {navigate} = this.props.navigation;
         return (
     
@@ -89,20 +96,20 @@ export class professionalScreen extends React.Component {
           )}>
 
 
-          <View style= {styles.orgs_container}>
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/Alpha_Kappa_Psi_2018.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Alpha Kappa Psi (ΑΚΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AKP_home')}
               />
             </View>
 
@@ -110,9 +117,117 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AKP_fb')}
               />
             </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/deltasigmapi2018_1.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Delta Sigma Pi (ΔΣΠ)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('DSP_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('DSP_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/kappagammadelta_1.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Kappa Gamma Delta (KΓΔ)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('KGD_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('KGD_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/Phi_Alpha_Delta_2018.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Phi Alpha Delta (ΦAΔ)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('PAD_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('PAD_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/sigmamu2018_1.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Sigma Mu Delta (ΣΜΔ)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('SMD_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('SMD_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            
           </View>
         
           </ScrollView>
@@ -129,6 +244,67 @@ export class professionalScreen extends React.Component {
     
         );
       }
+    }
+
+
+function AKP_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function AKP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function DSP_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function DSP_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function KGD_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function KGD_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function PAD_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function PAD_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function SMD_home() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
+    }
+
+function SMD_fb() {
+      WebBrowser.openBrowserAsync(
+        'https://www.soe.ucsc.edu/'
+      );
     }
     
     const styles = StyleSheet.create({

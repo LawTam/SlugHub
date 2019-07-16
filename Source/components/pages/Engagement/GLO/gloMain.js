@@ -37,6 +37,12 @@ export class gloMainScreen extends React.Component {
           />
 
           <Button
+            title="Service"
+            color = "#e6f542"
+            onPress={() => navigate('service_page')}
+          />
+
+          <Button
             title="Professional "
             color = "#e6f542"
             onPress={() => navigate('professional_page')}

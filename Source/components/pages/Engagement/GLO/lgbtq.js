@@ -60,10 +60,16 @@ export class lgbtqScreen extends React.Component {
             position: 3
           },
           {
+            text: "Service",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "service_page",
+            position: 4
+          },
+          {
             text: "Professional",
             icon: require('../../../../assets/images/home_icon.png'),
             name: "professional_page",
-            position: 4
+            position: 5
           },
           {
             text: "LGBTQ",
@@ -72,6 +78,7 @@ export class lgbtqScreen extends React.Component {
             position: 5
           }
         ];
+
         const {navigate} = this.props.navigation;
         return (
     
@@ -92,17 +99,17 @@ export class lgbtqScreen extends React.Component {
           <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/theta_pi_sigma.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Theta Pi Sigma (ΘΠΣ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('TPS_home')}
               />
             </View>
 
@@ -110,11 +117,15 @@ export class lgbtqScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('TPS_fb')}
               />
             </View>
           </View>
         
+            <View style= {styles.orgs_container}>
+            
+            </View>
+
           </ScrollView>
               
         <FloatingAction
@@ -131,6 +142,19 @@ export class lgbtqScreen extends React.Component {
         );
       }
     }
+
+    
+function TPS_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function TPS_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
     
     const styles = StyleSheet.create({
 

@@ -47,6 +47,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
   import { professionalScreen} from './components/pages/Engagement/GLO/Professional';
   import { lgbtqScreen} from './components/pages/Engagement/GLO/lgbtq';
   import { socialScreen} from './components/pages/Engagement/GLO/Social';
+  import { sreviceScreen} from './components/pages/Engagement/GLO/Service';
 
 
 
@@ -92,6 +93,7 @@ const FunStack = createStackNavigator({
     professional_page: {screen: professionalScreen},
     lgbtq_page: {screen: lgbtqScreen},
     social_page: {screen: socialScreen},
+    service_page: {screen: socialScreen},
 
 });
 

@@ -62,10 +62,16 @@ export class socialScreen extends React.Component {
             position: 3
           },
           {
+            text: "Service",
+            icon: require('../../../../assets/images/home_icon.png'),
+            name: "service_page",
+            position: 4
+          },
+          {
             text: "Professional",
             icon: require('../../../../assets/images/home_icon.png'),
             name: "professional_page",
-            position: 4
+            position: 5
           },
           {
             text: "LGBTQ",
@@ -91,21 +97,20 @@ export class socialScreen extends React.Component {
              [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
           )}>
 
-
-          <View style= {styles.orgs_container}>
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/gamma-phi-beta.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Gamma Phi Beta (ΓΦΒ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('GPB_home')}
               />
             </View>
 
@@ -113,25 +118,26 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('GPB_fb')}
               />
             </View>
           </View>
-        
-          <View style= {styles.orgs_container}>
+
+
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/theta_shoot_w18-0983_1.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Kappa Alpha Theta (ΚΑΘ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('KAT_home')}
               />
             </View>
 
@@ -139,25 +145,25 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('KAT_fb')}
               />
             </View>
           </View>
 
-          <View style= {styles.orgs_container}>
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/Kappa_Kappa_Gamma_2018.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Kappa Kappa Gamma (KKΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('KKG_home')}
               />
             </View>
 
@@ -165,25 +171,25 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('KKG_fb')}
               />
             </View>
           </View>
-        
-          <View style= {styles.orgs_container}>
+
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/aepi_logo.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Alpha Epsilon Pi (AEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AEP_home')}
               />
             </View>
 
@@ -191,25 +197,25 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AEP_fb')}
               />
             </View>
           </View>
-        
-          <View style= {styles.orgs_container}>
+
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/sigma-alpha-epsilon-pi.jpg')}
+                source={require('../../../../assets/images/orgs/ALPHA-PSI-SORO2018.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Alpha Psi (AΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AP_home')}
               />
             </View>
 
@@ -217,25 +223,25 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('AP_fb')}
               />
             </View>
           </View>
-        
-          <View style= {styles.orgs_container}>
+
+<View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/home_icon.png')}
+                source={require('../../../../assets/images/orgs/sigma-alpha-epsilon-pi.jpg')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
             </View>
-            <Text>UCSC SIGMA ALPHA EPSILON PI</Text>
+            <Text>Sigma Alpha Epsilon Pi (ΣAEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('SAEP_home')}
               />
             </View>
 
@@ -243,10 +249,67 @@ export class socialScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#FFFF33"
-                //onPress={() => navigate('JBE_Majors')}
+                onPress={() => navigate('SAEP_fb')}
               />
             </View>
           </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/Sigma_Pi-2018.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Sigma Pi Fraternity International (ΣΠ)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('SP_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('SP_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            <View style = {styles.image_container}>
+              <Image
+                source={require('../../../../assets/images/orgs/Tau_Kappa_Epsilon_2018.jpg')}
+                style={{height: 100, width: 180}}
+                resizeMode="contain"
+              />
+            </View>
+            <Text>Tau Kappa Epsilon (TKE)</Text>
+            <View style= {styles.OSButton}>
+              <Button
+                title="official site"
+                color = "#FFFF33"
+                onPress={() => navigate('TKE_home')}
+              />
+            </View>
+
+            <View style= {styles.FacebookButton}>
+              <Button
+                title="Facebook"
+                color = "#FFFF33"
+                onPress={() => navigate('TKE_fb')}
+              />
+            </View>
+          </View>
+
+<View style= {styles.orgs_container}>
+            
+          </View>
+
 
         </ScrollView>
 
@@ -266,11 +329,105 @@ export class socialScreen extends React.Component {
     }
     
 
-    function jbe_home() {
-      WebBrowser.openBrowserAsync(
-        'https://www.soe.ucsc.edu/'
-      );
-    }
+    
+
+function GPB_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function GPB_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function KAT_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function KAT_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function KKG_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function KKG_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function AEP_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function AEP_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function AP_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function AP_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function SAEP_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function SAEP_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function SP_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function SP_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function TKE_home() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+function TKE_fb() {
+  WebBrowser.openBrowserAsync(
+    'https://www.soe.ucsc.edu/'
+  );
+}
+
+
 
 
     const styles = StyleSheet.create({
