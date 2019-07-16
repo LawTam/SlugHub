@@ -40,12 +40,17 @@ export class EngagementScreen extends React.Component {
           color = "#e6f542"
           onPress={tutoring}
           />
-          <Button
+        <Button
           title="Library Room Booking"
           color = "#e6f542"
           onPress={library_room_reserve}
           />
 
+        <Button
+          title="Greek Letter Organization"
+          color = "#FFFF33"
+          onPress={() => navigate('gloMain')}
+        />
       </View>
 
     );

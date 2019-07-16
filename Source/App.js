@@ -63,6 +63,14 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
     import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
 
+  // GLO
+  import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
+  import { culturalScreen} from './components/pages/Engagement/GLO/Cultural';
+  import { professionalScreen} from './components/pages/Engagement/GLO/Professional';
+  import { lgbtqScreen} from './components/pages/Engagement/GLO/lgbtq';
+  import { socialScreen} from './components/pages/Engagement/GLO/Social';
+  import { sreviceScreen} from './components/pages/Engagement/GLO/Service';
+
 
 
 // Every screen we have in our program must be in this stack,
@@ -119,6 +127,13 @@ const FunStack = createStackNavigator({
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
       Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
+      // GLO
+      gloMain: {screen: gloMainScreen},
+      cultural_page: {screen: culturalScreen},
+      professional_page: {screen: professionalScreen},
+      lgbtq_page: {screen: lgbtqScreen},
+      social_page: {screen: socialScreen},
+      service_page: {screen: socialScreen},
 
 });
 
