@@ -25,17 +25,6 @@ export class EngagementScreen extends React.Component {
       <View style= {styles.container}>
 
 
-        <View style = {styles.advising_button}>
-          <TouchableHighlight onPress={() => navigate('Study_G')}>
-            <Image
-            source={require('../../../assets/images/logo.jpg')}
-            style={
-              {height: 100, width: 200}
-            }
-            resizeMode="contain"
-            />
-          </TouchableHighlight>
-        </View>
 
 
 
@@ -45,11 +34,13 @@ export class EngagementScreen extends React.Component {
           onPress={() => navigate('Clubs')}
           />
 
+
       <Button
           title="Athletics / Recreational Clubs"
           color = "#e6f542"
           onPress={() => navigate('Athletics')}
           />
+
 
         <Button
           title="LSS Tutoring"
@@ -60,6 +51,12 @@ export class EngagementScreen extends React.Component {
           title="Library Room Booking"
           color = "#e6f542"
           onPress={library_room_reserve}
+          />
+
+          <Button
+          title="Study Groups"
+          color = "#e6f542"
+          onPress={() => navigate('Study_G')}
           />
 
 
