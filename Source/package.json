@@ -6,7 +6,7 @@
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "clean-start": "npm run clean && npm run rc-start",
     "fresh-install": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm install",
-    "fresh-start" : "npm run fresh-install && npm run rc-start",
+    "fresh-start": "npm run fresh-install && npm run rc-start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -29,14 +29,12 @@
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-paper": "^2.16.0",
-<<<<<<< HEAD
-    "react-native-vector-icons": "^6.6.0",
-=======
     "react-native-action-button": "^2.8.5",
     "react-native-floating-action": "^1.17.0",
->>>>>>> db9e9088c5369999b6319c417044b0367fdccf31
+    "react-native-paper": "^2.16.0",
+    "react-native-vector-icons": "^6.6.0",
     "react-native-web": "^0.11.4",
+    "react-native-whc-banner": "^1.0.1",
     "react-native-wheel-picker": "^1.2.0",
     "react-native-wheel-scroll-picker": "^0.2.4",
     "react-navigation": "^3.11.0",
