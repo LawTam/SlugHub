@@ -1,59 +1,39 @@
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
+import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
-import * as WebBrowser from 'expo-web-browser';
 
-export class EngagementScreen extends React.Component {
+export class StudyScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
-        source={require('../../../assets/images/home_icon.png')}
+        source={require('../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
         resizeMode="contain"
         />
         </TouchableHighlight>
       ),
-      title: 'Engagement',
+      title: 'Study Locations',
     };
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-      <Button
-          title="Clubs"
-          color = "#e6f542"
-          onPress={() => navigate('Clubs')}
-          />
 
       <Button
-          title="Athletics / Recreational Clubs"
-          color = "#e6f542"
-          onPress={() => navigate('Athletics')}
-          />
-        
+      title="Study Locations"
+      color = "#e6f542"
+      onPress={() => navigate('Fitness')}
+      />
 
       </View>
 
     );
   }
 }
-
-function tutoring() {
-  WebBrowser.openBrowserAsync(
-    'https://sserc.ucsc.edu/slug-success'
-  );
-}
-
-function library_room_reserve() {
-  WebBrowser.openBrowserAsync(
-    'https://calendar.library.ucsc.edu/booking/mchmc'
-  );
-}
-
 
 const styles = StyleSheet.create({
   container: {

@@ -62,6 +62,12 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import { ReligiousClubsScreen } from './components/pages/Engagement/Clubs/Religous_Clubs/religious_clubs';
     import { ServiceClubsScreen } from './components/pages/Engagement/Clubs/Service_Clubs/service_clubs';
     import { Student_Media_ClubsScreen } from './components/pages/Engagement/Clubs/Student_Media_Clubs/student_media_clubs';
+    //facilities
+    import {FacilityScreen} from './components/pages/Facilities/facility'
+    import {DiningScreen} from './components/pages/Facilities/Dining/dining'
+    import {DiningHallsScreen} from './components/pages/Facilities/Dining/dining_halls'
+    import {FitnessScreen} from './components/pages/Facilities/Fitness/fitness'
+    import {StudyScreen} from './components/pages/Facilities/Study locations/studyloc'
 
 
 
@@ -118,7 +124,13 @@ const FunStack = createStackNavigator({
       Professional_Clubs: {screen: ProfessionalClubsScreen},
       ReligousClubs: {screen: ReligiousClubsScreen},
       ServiceClubs: {screen: ServiceClubsScreen},
-      Student_Media_Clubs: {screen: Student_Media_ClubsScreen}
+      Student_Media_Clubs: {screen: Student_Media_ClubsScreen},
+      //facility
+      Facility: {screen: FacilityScreen},
+      Dining: {screen: DiningScreen},
+      DiningHalls: {screen: DiningHallsScreen},
+      Fitness: {screen: FitnessScreen},
+      Study: {screen: StudyScreen}
 
 });
 
