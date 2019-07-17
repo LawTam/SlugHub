@@ -11,12 +11,8 @@ import Picker from '../../../../../node_modules/react-native-wheel-picker'
 
 var PickerItem = Picker.Item;
 var PickerItem2 = Picker.Item;
-var dict = new Map();
-dict.set("CMPS 5J", "CMPS 5J: Intro to Programming");
-dict.set("CMPS 12A", "CMPS 12A/L: Accelerated Programming");
-dict.set("CMPS 12B", "CMPS 12B/M: Intro to Data Structures");
-dict.set("CMPS 101", "CMPS 101: Algorithms and Abstract Data Types");
-dict.set("CMPS 111", "CMPS 111: Introduction to Operating Systems");
+var dictionary = new Map();
+var dictionary2 = new Map();
 
 export class CS_BSScreen extends React.Component {
   	static navigationOptions = ({ navigation }) => {
@@ -39,9 +35,10 @@ export class CS_BSScreen extends React.Component {
 		super(props);
 		this.state = {
 			selectedItem : 0,
-			itemList: ["CMPS 5J", "CMPS 12A", "CMPS 12B", "CMPS 101"],
+			itemList: [],
 			selectedItem1: 0,
-			itemList1: ["CMPS 101", "CMPS 111"]
+			itemList1: [],
+			data:  null
 		};
 	}
 
@@ -108,7 +105,7 @@ export class CS_BSScreen extends React.Component {
 						</Picker>
 
 						<Text style={{margin: 20, color: '#ffffff'}}>
-							{dict.get(this.state.itemList[this.state.selectedItem])}
+							{dictionary.get(this.state.itemList[this.state.selectedItem])}
 						</Text>
 
 						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
@@ -128,18 +125,108 @@ export class CS_BSScreen extends React.Component {
 						</Picker>
 
 						<Text style={{margin: 20, color: '#ffffff'}}>
-							{dict.get(this.state.itemList1[this.state.selectedItem1])}
+							{dictionary2.get(this.state.itemList1[this.state.selectedItem1])}
 						</Text>
 
-						<Text style={{margin: 20, color: '#ffffff'}}
+						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
 							onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
-							Search2 for this class!
-						</Text>
+						</Button>
         		</View>
 
 			</View>
 		);
 	}
+
+	componentDidMount = () => {
+		fetch('https://people.ucsc.edu/~nmarkenz/Webscraping/lowerdiv_cse_classes.json', {
+		   method: 'GET'
+		})
+		.then((response) => response.json())
+		.then((responseJson) => {
+		   console.log(responseJson);
+		   this.create_dict(responseJson,dictionary,0)
+		   //console.log(dictionary)
+		   //dictionary = clean_up_dict(dictionary)
+		   this.setState({
+			  data: responseJson
+		   })
+		})
+		.catch((error) => {
+		   console.error(error);
+		});
+		fetch('https://people.ucsc.edu/~nmarkenz/Webscraping/upperdiv_cse_classes.json', {
+		   method: 'GET'
+		})
+		.then((response) => response.json())
+		.then((responseJson) => {
+		   console.log(responseJson);
+		   this.create_dict(responseJson,dictionary2,1)
+		   //console.log(dictionary)
+		   //dictionary = clean_up_dict(dictionary)
+		   this.setState({
+			  data: responseJson
+		   })
+		})
+		.catch((error) => {
+		   console.error(error);
+		});
+	 }
+	 create_dict(result,dict,upper) {
+		console.log(typeof result);
+		console.log(result);
+		console.log(typeof dict);
+		   str_dict = JSON.stringify(result);
+		   //console.log(typeof str_dict);
+		  // console.log(str_dict);
+		   //console.log(new_dict.get("CMPS 5J"));
+		  var res = str_dict.split(" ,");
+		  // console.log(res);
+		  //var str_class = res[0].split(" \" ");
+		   //console.log(str_class);
+		  var str2 = res[0].match(/[^\s"']+|"([^"]*)"/gmi)
+		 // console.log("------------------------");
+		  //console.log(str2);
+		 // console.log(str2[1]);
+		  var start = 1
+		  var end = 3
+		  //console.log(Math.floor(str2.length/4));
+		  var num_items = Math.floor((str2.length)/4)
+		  console.log("---------------------------")
+		  console.log(str2[start]);
+		  var key = str2[start].split("\"");
+		  console.log(key)
+		  console.log(key[1])
+		  console.log("---------------------------")
+		  for(var i = 0; i < num_items; i++) 
+	   {
+		  var key = str2[start].split("\"");
+		  var val = str2[end].split("\"");
+		  dict.set(key[1], val[1]);
+		  //console.log(dict.get(str2[start]));
+		  start += 4;
+		  end += 4;
+	   }
+	   console.log(dict);
+	   console.log("KILL ME");
+	   console.log(dict.get("\"CSE99\""))
+	   iterator1 = dict.keys()
+	   console.log(this.state.itemList1)
+	   if (upper == 0)
+			   myList = this.state.itemList
+		else
+		myList = this.state.itemList1
+	   for (var i = 0; i < dict.size;i++)
+	   {
+		   myList.push(iterator1.next().value)
+	   }
+	   console.log(iterator1.next().value)
+	   //this.state.itemList = 
+	   console.log(typeof dict)
+	   for (key in dict)
+			   console.log(key);
+			   
+	   }
+	   
 }
 
 function cs_bs_curriculum() {
@@ -148,6 +235,19 @@ function cs_bs_curriculum() {
   );
 }
 
+
+
+function clean_up_dict(dictionary) {
+	for (var key in dictionary) {
+		// check if the property/key is defined in the object itself, not in parent
+		if (dictionary.hasOwnProperty(key)) {           
+			console.log(key, dictionary[key]);
+		}
+	}
+	return dictionary
+
+
+}
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
