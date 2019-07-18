@@ -3,7 +3,7 @@ import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
-export class DiningHallsScreen extends React.Component {
+export class CafesScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -15,7 +15,7 @@ export class DiningHallsScreen extends React.Component {
         />
         </TouchableHighlight>
       ),
-      title: 'Dining Halls',
+      title: 'Cafes, Restaurants and Coffee Bars',
     };
   };
   render() {
@@ -23,27 +23,42 @@ export class DiningHallsScreen extends React.Component {
     return (
       <View style= {styles.container}>
       <Button
-      title="Porter/Kresge"
+      title="Banana Joe's"
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />
       <Button
-      title="Cowell/Stevenson"
+      title="Bay Tree Express Store"
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />
       <Button
-      title="Crown/Merrill"
+      title="Bowls by Café Brasil"
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />
       <Button
-      title="Rachel Carson/Oakes"
+      title="College Eight Cafe"
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />
       <Button
-      title="Colleges Nine & Ten"
+      title="Global Village Cafe by Amazon Juices"
+      color = "#e6f542"
+      onPress={() => navigate('Dining')}
+      />
+      <Button
+      title="Perk Coffee Bar at Baskin Engineering"
+      color = "#e6f542"
+      onPress={() => navigate('Dining')}
+      />
+      <Button
+      title="Perk Coffee Bar at Physical Sciences Building"
+      color = "#e6f542"
+      onPress={() => navigate('Dining')}
+      />
+      <Button
+      title="Terra Fresca Restaurant & Coffee Bar"
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />

@@ -66,8 +66,8 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
     import {FacilityScreen} from './components/pages/Facilities/facility'
     import {DiningScreen} from './components/pages/Facilities/Dining/dining'
     import {DiningHallsScreen} from './components/pages/Facilities/Dining/dining_halls'
+    import {CafesScreen} from './components/pages/Facilities/Dining/cafes'
     import {FitnessScreen} from './components/pages/Facilities/Fitness/fitness'
-    import {StudyScreen} from './components/pages/Facilities/Study locations/studyloc'
 
   // GLO
   import { gloMainScreen} from './components/pages/Engagement/GLO/gloMain';
@@ -168,8 +168,8 @@ const FunStack = createStackNavigator({
       Facility: {screen: FacilityScreen},
       Dining: {screen: DiningScreen},
       DiningHalls: {screen: DiningHallsScreen},
+      Cafes: {screen: CafesScreen},
       Fitness: {screen: FitnessScreen},
-      Study: {screen: StudyScreen},
       // GLO
       gloMain: {screen: gloMainScreen},
       cultural_page: {screen: culturalScreen},
