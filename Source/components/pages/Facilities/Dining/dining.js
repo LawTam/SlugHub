@@ -29,6 +29,13 @@ export class DiningScreen extends React.Component {
       onPress={() => navigate('DiningHalls')}
       />
 
+      <Button
+      title="Cafes, Restaurants and Coffee Bars"
+      color = "#e6f542"
+      onPress={() => navigate('Cafes')}
+      />
+
+
       </View>
 
     );

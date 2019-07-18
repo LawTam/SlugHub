@@ -35,12 +35,6 @@ export class FacilityScreen extends React.Component {
       onPress={() => navigate('Fitness')}
       />
 
-      <Button
-      title="Study Locations"
-      color = "#e6f542"
-      onPress={() => navigate('Fitness')}
-      />
-
       </View>
 
     );
