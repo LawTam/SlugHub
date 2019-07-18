@@ -25,57 +25,45 @@ export class AdvisingScreen extends React.Component {
 
       <View style= {styles.screen_container}>
 
+        <View style= {styles.jbe_container}>
 
+          <TouchableHighlight underlayColor='transparent' onPress={jbe_home}>
+            <View style = {styles.dept_logo}>
+              <Image
+                source={require('../../../assets/images/jbe_logo.png')}
+                style={{height: '100%', width: '45%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableHighlight>
+
+              <View style= {styles.majorButton}>
+                <Button
+                  title="Majors"
+                  color = "#FFFFFF"
+                  onPress={() => navigate('JBE_Majors')}
+                />
+              </View>
+
+
+              <View style= {styles.minorButton}>
+                <Button
+                  title="Minors"
+                  color = "#FFFFFF"
+                  onPress={() => navigate('JBE_Minors')}
+                />
+              </View>
+
+      </View>
 
         <View style= {styles.jbe_container}>
-          <ImageBackground
-            source={require('../../../assets/images/engineering.png')}
-            resizeMode="stretch"
-            style={{width: '100%', height: '100%'}}>
 
-            <View style = {styles.touch_container}>
-              <TouchableHighlight onPress={jbe_home}>
-                <Image
-                  source={require('../../../assets/images/jbe_logo.png')}
-                  style={{height: 100, width: 180}}
-                  resizeMode="contain"
-                />
-              </TouchableHighlight>
-            </View>
-
-            <View style= {styles.majorButton}>
-              <Button
-                title="Majors"
-                color = "#FFFFFF"
-                onPress={() => navigate('JBE_Majors')}
-              />
-            </View>
-
-
-            <View style= {styles.minorButton}>
-              <Button
-                title="Minors"
-                color = "#FFFFFF"
-                onPress={() => navigate('JBE_Minors')}
-              />
-            </View>
-
-          </ImageBackground>
-        </View>
-
-
-
-        <View style= {styles.pbsci_container}>
-          <ImageBackground
-            source={require('../../../assets/images/pbsci.jpg')}
-            resizeMode="stretch"
-            style={{width: '100%', height: '100%'}}>
 
             <View style = {styles.smallTouch_container}>
               <TouchableHighlight onPress={pbsci_home}>
                 <Image
                   source={require('../../../assets/images/pbsci_logo.png')}
-                  style={{height: 83, width: 200}}
+                   style={{height: '100%', width: '45%'}}
                   resizeMode="contain"
                 />
               </TouchableHighlight>
@@ -97,22 +85,17 @@ export class AdvisingScreen extends React.Component {
               />
             </View>
 
-          </ImageBackground>
+                    
         </View>
 
 
-        <View style= {styles.ss_container}>
-
-          <ImageBackground
-            source={require('../../../assets/images/socialSciences.jpg')}
-            resizeMode="stretch"
-            style={{width: '100%', height: '100%'}}>
+        <View style= {styles.jbe_container}>
 
             <View style = {styles.smallTouch_container}>
               <TouchableHighlight onPress={ss_home}>
                 <Image
                   source={require('../../../assets/images/ss_logo.png')}
-                  style={{height: 82, width: 200}}
+                  style={{height: '100%', width: '45%'}}
                   resizeMode="contain"
                 />
               </TouchableHighlight>
@@ -133,24 +116,17 @@ export class AdvisingScreen extends React.Component {
                 //onPress={() => navigate('JBE_Minors')}
               />
             </View>
-
-          </ImageBackground>
         </View>
 
 
 
-        <View style= {styles.hum_container}>
-
-          <ImageBackground
-            source={require('../../../assets/images/humanities.jpg')}
-            resizeMode="stretch"
-            style={{width: '100%', height: '100%'}}>
+        <View style= {styles.jbe_container}>
 
             <View style = {styles.longTouch_container}>
               <TouchableHighlight onPress={hum_home}>
                 <Image
                   source={require('../../../assets/images/hum_logo.png')}
-                  style={{height: 100, width: 200}}
+                  style={{height: '100%', width: '45%'}}
                   resizeMode="contain"
                 />
               </TouchableHighlight>
@@ -171,23 +147,16 @@ export class AdvisingScreen extends React.Component {
                 //onPress={() => navigate('JBE_Minors')}
               />
             </View>
-
-          </ImageBackground>
         </View>
 
 
-        <View style= {styles.art_container}>
-
-          <ImageBackground
-            source={require('../../../assets/images/art.jpg')}
-            resizeMode="stretch"
-            style={{width: '100%', height: '100%'}}>
+        <View style= {styles.jbe_container}>
 
             <View style = {styles.smallTouch_container}>
               <TouchableHighlight onPress={art_home}>
                 <Image
                   source={require('../../../assets/images/art_logo.png')}
-                  style={{height: 78, width: 200}}
+                  style={{height: '100%', width: '45%'}}
                   resizeMode="contain"
                 />
               </TouchableHighlight>
@@ -208,11 +177,7 @@ export class AdvisingScreen extends React.Component {
                 //onPress={() => navigate('JBE_Minors')}
               />
             </View>
-          </ImageBackground>
-        </View>
-
-
-
+        </View> 
       </View>
 
 
@@ -257,9 +222,13 @@ const styles = StyleSheet.create({
     flex: 1
   },
 
-  touch_container: {
-    paddingLeft: 20
+  dept_logo: {
+    paddingLeft: '5%',
+  },
 
+  majorminor: {
+    paddingBottom: '10%',
+    backgroundColor: 'black',
   },
 
   smallTouch_container: {
@@ -274,27 +243,20 @@ const styles = StyleSheet.create({
   jbe_container: {
     justifyContent: "center",
     fontSize: 10,
-    // padding: 10,
-    // paddingTop: 10,
-    // paddingRight: 160,
-    // paddingBottom: 10,
-    // paddingLeft: 10,
-    backgroundColor: "#D8BFD8",
-    flex: .2,
-    borderBottomColor: "#FFFFFF",
-    borderBottomWidth: 4,
+    backgroundColor: "white",
+    flex: .18,
+    marginLeft: '5%',
+    marginRight: '5%',
+    marginTop: '2%',
+    marginBottom: '2%',
+    borderRadius: 10,
   },
 
   pbsci_container: {
     justifyContent: "center",
     fontSize: 10,
-    // padding: 10,
-    // paddingTop: 10,
-    // paddingRight: 160,
-    // paddingBottom: 10,
-    backgroundColor: "#000000",
+    backgroundColor: "white",
     flex: .2,
-    borderBottomColor: "#FFFFFF",
     borderBottomWidth: 4,
   },
 
@@ -343,15 +305,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDDDDD',
     padding: 10
   },
+
   majorButton: {
     alignSelf: 'flex-end',
     backgroundColor: 'gold',
     position: 'absolute',
-    bottom: '55.5%',
-    right: 10,
+    bottom: '50%',
+    right: 8,
     width: 150,
-    opacity: .9,
+    opacity: 1,
     borderRadius: 7,
+    // paddingTop: 10,
+    // paddingBottom: 10,
   },
   minorButton: {
     alignSelf: 'flex-end',
@@ -362,24 +327,7 @@ const styles = StyleSheet.create({
     width: 150,
     opacity: .9,
     borderRadius: 7,
+    marginTop: '10%',
   },
-
-  pbsci_majorButton: {
-    alignSelf: 'flex-end',
-    backgroundColor: 'gold',
-    position: 'absolute',
-    bottom: '62.5%',
-    right: 10,
-    width: 150,
-  },
-  pbsci_minorButton: {
-    alignSelf: 'flex-end',
-    backgroundColor: 'gold',
-    position: 'absolute',
-    bottom: '22%',
-    right: 10,
-    width: 150,
-  },
-
 
 });
