@@ -3,6 +3,7 @@ import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, Stat
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
+import { WorldAlignment } from 'expo/build/AR';
 
 export class HomePageScreen extends React.Component {
   static navigationOptions = {
@@ -11,97 +12,72 @@ export class HomePageScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-    <View style= {styles.container}>
+    <View style= {styles.page_container}>
         <ImageBackground 
-          source={require('../../../assets/images/UCSC_stock.jpg')} 
-          //resizeMode="contain"
+          source={require('../../../assets/images/homepage/background.jpg')} 
           style={{width: '100%', height: '100%'}}>
-
-          {/* <Button
-          title="Advising"
-          color = "#e6f542"
-          onPress={() => navigate('Advising')}
-          />
-
-          <Button
-          title="Academic"
-          color = "#e6f542"
-          onPress={() => navigate('Academic')}
-          />
-
-          <Button
-          title="Career"
-          color = "#e6f542"
-          onPress={() => navigate('Career')}
-          />
-          
-          <Button
-          title="Academic Calendar"
-          color = "#e6f542"
-          onPress={() => navigate('Academic Calendar')}
-          /> */}
-
-          <View style= {styles.myUCSCButton}> 
-            <TouchableHighlight onPress={myUCSC}>
-              <Image
-                source={require('../../../assets/images/myUCSC_logo.png')}
-                resizeMode="contain"
-                style= {styles.myUCSC_image}
-              /> 
-            </TouchableHighlight>
-          </View>
-                    
-          <View style= {styles.canvasButton}> 
-            <TouchableHighlight onPress={canvas}>
-              <Image
-                source={require('../../../assets/images/canvas_logo.png')}
-                resizeMode="contain"
-                style= {styles.canvas_image}
-                /> 
-            </TouchableHighlight>
-          </View> 
-
-          <View style = {styles.advising_button}>
+            <View style = {styles.row_container}>
+              <View style = {styles.logo_container}>
+                <TouchableHighlight onPress={myUCSC}>
+                  <Image
+                  source={require('../../../assets/images/homepage/myucsc.png')}
+                  style = {{height: 96, width: 96}}
+                  />
+                </TouchableHighlight>
+                <Text>myUCSC</Text> 
+              </View>
+              <View style ={styles.logo_container}>
+                <TouchableHighlight onPress={canvas}>
+                  <Image
+                  source={require('../../../assets/images/homepage/canvas.png')}
+                  style = {{height: 96, width: 96}}
+                  /> 
+                  </TouchableHighlight>
+                  <Text>Canvas</Text>
+              </View>
+            </View>
+           
+            <View style = {styles.row_container}>
+            <View style = {styles.logo_container}>
             <TouchableHighlight onPress={() => navigate('Advising')}>
               <Image
-              source={require('../../../assets/images/logo.jpg')}
-              style={
-                {height: 100, width: 200}
-              }
+              source={require('../../../assets/images/homepage/advising.png')}
               resizeMode="contain"
               />
             </TouchableHighlight>
-          </View>
-
-          <View style = {styles.engagement_button}>
+            <Text>Advising</Text>
+            </View>
+            <View style = {styles.logo_container}>
             <TouchableHighlight onPress={() => navigate('Engagement')}>
               <Image
-              source={require('../../../assets/images/robot-prod.png')}
-              style={{height: 100, width: 200}}
+              source={require('../../../assets/images/homepage/engagement.png')}
               resizeMode="contain"
               />
             </TouchableHighlight>
-          </View>
+            <Text>Engagement</Text>
+            </View>
+            </View>
 
-          <View style = {styles.athletics_button}>
+            <View style = {styles.row_container}>
+            <View style = {styles.logo_container}>
             <TouchableHighlight onPress={() => navigate('Athletics')}>
               <Image
-              source={require('../../../assets/images/athletic_slug.jpg')}
-              style={{height: 100, width: 200}}
+              source={require('../../../assets/images/homepage/athletics.png')}
               resizeMode="contain"
               />
             </TouchableHighlight>
-          </View>
-
-          <View style = {styles.facility_button}>
+            <Text>Athletics</Text>
+            </View>
+            <View style = {styles.logo_container}>
             <TouchableHighlight onPress={() => navigate('Facility')}>
               <Image
-              source={require('../../../assets/images/facility_logo.jpg')}
-              style={{height: 100, width: 200}}
+              source={require('../../../assets/images/homepage/facilities.png')}
               resizeMode="contain"
               />
             </TouchableHighlight>
-          </View>
+            <Text>Facility</Text>
+            </View>
+            </View>
           
       </ImageBackground> 
     </View>
@@ -122,69 +98,23 @@ function canvas() {
   );
 }
 
-function jbe_home() {
-  WebBrowser.openBrowserAsync(
-    'https://www.soe.ucsc.edu/'
-  );
-}
-
 const styles = StyleSheet.create({
-    container: {
-      justifyContent: "center",
+    page_container: {
       fontSize: 30,
-      backgroundColor: "#4287f5",
-      flex: 1
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "flex-start",
     },
 
-    myUCSC_image: {
-      height:50,
-      width:130,
+    row_container: {
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "flex-start",
     },
 
-    myUCSCButton: {
-      top: '30%',
-      left: '13%',
-      position: "absolute",
-      height: 50,
-      width: 130,
+    logo_container: {
+      position: 'relative',
+      justifyContent: 'flex-start',
     },
-
-    canvasButton: {
-      top: '30%',
-      left: '50%',
-      position: "absolute",
-      height:70, 
-      width:180,
-    },
-    
-    canvas_image: {
-      height:70, 
-      width:180,
-    },
-
-    advising_button: {
-      top:  '10%',
-      left: '5%',
-      position: "absolute",
-    },
-
-    engagement_button: {
-      top: '10%',
-      left: '50%',
-      position: "absolute",
-    },
-
-    athletics_button: {
-      top: '70%',
-      left: '10%',
-      position: "absolute",
-    },
-    
-    facility_button: {
-      top: '70%',
-      right: '10%',
-      position: "absolute",
-    }
-
 
   });

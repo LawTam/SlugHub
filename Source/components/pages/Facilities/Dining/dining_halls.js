@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class DiningHallsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -25,7 +26,7 @@ export class DiningHallsScreen extends React.Component {
       <Button
       title="Porter/Kresge"
       color = "#e6f542"
-      onPress={() => navigate('Dining')}
+      onPress={PorterLocation}
       />
       <Button
       title="Cowell/Stevenson"
@@ -51,6 +52,12 @@ export class DiningHallsScreen extends React.Component {
 
     );
   }
+}
+
+function PorterLocation() {
+  WebBrowser.openBrowserAsync(
+    'https://www.google.com/maps/place/Porter%2FKresge+Dining+Hall/@36.9942691,-122.0681352,17z/data=!3m1!4b1!4m5!3m4!1s0x808e419e8ff298a9:0xc0cc7592fcea39a0!8m2!3d36.9942691!4d-122.0659465'
+  );
 }
 
 const styles = StyleSheet.create({
