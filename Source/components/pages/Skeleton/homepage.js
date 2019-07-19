@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
 import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 import { WorldAlignment } from 'expo/build/AR';
 
@@ -12,71 +10,71 @@ export class HomePageScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-    <View style= {styles.page_container}>
+    <View style= {styles.pageContainer}>
         <ImageBackground 
           source={require('../../../assets/images/homepage/background.jpg')} 
           style={{width: '100%', height: '100%'}}>
-            <View style = {styles.row_container}>
-              <View style = {styles.logo_container}>
+              <View style = {styles.muContainer}>
                 <TouchableHighlight onPress={myUCSC}>
                   <Image
                   source={require('../../../assets/images/homepage/myucsc.png')}
+                  resizeMode="contain"
                   style = {{height: 96, width: 96}}
                   />
                 </TouchableHighlight>
-                <Text>myUCSC</Text> 
+                <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>myUCSC</Text> 
               </View>
-              <View style ={styles.logo_container}>
+              <View style ={styles.cnContainer}>
                 <TouchableHighlight onPress={canvas}>
                   <Image
                   source={require('../../../assets/images/homepage/canvas.png')}
+                  resizeMode="contain"
                   style = {{height: 96, width: 96}}
                   /> 
                   </TouchableHighlight>
-                  <Text>Canvas</Text>
+                  <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Canvas</Text>
               </View>
-            </View>
            
-            <View style = {styles.row_container}>
-            <View style = {styles.logo_container}>
+            <View style = {styles.adContainer}>
             <TouchableHighlight onPress={() => navigate('Advising')}>
               <Image
               source={require('../../../assets/images/homepage/advising.png')}
               resizeMode="contain"
+              style = {{height: 96, width: 96}}
               />
             </TouchableHighlight>
-            <Text>Advising</Text>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Advising</Text>
             </View>
-            <View style = {styles.logo_container}>
+            <View style = {styles.enContainer}>
             <TouchableHighlight onPress={() => navigate('Engagement')}>
               <Image
               source={require('../../../assets/images/homepage/engagement.png')}
               resizeMode="contain"
+              style = {{height: 96, width: 96}}
               />
             </TouchableHighlight>
-            <Text>Engagement</Text>
-            </View>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engagement</Text>
             </View>
 
-            <View style = {styles.row_container}>
-            <View style = {styles.logo_container}>
+            <View style = {styles.atContainer}>
             <TouchableHighlight onPress={() => navigate('Athletics')}>
               <Image
               source={require('../../../assets/images/homepage/athletics.png')}
               resizeMode="contain"
+              style = {{height: 96, width: 96}}
               />
             </TouchableHighlight>
-            <Text>Athletics</Text>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Athletics</Text>
             </View>
-            <View style = {styles.logo_container}>
+            <View style = {styles.fcContainer}>
             <TouchableHighlight onPress={() => navigate('Facility')}>
               <Image
               source={require('../../../assets/images/homepage/facilities.png')}
               resizeMode="contain"
+              style = {{height: 96, width: 96}}
               />
             </TouchableHighlight>
-            <Text>Facility</Text>
-            </View>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Facility</Text>
             </View>
           
       </ImageBackground> 
@@ -99,22 +97,49 @@ function canvas() {
 }
 
 const styles = StyleSheet.create({
-    page_container: {
+    pageContainer: {
       fontSize: 30,
       flex: 1,
       flexDirection: "row",
       justifyContent: "flex-start",
     },
 
-    row_container: {
-      flex: 1,
-      flexDirection: "row",
-      justifyContent: "flex-start",
+    muContainer: {
+      position: "absolute",
+      top: "5%",
+      left: "19%"
     },
 
-    logo_container: {
-      position: 'relative',
-      justifyContent: 'flex-start',
+    cnContainer:{
+      position: "absolute",
+      top: "5%",
+      right: "19%"
     },
+
+    adContainer: {
+      position: "absolute",
+      top: "22%",
+      left: "19%"
+    },
+
+    enContainer: {
+      position: "absolute",
+      top: "22%",
+      right: "19%"
+    },
+
+    atContainer: {
+      position: "absolute",
+      top: "39%",
+      right: "19%"
+    },
+
+    fcContainer: {
+      position: "absolute",
+      top: "39%",
+      left: "19%"
+    }
+
+
 
   });
