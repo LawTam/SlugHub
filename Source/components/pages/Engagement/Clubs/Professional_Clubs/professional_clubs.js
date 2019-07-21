@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class ProfessionalClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -21,113 +22,189 @@ export class ProfessionalClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="Accounting Association"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="Association of Latino Professionals in Finance & Accounting (ALPFA)"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
-      <Button
-      title="American Medical Student Association (AMSA)"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
+      
+       
+              
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Accounting Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Association of Latino Professionals in Finance & Accounting (ALPFA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               American Medical Student Association (AMSA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Gesher Group
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Health Guardians America
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Microcontrollers and Application Processors (MAAP)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Morning Sign Out (MSO)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pre-Dental Society
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pre-Law Society
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pre-Pharmacy Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pre-SOMA (Students of Osteopathic Medical Association)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pre-Veterinary Club at UCSC
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slugs Fund Investment Group
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Society of Hispanic Professional Engineers (SHPE)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Students for Professional Development (SPD)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Tomorrow’s Medical Community
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               University Economics Association (UEA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Volunteers Around the World: Medical Outreach Program at UCSC
+           </Text>
+       </TouchableHighlight>
+       
+       
 
-      <Button
-      title="Gesher Group"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Health Guardians America"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Microcontrollers and Application Processors (MAAP)"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Morning Sign Out (MSO)"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Pre-Dental Society"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Pre-Law Society"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Pre-Pharmacy Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Pre-SOMA (Students of Osteopathic Medical Association)"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Pre-Veterinary Club at UCSC"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Slugs Fund Investment Group"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Society of Hispanic Professional Engineers (SHPE)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Students for Professional Development (SPD)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-<Button
-      title="Tomorrow’s Medical Community"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="University Economics Association (UEA)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Volunteers Around the World: Medical Outreach Program at UCSC"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-</ScrollView>
-      </View>
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
+  </View>
 
     );
   }
@@ -136,9 +213,38 @@ export class ProfessionalClubsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });

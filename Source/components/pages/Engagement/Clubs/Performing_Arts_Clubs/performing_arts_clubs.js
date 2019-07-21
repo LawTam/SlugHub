@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class Performing_ArtsClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -21,145 +22,242 @@ export class Performing_ArtsClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="Acquire A Cappella"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="Banana Slug Records"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
-      <Button
-      title="Cloud 9 A Cappella"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
+      
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Acquire A Cappella
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Banana Slug Records
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Cloud 9 A Cappella
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Comedy Joust
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Fighting Slugs Marching Band
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Haluan Hip Hop Dance Troupe
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               The Hightones
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Interval
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Isang Himig Multi-Cultural A Capella
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Kadence Keys
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Kasama Ballroom Dance Troupe
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Kinetic Poetics Project (KPP)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Pagkakaisa Dance Troupe (PDT)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               People Power Acting Troupe
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Popreka
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Queery
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Rainbow Theater
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Sabrosura Latin Dance Troupe
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Sequoia Singers
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slug Stand-Up
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slugs in Fishnets
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slugz II Men
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Taza Tal
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Traditional East Asian Music & Rockband
+           </Text>
+       </TouchableHighlight>
+       
+       
 
-      <Button
-      title="Comedy Joust"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Fighting Slugs Marching Band"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Haluan Hip Hop Dance Troupe"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="The Hightones"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Interval"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Isang Himig Multi-Cultural A Capella"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Kadence Keys"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Kasama Ballroom Dance Troupe"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Kinetic Poetics Project (KPP)"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Pagkakaisa Dance Troupe (PDT)"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="People Power Acting Troupe"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Popreka"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Queery"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Rainbow Theater"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Sabrosura Latin Dance Troupe"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Sequoia Singers"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Slug Stand-Up"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-
-<Button
-      title="Slugs in Fishnets"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Slugz II Men"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Taza Tal"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Traditional East Asian Music & Rockband"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-</ScrollView>
-      </View>
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
+  </View>
 
     );
   }
@@ -168,9 +266,38 @@ export class Performing_ArtsClubsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });

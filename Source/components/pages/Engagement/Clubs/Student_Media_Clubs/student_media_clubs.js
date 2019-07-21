@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class Student_Media_ClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -21,123 +22,206 @@ export class Student_Media_ClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="Alay"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="Banana Slug News"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
-      <Button
-      title="Chinquapin Thirty-four"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
+      
+              
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Alay
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Banana Slug News
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Chinquapin Thirty-four
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               City on a Hill Press
+           </Text>
+       </TouchableHighlight>
+              
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Eyecandy
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Film Production Coalition
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Fishrap Live!
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Fruitcake
+           </Text>
+       </TouchableHighlight>
+              
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Gaia
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Kalopsia
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               KZSC
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Leviathan Jewish Journal
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Matchbox Magazine
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               On the Spot
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Rainbow TV
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Red Wheelbarrow
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Scientific Slug
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               SCTV
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slug Works Animation
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               TWANAS (Third World and Native American Students Press Collective)
+           </Text>
+       </TouchableHighlight>
+       
+       
 
-      <Button
-      title="City on a Hill Press"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Eyecandy"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Film Production Coalition"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Fishrap Live!"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Fruitcake"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Gaia"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Kalopsia"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="KZSC"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Leviathan Jewish Journal"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Matchbox Magazine"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="On the Spot"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Rainbow TV"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-<Button
-      title="Red Wheelbarrow"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Scientific Slug"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="SCTV"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-      <Button
-      title="Slug Works Animation"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-      <Button
-      title="TWANAS (Third World and Native American Students Press Collective)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-</ScrollView>
-      </View>
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
+  </View>
 
     );
   }
@@ -146,9 +230,38 @@ export class Student_Media_ClubsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });

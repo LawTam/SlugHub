@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class General_InterestClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -21,101 +22,170 @@ export class General_InterestClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="Active Minds"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="Anthropology Society"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
-      <Button
-      title="Balloon Art Brigade"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Brain, Mind, Consciousness Society"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Cosplay Club"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="The Great Chess Club"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="League of Slugs (LOS)"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Medieval Club of UCSC"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Metal Slugs"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Santa Cruz Fighting Game Community"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Sisterhood in STEM"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Slug Anime & Manga Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Slug Gaming"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="SlugLug Linux Users' Group"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="The Ten Colleges Debate Union, Debate Team"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Warriors for Peace"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
       
-</ScrollView>
-      </View>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Active Minds
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Anthropology Society
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Balloon Art Brigade
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Brain, Mind, Consciousness Society
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Cosplay Club
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               The Great Chess Club
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               League of Slugs (LOS)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Medieval Club of UCSC
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Metal Slugs
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Santa Cruz Fighting Game Community
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Sisterhood in STEM
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slug Anime & Manga Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slug Gaming
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               SlugLug Linux Users' Group
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               The Ten Colleges Debate Union, Debate Team
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Warriors for Peace
+           </Text>
+       </TouchableHighlight>
+       
+       
+
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
+  </View>
 
     );
   }
@@ -124,9 +194,38 @@ export class General_InterestClubsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });

@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
+import * as WebBrowser from 'expo-web-browser';
 
 export class ReligiousClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -21,156 +22,269 @@ export class ReligiousClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="Acts 2 Christian Fellowship"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-       <Button
-      title="Asian-American Christian Fellowship"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-      <Button
-      title="Chabad Student Center"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="Christians on Campus at UCSC"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-      <Button
-      title="The Church of Jesus Christ of Latter-day Saints"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-      <Button
-      title="Community Seed Earth Spirit Fellowship"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-      <Button
-      title="Faith Education Action Service Together (FEAST)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-      <Button
-      title="FPMT Buddhist Centers of Santa Cruz"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-      <Button
-      title="Grad Student & Postdoc Christian Fellowship (GPCF)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-      <Button
-      title="High Street College Fellowship"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-      <Button
-      title="Hillel / Jewish Student Resource Center"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
       
-      <Button
-      title="Hindu Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Acts 2 Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Asian-American Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Chabad Student Center
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Christians on Campus at UCSC
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               The Church of Jesus Christ of Latter-day Saints
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Community Seed Earth Spirit Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Faith Education Action Service Together (FEAST)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               FPMT Buddhist Centers of Santa Cruz
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Grad Student & Postdoc Christian Fellowship (GPCF)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               High Street College Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Hillel / Jewish Student Resource Center
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Hindu Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               International Students, Inc.
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               InterVarsity Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Klesis Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Kyrie Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Lutheran Campus Ministry
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Muslim Student Association (MSA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Newman Catholic Campus Ministry
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Orthodox Christian Fellowship
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Santa Cruz Sikh Community/Sangat
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Sikh Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               SGI: World Peace Buddhist
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Slugs and Bahais
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Soon Movement
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Vintage Faith Church
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+           <Text
+             style={styles.buttonText}>
+               Young Life College
+           </Text>
+       </TouchableHighlight>
+       
+       
 
-    <Button
-      title="International Students, Inc."
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-      <Button
-      title="InterVarsity Christian Fellowship"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-      <Button
-      title="Klesis Christian Fellowship"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-    <Button
-      title="Kyrie Christian Fellowship"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-    <Button
-      title="Lutheran Campus Ministry"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Muslim Student Association (MSA)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-    <Button
-      title="Newman Catholic Campus Ministry"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Orthodox Christian Fellowship"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Santa Cruz Sikh Community/Sangat"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Sikh Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="SGI: World Peace Buddhist"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Slugs and Bahais"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Soon Movement"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Vintage Faith Church"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Young Life College"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      
-
-</ScrollView>
-      </View>
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
+  </View>
 
     );
   }
@@ -179,9 +293,38 @@ export class ReligiousClubsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });
