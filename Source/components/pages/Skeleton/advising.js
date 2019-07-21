@@ -1,11 +1,8 @@
-import React , {Component} from '../../../node_modules/react';
-import {ScrollView, ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React from 'react';
+import {ImageBackground, TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export class AdvisingScreen extends React.Component {
-
   // AppNavigator
   static navigationOptions = ({ navigation }) => {
     return{
@@ -245,15 +242,6 @@ const styles = StyleSheet.create({
     flex: 0.5,
   },
 
-  smallTouch_container: {
-    paddingLeft: 20,
-    paddingTop: 16.5,
-  },
-
-  longTouch_container:{
-    paddingLeft: 6
-  },
-
   major_container: {
     justifyContent: "center",
     fontSize: 10,
@@ -266,60 +254,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flexDirection: 'row',
   },
-
-  pbsci_container: {
-    justifyContent: "center",
-    fontSize: 10,
-    backgroundColor: "white",
-    flex: .2,
-    borderBottomWidth: 4,
-  },
-
-  ss_container: {
-    justifyContent: "center",
-    fontSize: 10,
-    // padding: 10,
-    // paddingTop: 10,
-    // paddingRight: 160,
-    // paddingBottom: 10,
-    backgroundColor: "#228B22",
-    flex: .2,
-    borderBottomColor: "#FFFFFF",
-    borderBottomWidth: 4,
-  },
-
-  hum_container: {
-    justifyContent: "center",
-    fontSize: 10,
-    // padding: 10,
-    // paddingTop: 10,
-    // paddingRight: 160,
-    // paddingBottom: 10,
-    backgroundColor: "#FFA500",
-    flex: .2,
-    borderBottomColor: "#FFFFFF",
-    borderBottomWidth: 4,
-  },
-
-  art_container: {
-    justifyContent: "center",
-    fontSize: 10,
-    // padding: 10,
-    // paddingTop: 10,
-    // paddingRight: 160,
-    // paddingBottom: 10,
-    backgroundColor: "#40E0D0",
-    flex: .2,
-    borderBottomColor: "#FFFFFF",
-    borderBottomWidth: 1,
-  },
-
-
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10
-  },
-
-
 });
