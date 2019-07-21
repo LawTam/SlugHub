@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, Dimensions} from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
@@ -9,6 +9,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 // npm i react-native-whc-banner --save
 import Banner, {IndicaterAlign, IndicaterType} from 'react-native-whc-banner'
+
+const BannerWidth = Dimensions.get('window').width;
+const BannerHeight = 260;
 
 export class AthleticsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -37,9 +40,9 @@ export class AthleticsScreen extends React.Component {
             autoLoop = {true}
             autoPlay = {true}
             duration = {1000}>
-              <View >< Image style = {styles.img} source = {require('../../../../assets/images/GoSlugsBanner.jpg')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.jpg')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')} /></View>
+              <View >< Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')}/></View>
+              <View ><Image style = {styles.img} source = {require('../../../../assets/images/athletic_slug.jpg')}/></View>
+              <View ><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.jpg')} /></View>
           </Banner> 
 
           <View style= {styles.container}>
@@ -106,14 +109,9 @@ function goSlugs() {
 const styles = StyleSheet.create({
   page:{
     flex:1,
-    backgroundColor: '#4287f5',
+    backgroundColor: 'white',
   },
-  container: {
-    //justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    position:'relative'
-  },
+
   banner:{
     display: 'flex',
     height: '20%',
@@ -122,10 +120,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   img:{
-    flex: 1,
-    //flexBasis: '100%',
     flexDirection: 'row',
     justifyContent: "space-evenly",
-    resizeMode: 'stretch',
-  }
+    resizeMode: 'contain',
+    width: BannerWidth,
+    height: BannerHeight 
+  },
+
+  container: {
+    fontSize: 30,
+    padding: 60,
+    position:'relative'
+  },
 });
