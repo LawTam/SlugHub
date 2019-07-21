@@ -83,9 +83,6 @@ export class CS_BSScreen extends React.Component {
     const {navigate} = this.props.navigation;
 		return (
 			<View style={styles.container}>
-				{/* <Text style={styles.welcome}>
-					Welcome to React Native!
-        			</Text> */}
 
 				<Button
 				title="Curriculum Chart"

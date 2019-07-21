@@ -1,13 +1,17 @@
 import React , {Component} from '../../../node_modules/react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import {ScrollView, ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
 
 export class AdvisingScreen extends React.Component {
+
+  // AppNavigator
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
+
+        // Home button
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
           <Image
             source={require('../../../assets/images/home_icon.png')}
@@ -19,168 +23,156 @@ export class AdvisingScreen extends React.Component {
       title: 'Advising',
     };
   };
-  render() {
-    const {navigate} = this.props.navigation;
+  render() { 
+    const {navigate} = this.props.navigation; 
     return (
-
       <View style= {styles.screen_container}>
+        
+       <ImageBackground     // Create screen background
+        source = {require('../../../assets/images/homepage/background.jpg')}
+        style={{width: '100%', height: '100%', flex: 1}}>
 
-        <View style= {styles.jbe_container}>
-
-          <TouchableHighlight underlayColor='transparent' onPress={jbe_home}>
-            <View style = {styles.dept_logo}>
+        <View style = {styles.major_container}> 
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+            <View >
               <Image
                 source={require('../../../assets/images/jbe_logo.png')}
-                style={{height: '100%', width: '45%'}}
+                style={{height: '100%', width: '100%'}}
                 resizeMode="contain"
               />
             </View>
           </TouchableHighlight>
-
+          <View style = {styles.majorminor}>
               <View style= {styles.majorButton}>
                 <Button
                   title="Majors"
-                  color = "#FFFFFF"
+                  color = "black"
                   onPress={() => navigate('JBE_Majors')}
                 />
               </View>
-
-
               <View style= {styles.minorButton}>
                 <Button
                   title="Minors"
-                  color = "#FFFFFF"
+                  color = "black"
                   onPress={() => navigate('JBE_Minors')}
                 />
+              </View> 
+          </View> 
+        </View>
+      
+        <View style= {styles.major_container}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+            <View >
+              <Image
+                source={require('../../../assets/images/pbsci_logo.png')}
+                style={{height: '100%', width: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableHighlight>
+          <View style = {styles.majorminor}>
+              <View style= {styles.majorButton}>
+                <Button
+                  title="Majors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Majors')}
+                />
               </View>
+              <View style= {styles.minorButton}>
+                <Button
+                  title="Minors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Minors')}
+                />
+              </View> 
+          </View> 
+        </View>
 
+        <View style= {styles.major_container}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+            <View >
+              <Image
+                source={require('../../../assets/images/art_logo.png')}
+                style={{height: '100%', width: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableHighlight>
+          <View style = {styles.majorminor}>
+              <View style= {styles.majorButton}>
+                <Button
+                  title="Majors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Majors')}
+                />
+              </View>
+              <View style= {styles.minorButton}>
+                <Button
+                  title="Minors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Minors')}
+                />
+              </View> 
+          </View> 
+        </View>
+
+        <View style= {styles.major_container}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+            <View >
+              <Image
+                source={require('../../../assets/images/humanities_logo.png')}
+                style={{height: '100%', width: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableHighlight>
+          <View style = {styles.majorminor}>
+              <View style= {styles.majorButton}>
+                <Button
+                  title="Majors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Majors')}
+                />
+              </View>
+              <View style= {styles.minorButton}>
+                <Button
+                  title="Minors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Minors')}
+                />
+              </View> 
+          </View> 
+        </View>
+
+        <View style= {styles.major_container}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+            <View >
+              <Image
+                source={require('../../../assets/images/socialsciences_logo.png')}
+                style={{height: '100%', width: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </TouchableHighlight>
+          <View style = {styles.majorminor}>
+              <View style= {styles.majorButton}>
+                <Button
+                  title="Majors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Majors')}
+                />
+              </View>
+              <View style= {styles.minorButton}>
+                <Button
+                  title="Minors"
+                  color = "black"
+                  onPress={() => navigate('JBE_Minors')}
+                />
+              </View> 
+            </View> 
+          </View>
+        </ImageBackground> 
       </View>
-
-        <View style= {styles.jbe_container}>
-
-
-            <View style = {styles.smallTouch_container}>
-              <TouchableHighlight onPress={pbsci_home}>
-                <Image
-                  source={require('../../../assets/images/pbsci_logo.png')}
-                   style={{height: '100%', width: '45%'}}
-                  resizeMode="contain"
-                />
-              </TouchableHighlight>
-            </View>
-
-            <View style= {styles.majorButton}>
-              <Button
-                title="PBSCI Majors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Majors')}
-              />
-            </View>
-
-            <View style= {styles.minorButton}>
-              <Button
-                title="PBSCI Minors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Minors')}
-              />
-            </View>
-
-                    
-        </View>
-
-
-        <View style= {styles.jbe_container}>
-
-            <View style = {styles.smallTouch_container}>
-              <TouchableHighlight onPress={ss_home}>
-                <Image
-                  source={require('../../../assets/images/ss_logo.png')}
-                  style={{height: '100%', width: '45%'}}
-                  resizeMode="contain"
-                />
-              </TouchableHighlight>
-            </View>
-
-            <View style= {styles.majorButton}>
-              <Button
-                title="SS Majors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Majors')}
-              />
-            </View>
-
-            <View style= {styles.minorButton}>
-              <Button
-                title="SS Minors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Minors')}
-              />
-            </View>
-        </View>
-
-
-
-        <View style= {styles.jbe_container}>
-
-            <View style = {styles.longTouch_container}>
-              <TouchableHighlight onPress={hum_home}>
-                <Image
-                  source={require('../../../assets/images/hum_logo.png')}
-                  style={{height: '100%', width: '45%'}}
-                  resizeMode="contain"
-                />
-              </TouchableHighlight>
-            </View>
-
-            <View style= {styles.majorButton}>
-              <Button
-                title="HUM Majors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Majors')}
-              />
-            </View>
-
-            <View style= {styles.minorButton}>
-              <Button
-                title="HUM Minors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Minors')}
-              />
-            </View>
-        </View>
-
-
-        <View style= {styles.jbe_container}>
-
-            <View style = {styles.smallTouch_container}>
-              <TouchableHighlight onPress={art_home}>
-                <Image
-                  source={require('../../../assets/images/art_logo.png')}
-                  style={{height: '100%', width: '45%'}}
-                  resizeMode="contain"
-                />
-              </TouchableHighlight>
-            </View>
-
-            <View style= {styles.majorButton}>
-              <Button
-                title="ART Majors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Majors')}
-              />
-            </View>
-
-            <View style= {styles.minorButton}>
-              <Button
-                title="ART Minors"
-                color = "#FFFFFF"
-                //onPress={() => navigate('JBE_Minors')}
-              />
-            </View>
-        </View> 
-      </View>
-
-
     );
   }
 }
@@ -218,17 +210,39 @@ function art_home() {
 const styles = StyleSheet.create({
 
   screen_container: {
-    backgroundColor: "#4287f5",
     flex: 1
   },
 
   dept_logo: {
     paddingLeft: '5%',
+    paddingTop: '1%',
+    alignContent: 'center',
+    flex: 0.5,
   },
 
   majorminor: {
-    paddingBottom: '10%',
-    backgroundColor: 'black',
+    flex: 0.5,
+    flexDirection: 'column'
+  }, 
+  majorButton: {
+    alignItems: 'center',
+    backgroundColor: 'gold',
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginTop: '3%',
+    opacity: 1,
+    borderRadius: 7,
+    flex: 0.5,
+  }, 
+  minorButton: {
+    alignItems: 'center',
+    backgroundColor: 'gold',
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginTop: '4%',
+    opacity: 1,
+    borderRadius: 7,
+    flex: 0.5,
   },
 
   smallTouch_container: {
@@ -240,16 +254,17 @@ const styles = StyleSheet.create({
     paddingLeft: 6
   },
 
-  jbe_container: {
+  major_container: {
     justifyContent: "center",
     fontSize: 10,
     backgroundColor: "white",
     flex: .18,
     marginLeft: '5%',
     marginRight: '5%',
-    marginTop: '2%',
-    marginBottom: '2%',
+    marginTop: '4%',
+    paddingTop: '1%',
     borderRadius: 10,
+    flexDirection: 'row',
   },
 
   pbsci_container: {
@@ -306,28 +321,5 @@ const styles = StyleSheet.create({
     padding: 10
   },
 
-  majorButton: {
-    alignSelf: 'flex-end',
-    backgroundColor: 'gold',
-    position: 'absolute',
-    bottom: '50%',
-    right: 8,
-    width: 150,
-    opacity: 1,
-    borderRadius: 7,
-    // paddingTop: 10,
-    // paddingBottom: 10,
-  },
-  minorButton: {
-    alignSelf: 'flex-end',
-    backgroundColor: 'gold',
-    position: 'absolute',
-    bottom: '15%',
-    right: 10,
-    width: 150,
-    opacity: .9,
-    borderRadius: 7,
-    marginTop: '10%',
-  },
 
 });
