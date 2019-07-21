@@ -61,7 +61,7 @@ export class AdvisingScreen extends React.Component {
         </View>
       
         <View style= {styles.major_container}>
-          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={pbsci_home}>
             <View >
               <Image
                 source={require('../../../assets/images/pbsci_logo.png')}
@@ -89,7 +89,7 @@ export class AdvisingScreen extends React.Component {
         </View>
 
         <View style= {styles.major_container}>
-          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={art_home}>
             <View >
               <Image
                 source={require('../../../assets/images/art_logo.png')}
@@ -117,7 +117,7 @@ export class AdvisingScreen extends React.Component {
         </View>
 
         <View style= {styles.major_container}>
-          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={hum_home}>
             <View >
               <Image
                 source={require('../../../assets/images/humanities_logo.png')}
@@ -145,7 +145,7 @@ export class AdvisingScreen extends React.Component {
         </View>
 
         <View style= {styles.major_container}>
-          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={jbe_home}>
+          <TouchableHighlight underlayColor='transparent' style = {styles.dept_logo} onPress={ss_home}>
             <View >
               <Image
                 source={require('../../../assets/images/socialsciences_logo.png')}
@@ -189,13 +189,13 @@ function pbsci_home() {
   );
 }
 
-function ss_home() {
+function hum_home() {
   WebBrowser.openBrowserAsync(
     'https://humanities.ucsc.edu/'
   );
 }
 
-function hum_home() {
+function ss_home() {
   WebBrowser.openBrowserAsync(
     'https://socialsciences.ucsc.edu/'
   );
