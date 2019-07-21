@@ -1,5 +1,5 @@
 import React , {Component} from '../../../../../node_modules/react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
@@ -83,19 +83,23 @@ export class CS_BSScreen extends React.Component {
     const {navigate} = this.props.navigation;
 		return (
 			<View style={styles.container}>
-				{/* <Text style={styles.welcome}>
-					Welcome to React Native!
-        			</Text> */}
-
-				<Button
-				title="Curriculum Chart"
-				style= {styles.button2}
-				color = "#e6f542"
-				onPress={cs_bs_curriculum}
-				/>
+				
+				<ImageBackground 
+      source={require('../../../../../assets/images/compsci_pic.png')}
+      style={{width: '100%', height: '100%'}}>
+		  		
+				<TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}
+         onPress={cs_bs_curriculum}>
+           <Text
+             style={styles.buttonText}>
+               Curriculum Chart
+           </Text>
+       </TouchableHighlight>
 
 				<View style={styles.lower_div_container}>
-						<Picker style={{width: 150, height: 180}}
+						<Picker style={{width: 150, height: 180}} itemStyle={{height: 180}}
 							selectedValue={this.state.selectedItem}
 							itemStyle={{color:"white", fontSize:26}}
 							onValueChange={(index) => this.onPickerSelect(index)}>
@@ -104,18 +108,24 @@ export class CS_BSScreen extends React.Component {
 							))}
 						</Picker>
 
-						<Text style={{margin: 20, color: '#ffffff'}}>
+						<Text style={{margin: 15, color: '#ffffff',flexWrap: 'wrap',flexDirection:'row',flexShrink: 0}}>
 							{dictionary.get(this.state.itemList[this.state.selectedItem])}
 						</Text>
 
-						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
-							onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>!
-						</Button>
+						<TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.search_buttonContainer}
+         onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>
+           <Text
+             style={styles.buttonText}>
+               Search
+           </Text>
+       </TouchableHighlight>
 				</View>
 
 
 				<View style={styles.upper_div_container}>
-						<Picker style={{width: 150, height: 180}}
+						<Picker style={{width: 150, height: 180}} itemStyle={{height: 180}}
 							selectedValue={this.state.selectedItem1}
 							itemStyle={{color:"white", fontSize:26}}
 							onValueChange={(index) => this.onPickerSelect1(index)}>
@@ -124,15 +134,21 @@ export class CS_BSScreen extends React.Component {
 							))}
 						</Picker>
 
-						<Text style={{margin: 20, color: '#ffffff'}}>
+						<Text style={{margin: 15, color: '#ffffff'}}>
 							{dictionary2.get(this.state.itemList1[this.state.selectedItem1])}
 						</Text>
 
-						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
-							onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
-						</Button>
+						<TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.search_buttonContainer}
+         onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
+           <Text
+             style={styles.buttonText}>
+               Search
+           </Text>
+       </TouchableHighlight>
         		</View>
-
+				</ImageBackground>						
 			</View>
 		);
 	}
@@ -172,45 +188,23 @@ export class CS_BSScreen extends React.Component {
 		});
 	 }
 	 create_dict(result,dict,upper) {
-		console.log(typeof result);
-		console.log(result);
-		console.log(typeof dict);
 		   str_dict = JSON.stringify(result);
-		   //console.log(typeof str_dict);
-		  // console.log(str_dict);
-		   //console.log(new_dict.get("CMPS 5J"));
 		  var res = str_dict.split(" ,");
-		  // console.log(res);
-		  //var str_class = res[0].split(" \" ");
-		   //console.log(str_class);
 		  var str2 = res[0].match(/[^\s"']+|"([^"]*)"/gmi)
-		 // console.log("------------------------");
-		  //console.log(str2);
-		 // console.log(str2[1]);
 		  var start = 1
 		  var end = 3
-		  //console.log(Math.floor(str2.length/4));
 		  var num_items = Math.floor((str2.length)/4)
-		  console.log("---------------------------")
-		  console.log(str2[start]);
 		  var key = str2[start].split("\"");
-		  console.log(key)
-		  console.log(key[1])
-		  console.log("---------------------------")
 		  for(var i = 0; i < num_items; i++) 
 	   {
 		  var key = str2[start].split("\"");
 		  var val = str2[end].split("\"");
 		  dict.set(key[1], val[1]);
-		  //console.log(dict.get(str2[start]));
 		  start += 4;
 		  end += 4;
 	   }
-	   console.log(dict);
-	   console.log("KILL ME");
-	   console.log(dict.get("\"CSE99\""))
+
 	   iterator1 = dict.keys()
-	   console.log(this.state.itemList1)
 	   if (upper == 0)
 			   myList = this.state.itemList
 		else
@@ -219,12 +213,6 @@ export class CS_BSScreen extends React.Component {
 	   {
 		   myList.push(iterator1.next().value)
 	   }
-	   console.log(iterator1.next().value)
-	   //this.state.itemList = 
-	   console.log(typeof dict)
-	   for (key in dict)
-			   console.log(key);
-			   
 	   }
 	   
 }
@@ -252,21 +240,21 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
-		backgroundColor: '#1962dd',
   },
   lower_div_container: {
+	 // flex:1,
     top: 0,
-    left: 0,
+	left: 0,
 		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
+
+		//backgroundColor: '#1962dd',
   },
   upper_div_container: {
     top: 0,
     left: 0,
 		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
+		//alignItems: 'center',
+		//backgroundColor: '#1962dd',
 	},
 	welcome: {
 		fontSize: 20,
@@ -286,5 +274,49 @@ const styles = StyleSheet.create({
     left: 120,
     height:70,
     width:180,
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 0,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 80,
+    marginRight: 80,
+    marginTop: 5,
+    marginBottom: 0,
+    paddingTop: 15,
+    paddingBottom: 10,
+},
+search_buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 0,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 80,
+    marginRight: 80,
+    marginTop: 0,
+    marginBottom: 0,
+    paddingTop: 5,
+    paddingBottom: 5,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });

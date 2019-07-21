@@ -46,13 +46,13 @@ export class AdvisingScreen extends React.Component {
               </View>
 
 
-              <View style= {styles.minorButton}>
+              {/* <View style= {styles.minorButton}>
                 <Button
                   title="Minors"
                   color = "#FFFFFF"
                   onPress={() => navigate('JBE_Minors')}
                 />
-              </View>
+              </View> */}
 
       </View>
 
