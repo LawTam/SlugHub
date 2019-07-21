@@ -1,5 +1,5 @@
 import React , {Component} from '../../../../node_modules/react';
-import { ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
 import AppNavigator from '../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
@@ -7,8 +7,7 @@ export class JBE_MinorsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
-        <TouchableHighlight 
-        underlayColor= 'transparent' onPress = {() => navigation.navigate('HomePage')}>
+        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
         source={require('../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
@@ -24,11 +23,6 @@ export class JBE_MinorsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-      
-      <ImageBackground 
-      source={require('../../../../assets/images/JBE_back_temp.png')}
-      style={{width: '100%', height: '100%'}}>
-        
       <ScrollView 
            scrollEventThrottle = { 16 }
            contentContainerStyle = {{ paddingTop: 10 }}
@@ -37,7 +31,6 @@ export class JBE_MinorsScreen extends React.Component {
           )}>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CS_Minor')}>
            <Text
@@ -47,7 +40,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CE_Minor')}>
            <Text
@@ -57,7 +49,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('BioInfo_Minor')}>
            <Text
@@ -67,7 +58,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('AM_Minor')}>
            <Text
@@ -77,7 +67,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('EE_Minor')}>
            <Text
@@ -87,7 +76,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('Statistics_Minor')}>
            <Text
@@ -97,7 +85,6 @@ export class JBE_MinorsScreen extends React.Component {
        </TouchableHighlight>
     
        <TouchableHighlight 
-        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('TIM_Minor')}>
            <Text
@@ -105,11 +92,8 @@ export class JBE_MinorsScreen extends React.Component {
               Technology and Information Management
            </Text>
        </TouchableHighlight>
-       
-       <View style= {styles.emptyContainer}/>
 
       </ScrollView>
-      </ImageBackground>
       </View>
 
     );
@@ -119,8 +103,12 @@ export class JBE_MinorsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
+    fontSize: 30,
+    padding: 30,
+    backgroundColor: "#4287f5",
     flex: 1
   },
+
   buttonContainer: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 15,
@@ -133,10 +121,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 1,
-    marginLeft: 30,
-    marginRight: 30,
+    marginLeft: 5,
+    marginRight: 5,
     marginTop: 10,
-    marginBottom: 10,
     paddingTop: 15,
     paddingBottom: 15,
 },
@@ -145,12 +132,5 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  emptyContainer: {
-    justifyContent: "center",
-    backgroundColor: "#4287f5",
-    flex: .2,
-    borderBottomWidth: 240,
-    opacity: 0,
-  },
+  }
 });

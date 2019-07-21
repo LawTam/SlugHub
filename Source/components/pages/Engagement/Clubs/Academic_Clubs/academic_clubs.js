@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
+import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
@@ -22,260 +22,158 @@ export class AcademicClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-    <View style= {styles.container}>
-    <ImageBackground 
-    source={require('../../../../../assets/images/JBE_back_temp.png')}
-    style={{width: '100%', height: '100%'}}>
+      <View style= {styles.container}>
+      <ScrollView>
+      <Button
+      title="American Medical Student Association (AMSA)"
+      color = "#e6f542"
+      onPress={AMSA_page}
+      />
 
-     <ScrollView 
-         scrollEventThrottle = { 16 }
-         contentContainerStyle = {{ paddingTop: 10}}
-         onScroll = { Animated.event(
-           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
-        )}>
+      <Button
+      title="Aspiring Physician Assistant Association (APAA)"
+      color = "#e6f542"
+      onPress={APAA_page}
+      />
 
-      
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={APAA_page}>
-           <Text
-             style={styles.buttonText}>
-               Aspiring Physician Assistant Association (APAA)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={ACM_page}>
-           <Text
-             style={styles.buttonText}>
-               Association for Computing Machinery
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={ACM_page}>
-           <Text
-             style={styles.buttonText}>
-               Association for Computing Machinery - Women
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={CC_page}>
-           <Text
-             style={styles.buttonText}>
-               Chemistry Club
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={CLE_page}>
-           <Text
-             style={styles.buttonText}>
-               Chican@s and Latin@s Educandose
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={CSSA_page}>
-           <Text
-             style={styles.buttonText}>
-               Cognitive Science Student Association
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={CUSN_page}>
-           <Text
-             style={styles.buttonText}>
-               Community Unified Student Network (CUSN)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}>
-           <Text
-             style={styles.buttonText}>
-               Crypto Currency Club
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}>
-           <Text
-             style={styles.buttonText}>
-               Empowering Latino Advancement Through Education and Development (E.L.A.T.E.D.)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}>
-           <Text
-             style={styles.buttonText}>
-               eWomen at UC Santa Cruz
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={GDA_page}>
-           <Text
-             style={styles.buttonText}>
-               Game Design & Art Collaborations (GDA)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={GK_page}>
-           <Text
-             style={styles.buttonText}>
-               Golden Key International Honour Society
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={IEEE_page}>
-           <Text
-             style={styles.buttonText}>
-               Institute of Electrical and Electronics Engineers (IEEE)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={ISMA_page}>
-           <Text
-             style={styles.buttonText}>
-               Information Systems Management Association (ISMA)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={KAM_page}>
-           <Text
-             style={styles.buttonText}>
-               Kuya Ate Mentorship Program
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={MUN_page}>
-           <Text
-             style={styles.buttonText}>
-               Model United Nations Club (SlugMUN)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={NSBE_page}>
-           <Text
-             style={styles.buttonText}>
-               National Society of Black Engineers (NSBE)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={NSCS_page}>
-           <Text
-             style={styles.buttonText}>
-               National Society of Collegiate Scholars (NSCS)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={PSS_page}>
-           <Text
-             style={styles.buttonText}>
-               Philosophical Slug Society
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={PSS_page}>
-           <Text
-             style={styles.buttonText}>
-               Slugs United by Mathematics (SUM)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={SACN_page}>
-           <Text
-             style={styles.buttonText}>
-               Society for the Advancement of Chicanos and Native Americans in Science (SACNAS)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={SWE_page}>
-           <Text
-             style={styles.buttonText}>
-               Society of Women Engineers (SWESLUGS)
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={TBP_page}>
-           <Text
-             style={styles.buttonText}>
-               Tau Beta Pi Engineering Honors Society
-           </Text>
-       </TouchableHighlight>
-       
-       <TouchableHighlight
-        underlayColor= 'transparent' 
-         style={styles.buttonContainer}
-         onPress={Umoja_page}>
-           <Text
-             style={styles.buttonText}>
-               Umoja
-           </Text>
-       </TouchableHighlight>
+      <Button
+      title="Association for Computing Machinery"
+      color = "#e6f542"
+      onPress={ACM_page}
+      />
 
-       <View style= {styles.emptyContainer}/>
-	  </ScrollView>
-	  </ImageBackground>
-  </View>
+      <Button
+      title="Association for Computing Machinery - Women"
+      color = "#B22222"
+      onPress={ACM_page}
+      />
+
+      <Button
+      title="Chemistry Club"
+      color = "#DC143C"
+      onPress={CC_page}
+      />
+
+      <Button
+      title="Chican@s and Latin@s Educandose"
+      color = "#e6f542"
+      //onPress={CLE_page}
+      />
+
+      <Button
+      title="Cognitive Science Student Association"
+      color = "#e6f542"
+      onPress={CSSA_page}
+      />
+      <Button
+      title="Community Unified Student Network (CUSN)"
+      color = "#e6f542"
+      onPress={CUSN_page}
+      />
+      <Button
+      title="Crypto Currency Club"
+      color = "#e6f542"
+      //onPress={CCC_page}
+      />
+      <Button
+      title="Empowering Latino Advancement Through Education and Development (E.L.A.T.E.D.)"
+      color = "#e6f542"
+      //onPress={ELA_page}
+      />
+      <Button
+      title="eWomen at UC Santa Cruz"
+      color = "#e6f542"
+      //onPress={EW_page}
+      />
+
+      <Button
+      title="Game Design & Art Collaborations (GDA)"
+      color = "#e6f542"
+      onPress={GDA_page}
+      />
+
+      <Button
+      title="Golden Key International Honour Society"
+      color = "#e6f542"
+      onPress={GK_page}
+      />
+
+      {/* <Button
+      title="Hermanos Unidos de UCSC"
+      color = "#B22222"
+      onPress={HU_page}
+      /> */}
+
+      <Button
+      title="Institute of Electrical and Electronics Engineers (IEEE)"
+      color = "#DC143C"
+      onPress={IEEE_page}
+      />
+
+      <Button
+      title="Information Systems Management Association (ISMA)"
+      color = "#e6f542"
+      onPress={ISMA_page}
+      />
+      <Button
+      title="Kuya Ate Mentorship Program"
+      color = "#e6f542"
+      onPress={KAM_page}
+      />
+      <Button
+      title="Model United Nations Club (SlugMUN)"
+      color = "#e6f542"
+      onPress={MUN_page}
+      />
+      <Button
+      title="National Society of Black Engineers (NSBE)"
+      color = "#e6f542"
+      onPress={NSBE_page}
+      />
+      <Button
+      title="National Society of Collegiate Scholars (NSCS)"
+      color = "#e6f542"
+      onPress={NSCS_page}
+      />
+
+      <Button
+      title="Philosophical Slug Society"
+      color = "#e6f542"
+      onPress={PSS_page}
+      />
+
+      <Button
+      title="Slugs United by Mathematics (SUM)"
+      color = "#e6f542"
+      //onPress={PSS_page}
+      />
+
+      <Button
+      title="Society for the Advancement of Chicanos and Native Americans in Science (SACNAS)"
+      color = "#e6f542"
+      onPress={SACN_page}
+      />
+
+      <Button
+      title="Society of Women Engineers (SWESLUGS)"
+      color = "#B22222"
+      onPress={SWE_page}
+      />
+
+      <Button
+      title="Tau Beta Pi Engineering Honors Society"
+      color = "#DC143C"
+      onPress={TBP_page}
+      />
+
+      <Button
+      title="Umoja"
+      color = "#e6f542"
+      onPress={Umoja_page}
+      />
+
+</ScrollView>
+      </View>
 
     );
   }
@@ -403,41 +301,13 @@ function Umoja_page() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    flex: 1
-  },
-  buttonContainer: {
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 15,
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: '#ddd',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 10,
-    marginBottom: 10,
-    paddingTop: 15,
-    paddingBottom: 15,
-},
-  buttonText: {
-    textAlign: 'center',
-    color: '#000000',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  emptyContainer: {
-    justifyContent: "center",
+    fontSize: 30,
+    padding: 60,
     backgroundColor: "#4287f5",
-    flex: .2,
-    borderBottomWidth: 240,
-    opacity: 0,
+    flex: 1
   },
 });

@@ -7,8 +7,7 @@ export class JBE_MajorsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
-        <TouchableHighlight
-        underlayColor= 'transparent' onPress = {() => navigation.navigate('HomePage')}>
+        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
         source={require('../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
@@ -36,8 +35,7 @@ export class JBE_MajorsScreen extends React.Component {
              [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
           )}>
             
-      <TouchableHighlight
-        underlayColor= 'transparent'
+      <TouchableHighlight 
         style={styles.buttonContainer}
         onPress={() => navigate('BE_page')}>
           <Text
@@ -46,8 +44,7 @@ export class JBE_MajorsScreen extends React.Component {
           </Text>
       </TouchableHighlight>
 
-      <TouchableHighlight
-        underlayColor= 'transparent' 
+      <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('CE_Major')}>
            <Text
@@ -56,8 +53,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('CS_BS')}>
            <Text
@@ -66,8 +62,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('CS_BA')}>
            <Text
@@ -76,8 +71,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('CSGD_BS')}>
            <Text
@@ -86,8 +80,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('EE_BS')}>
            <Text
@@ -96,8 +89,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('NDT_BA')}>
            <Text
@@ -106,8 +98,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('RE_BS')}>
            <Text
@@ -116,8 +107,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight
-        underlayColor= 'transparent' 
+       <TouchableHighlight 
          style={styles.buttonContainer}
          onPress={() => navigate('TIM_BS')}>
            <Text
@@ -126,7 +116,9 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
        
-       <View style= {styles.emptyContainer}/>
+       {/* <View style= {styles.orgs_container}>
+
+       </View> */}
 
       </ScrollView>
       </ImageBackground>
@@ -166,11 +158,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  emptyContainer: {
+  orgs_container: {
     justifyContent: "center",
     backgroundColor: "#4287f5",
     flex: .2,
-    borderBottomWidth: 240,
-    opacity: 0,
+    borderBottomWidth: 400,
   },
 });
