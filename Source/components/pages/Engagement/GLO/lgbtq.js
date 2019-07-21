@@ -108,7 +108,7 @@ export class lgbtqScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={TPS_home}
               />
             </View>
@@ -116,7 +116,7 @@ export class lgbtqScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={TPS_fb}
               />
             </View>
@@ -156,48 +156,74 @@ function TPS_fb() {
   );
 }
     
-    const styles = StyleSheet.create({
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 
-      screen_container: {
-        backgroundColor: "#4287f5",
-        flex: 1
-      },
-    
-      image_container: {
-        paddingLeft: 20
-    
-      },
+  image_container: {
+    paddingLeft: 20
+  
+  },
+  orgs_container: {
+    justifyContent: "center",
+    fontSize: 10,
+    flex: .2,
+    borderBottomColor: "#FFFFFF",
+    borderBottomWidth: 4,
+  },
+  OSButton: {
+    alignSelf: 'flex-end',
+    backgroundColor: 'gold',
+    position: 'absolute',
+    bottom: '55.5%',
+    right: 10,
+    width: 150,
+    opacity: .9,
+    borderRadius: 7,
+  },
+  FacebookButton: {
+    alignSelf: 'flex-end',
+    backgroundColor: 'gold',
+    position: 'absolute',
+    bottom: '15%',
+    right: 10,
+    width: 150,
+    opacity: .9,
+    borderRadius: 7,
+  },
 
-      orgs_container: {
-        justifyContent: "center",
-        fontSize: 10,
-        backgroundColor: "#4287f5",
-        flex: .2,
-        borderBottomColor: "#FFFFFF",
-        borderBottomWidth: 4,
-      },
-      
-      OSButton: {
-        alignSelf: 'flex-end',
-        backgroundColor: 'gold',
-        position: 'absolute',
-        bottom: '55.5%',
-        right: 10,
-        width: 150,
-        opacity: .9,
-        borderRadius: 7,
-      },
-      FacebookButton: {
-        alignSelf: 'flex-end',
-        backgroundColor: 'gold',
-        position: 'absolute',
-        bottom: '15%',
-        right: 10,
-        width: 150,
-        opacity: .9,
-        borderRadius: 7,
-      },
-      
-    
-    });
-    
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
+  },
+});

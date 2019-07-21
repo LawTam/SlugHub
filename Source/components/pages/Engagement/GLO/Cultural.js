@@ -108,7 +108,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AKDP_home}
               />
             </View>
@@ -116,7 +116,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AKDP_ins}
               />
             </View>
@@ -135,7 +135,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={DST_home}
               />
             </View>
@@ -143,7 +143,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="national site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={DST_national}
               />
             </View>
@@ -161,7 +161,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KZ_home}
               />
             </View>
@@ -169,7 +169,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KZ_ins}
               />
             </View>
@@ -187,7 +187,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={LTA_ins}
               />
             </View>
@@ -195,7 +195,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={LTA_fb}
               />
             </View>
@@ -213,7 +213,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SLG_home}
               />
             </View>
@@ -221,7 +221,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SLG_ins}
               />
             </View>
@@ -239,7 +239,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SOP_ins}
               />
             </View>
@@ -247,7 +247,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SOP_fb}
               />
             </View>
@@ -265,7 +265,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SPA_home}
               />
             </View>
@@ -283,7 +283,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={ZPB_home}
               />
             </View>
@@ -291,7 +291,7 @@ export class culturalScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={ZPB_ins}
               />
             </View>
@@ -412,29 +412,48 @@ export class culturalScreen extends React.Component {
       );
     }
 
-    
-
     const styles = StyleSheet.create({
-
-      screen_container: {
-        backgroundColor: "#4287f5",
+      container: {
+        justifyContent: "center",
         flex: 1
+      },
+      buttonContainer: {
+        backgroundColor: '#FFFFFF',
+        paddingVertical: 15,
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#ddd',
+        borderBottomWidth: 0,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 1,
+        marginLeft: 30,
+        marginRight: 30,
+        marginTop: 10,
+        marginBottom: 10,
+        paddingTop: 15,
+        paddingBottom: 15,
+    },
+      buttonText: {
+        textAlign: 'center',
+        color: '#000000',
+        fontSize: 18,
+        fontWeight: 'bold',
       },
     
       image_container: {
         paddingLeft: 20
-    
+      
       },
-
       orgs_container: {
         justifyContent: "center",
         fontSize: 10,
-        backgroundColor: "#4287f5",
         flex: .2,
         borderBottomColor: "#FFFFFF",
         borderBottomWidth: 4,
       },
-      
       OSButton: {
         alignSelf: 'flex-end',
         backgroundColor: 'gold',
@@ -455,7 +474,13 @@ export class culturalScreen extends React.Component {
         opacity: .9,
         borderRadius: 7,
       },
-      
     
+      emptyContainer: {
+        justifyContent: "center",
+        backgroundColor: "#4287f5",
+        flex: .2,
+        borderBottomWidth: 240,
+        opacity: 0,
+      },
     });
     

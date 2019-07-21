@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 //import AppNavigator from '../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
@@ -84,7 +84,7 @@ export class socialScreen extends React.Component {
         const {navigate} = this.props.navigation;
         return (
 
-        <View style= {styles.screen_container}>
+        <View style= {styles.container}>
           
           <ImageBackground 
           source={require('../../../../assets/images/UCSC_stock.jpg')}
@@ -109,7 +109,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={GPB_home}
               />
             </View>
@@ -117,7 +117,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={GPB_fb}
               />
             </View>
@@ -136,7 +136,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KAT_home}
               />
             </View>
@@ -144,7 +144,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KAT_fb}
               />
             </View>
@@ -162,7 +162,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KKG_home}
               />
             </View>
@@ -170,7 +170,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={KKG_ins}
               />
             </View>
@@ -188,7 +188,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AEP_ins}
               />
             </View>
@@ -196,7 +196,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AEP_fb}
               />
             </View>
@@ -214,7 +214,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AP_home}
               />
             </View>
@@ -222,7 +222,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Instagram"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={AP_ins}
               />
             </View>
@@ -240,7 +240,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SAEP_home}
               />
             </View>
@@ -248,7 +248,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SAEP_fb}
               />
             </View>
@@ -266,7 +266,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SP_home}
               />
             </View>
@@ -274,7 +274,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={SP_fb}
               />
             </View>
@@ -292,7 +292,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={TKE_home}
               />
             </View>
@@ -300,7 +300,7 @@ export class socialScreen extends React.Component {
             <View style= {styles.FacebookButton}>
               <Button
                 title="Facebook"
-                color = "#FFFF33"
+                color = "#3b5998"
                 onPress={TKE_fb}
               />
             </View>
@@ -427,50 +427,74 @@ export class socialScreen extends React.Component {
     }
 
 
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 
+  image_container: {
+    paddingLeft: 20
+  
+  },
+  orgs_container: {
+    justifyContent: "center",
+    fontSize: 10,
+    flex: .2,
+    borderBottomColor: "#FFFFFF",
+    borderBottomWidth: 4,
+  },
+  OSButton: {
+    alignSelf: 'flex-end',
+    backgroundColor: 'gold',
+    position: 'absolute',
+    bottom: '55.5%',
+    right: 10,
+    width: 150,
+    opacity: .9,
+    borderRadius: 7,
+  },
+  FacebookButton: {
+    alignSelf: 'flex-end',
+    backgroundColor: 'gold',
+    position: 'absolute',
+    bottom: '15%',
+    right: 10,
+    width: 150,
+    opacity: .9,
+    borderRadius: 7,
+  },
 
-    const styles = StyleSheet.create({
-
-      screen_container: {
-        backgroundColor: "#4287f5",
-        flex: 1
-      },
-    
-      image_container: {
-        paddingLeft: 20
-    
-      },
-
-      orgs_container: {
-        justifyContent: "center",
-        fontSize: 10,
-        backgroundColor: "#4287f5",
-        flex: .2,
-        borderBottomColor: "#FFFFFF",
-        borderBottomWidth: 4,
-      },
-      
-      OSButton: {
-        alignSelf: 'flex-end',
-        backgroundColor: 'gold',
-        position: 'absolute',
-        bottom: '55.5%',
-        right: 10,
-        width: 150,
-        opacity: .9,
-        borderRadius: 7,
-      },
-      FacebookButton: {
-        alignSelf: 'flex-end',
-        backgroundColor: 'gold',
-        position: 'absolute',
-        bottom: '15%',
-        right: 10,
-        width: 150,
-        opacity: .9,
-        borderRadius: 7,
-      },
-      
-    
-    });
-    
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
+  },
+});
