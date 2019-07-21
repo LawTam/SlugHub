@@ -1,8 +1,9 @@
 import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import AppNavigator from '../../../../../navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 import * as WebBrowser from 'expo-web-browser';
+
 
 export class CulturalClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,220 +23,394 @@ export class CulturalClubsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
-      <ScrollView>
-      <Button
-      title="A Step Forward"
-      color = "#e6f542"
-      onPress={ASF_page}
-      />
+    <View style= {styles.container}>
+    <ImageBackground 
+    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    style={{width: '100%', height: '100%'}}>
 
-      <Button
-      title="African American Theater Arts Troupe (AATAT)"
-      color = "#e6f542"
-      onPress={AATAT_page}
-      />
+     <ScrollView 
+         scrollEventThrottle = { 16 }
+         contentContainerStyle = {{ paddingTop: 10}}
+         onScroll = { Animated.event(
+           [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
+        )}>
 
-      <Button
-      title="African Student Union"
-      color = "#e6f542"
-      //onPress={ASF_page}
-      />
 
-      <Button
-      title="Armenian Student Association (ASA)"
-      color = "#B22222"
-      //onPress={ASA_page}
-      />
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}
+         onPress={ASF_page}>
+           <Text
+             style={styles.buttonText}>
+               A Step Forward
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}
+         onPress={AATAT_page}>
+           <Text
+             style={styles.buttonText}>
+               African American Theater Arts Troupe (AATAT)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               African Student Union
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Armenian Student Association (ASA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Asian/Pacific Islander Student Alliance (APISA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Bayanihan (formerly Filipino Student Association)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Black Men's Alliance (BMA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Black Sistas United (BSU)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Black Student Union (formerly African/Black Student Alliance)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Centro Americanos Unidos (CAU)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Chabad Student Group
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Chinese Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Chinese Students & Scholars Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               College Diabetes Network at UCSC
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Cultural Arts & Diversity (CAD)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Engaging Education (e2)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Grupo Folklorico Los Mejicas
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Han Chinese Clothing Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Hermanas Unidas (HaU)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Hmong Student Association (HSA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Indian Student Association (ISA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               International Student Organization (ISO)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Iranian Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Japanese Student Association (JSA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Korean American Student Association (KASA)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Kahaani
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Oceania Navigators Empowerment (ONE)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               People of the Islands (POI)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Prism: Student Coalition for Gender, Sex, & Sexuality
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Project RISHI
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               The Russian Club
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Salsita Dance Group
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Sikh Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Society of Asian Scientists and Engineers (SASE)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Student Alliance of North American Indians (SANAI)
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Taiwanese Student Association
+           </Text>
+       </TouchableHighlight>
+       
+       <TouchableHighlight
+        underlayColor= 'transparent' 
+         style={styles.buttonContainer}>
+         
+           <Text
+             style={styles.buttonText}>
+               Vietnamese Student Association (VSA)
+           </Text>
+       </TouchableHighlight>
 
-      <Button
-      title="Asian/Pacific Islander Student Alliance (APISA)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
 
-      <Button
-      title="Bayanihan (formerly Filipino Student Association)"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Black Men's Alliance (BMA)"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Black Sistas United (BSU)"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Black Student Union (formerly African/Black Student Alliance)"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Centro Americanos Unidos (CAU)"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Chabad Student Group"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Chinese Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Chinese Students & Scholars Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="College Diabetes Network at UCSC"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Cultural Arts & Diversity (CAD)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Engaging Education (e2)"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Grupo Folklorico Los Mejicas"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="Han Chinese Clothing Association"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Hermanas Unidas (HaU)"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Hmong Student Association (HSA)"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-
-<Button
-      title="Indian Student Association (ISA)"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="International Student Organization (ISO)"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Iranian Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Japanese Student Association (JSA)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Korean American Student Association (KASA)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Kahaani"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      
-      <Button
-      title="Oceania Navigators Empowerment (ONE)"
-      color = "#e6f542"
-      //onPress={() => navigate('NDT_BA')}
-      />
-      <Button
-      title="People of the Islands (POI)"
-      color = "#e6f542"
-      //onPress={() => navigate('RE_BS')}
-      />
-      <Button
-      title="Prism: Student Coalition for Gender, Sex, & Sexuality"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-      <Button
-      title="Project RISHI"
-      color = "#e6f542"
-      //onPress={() => navigate('TIM_BS')}
-      />
-
-<Button
-      title="The Russian Club"
-      color = "#e6f542"
-      //onPress={() => navigate('BE_page')}
-      />
-
-      <Button
-      title="Salsita Dance Group"
-      color = "#e6f542"
-      //onPress={() => navigate('CE_Major')}
-      />
-
-      <Button
-      title="Sikh Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('CS_BS')}
-      />
-
-      <Button
-      title="Society of Asian Scientists and Engineers (SASE)"
-      color = "#B22222"
-      //onPress={() => navigate('CS_BA')}
-      />
-
-      <Button
-      title="Student Alliance of North American Indians (SANAI)"
-      color = "#DC143C"
-      //onPress={() => navigate('CSGD_BS')}
-      />
-
-      <Button
-      title="Taiwanese Student Association"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-      <Button
-      title="Vietnamese Student Association (VSA)"
-      color = "#e6f542"
-      //onPress={() => navigate('EE_BS')}
-      />
-
-</ScrollView>
+       <View style= {styles.emptyContainer}/>
+      </ScrollView>
+      </ImageBackground>
       </View>
-
     );
   }
 }
@@ -253,13 +428,41 @@ function AATAT_page() {
 }
 
 
-
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
+  },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+  buttonText: {
+    textAlign: 'center',
+    color: '#000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  emptyContainer: {
+    justifyContent: "center",
+    backgroundColor: "#4287f5",
+    flex: .2,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });

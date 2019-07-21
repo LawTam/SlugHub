@@ -7,7 +7,8 @@ export class JBE_MajorsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
-        <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
+        <TouchableHighlight
+        underlayColor= 'transparent' onPress = {() => navigation.navigate('HomePage')}>
         <Image
         source={require('../../../../assets/images/home_icon.png')}
         style={{height: 35, width: 35, margin: 10}}
@@ -35,7 +36,8 @@ export class JBE_MajorsScreen extends React.Component {
              [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
           )}>
             
-      <TouchableHighlight 
+      <TouchableHighlight
+        underlayColor= 'transparent'
         style={styles.buttonContainer}
         onPress={() => navigate('BE_page')}>
           <Text
@@ -44,7 +46,8 @@ export class JBE_MajorsScreen extends React.Component {
           </Text>
       </TouchableHighlight>
 
-      <TouchableHighlight 
+      <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CE_Major')}>
            <Text
@@ -53,7 +56,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CS_BS')}>
            <Text
@@ -62,7 +66,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CS_BA')}>
            <Text
@@ -71,7 +76,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('CSGD_BS')}>
            <Text
@@ -80,7 +86,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('EE_BS')}>
            <Text
@@ -89,7 +96,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('NDT_BA')}>
            <Text
@@ -98,7 +106,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('RE_BS')}>
            <Text
@@ -107,7 +116,8 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
     
-       <TouchableHighlight 
+       <TouchableHighlight
+        underlayColor= 'transparent' 
          style={styles.buttonContainer}
          onPress={() => navigate('TIM_BS')}>
            <Text
@@ -116,9 +126,7 @@ export class JBE_MajorsScreen extends React.Component {
            </Text>
        </TouchableHighlight>
        
-       {/* <View style= {styles.orgs_container}>
-
-       </View> */}
+       <View style= {styles.emptyContainer}/>
 
       </ScrollView>
       </ImageBackground>
@@ -158,10 +166,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  orgs_container: {
+  emptyContainer: {
     justifyContent: "center",
     backgroundColor: "#4287f5",
     flex: .2,
-    borderBottomWidth: 400,
+    borderBottomWidth: 240,
+    opacity: 0,
   },
 });
