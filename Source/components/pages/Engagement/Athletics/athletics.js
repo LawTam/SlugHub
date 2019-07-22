@@ -1,7 +1,5 @@
-import React , {Component} from 'react';
-import { ScrollView, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, Dimensions} from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
-import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
+import React from 'react';
+import { ScrollView, TouchableHighlight, Image, Text, StyleSheet, View, Dimensions} from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 // npm install --save react-native-vector-icons
@@ -48,15 +46,24 @@ export class AthleticsScreen extends React.Component {
           <View style= {styles.container}>
             <Icon.Button 
                   name="trophy"
-                  backgroundColor="#ffcc33"
+                  backgroundColor="#006aad"
+                  wordWrap = "break-word"
                   onPress={goSlugs}
                 >
-                  Click here to enter the UCSC NCAA website.
+                  Visit the UCSC Official Athletics website
             </Icon.Button>
 
             <Text style="center">
-            {"\n"} {"\n"} 
-              UCSC offers both competitive and recreational sports clubs. Intramural competition is also popular at UC Santa Cruz.
+              {"\n"} {"\n"} 
+              UC Santa Cruz is known for its Divison III sports teams and extensive intramural competition program, where UCSC students can compete in friendly competition.
+            </Text>
+
+            <Text style="center">
+              {"\n"} {"\n"} 
+              UCSC offers both competitive and recreational sports clubs.
+              {"\n"} 
+              Competitive clubs include Division III teams and teams such as ballroom dancing, sailing, ultimate frisbee, and more.
+              {"\n"} {"\n"} 
             </Text>
 
             <Icon.Button 
@@ -64,12 +71,13 @@ export class AthleticsScreen extends React.Component {
                   backgroundColor="#ffcc33"
                   onPress={() => navigate('Competitive_Athletics')}
                 >
-                  Click here for more on Competitive Sports
+                  More on Competitive Sports
             </Icon.Button>
 
             <Text>
-            {"\n"} {"\n"} 
-              Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, Camp Kesem (camp for children with a parent who has cancer), cheer team, circus Slugs, dance team, grappling, judo, kayak, kendo, muay thai, ninjutsu, racquetball, table tennis, taekwondo, tango, track and field, triathlon, volleyball, and wushu.
+              {"\n"} {"\n"} 
+              Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, triathlon, volleyball, and more.
+              {"\n"} {"\n"} 
             </Text>
 
             <Icon.Button 
@@ -77,12 +85,13 @@ export class AthleticsScreen extends React.Component {
                   backgroundColor="#ffcc33"
                   onPress={() => navigate('Recreational_Athletics')}
                 >
-                  Click here for more on Recreational Sports
+                  More on Recreational Sports
             </Icon.Button>
 
             <Text>
               {"\n"} {"\n"} 
               Intramurals are structured for different skill levels and are conducted in a safe, supervised environment.  Participants do not need to be an experienced athlete to play! 
+              {"\n"} {"\n"} 
             </Text>
 
             <Icon.Button 
@@ -90,7 +99,7 @@ export class AthleticsScreen extends React.Component {
                   backgroundColor="#ffcc33"
                   onPress={() => navigate('Intramural_Athletics')}
                 >
-                  Click here for more on Intramural Competition
+                  More on Intramural Competition
             </Icon.Button>
 
           </View>
@@ -129,7 +138,7 @@ const styles = StyleSheet.create({
 
   container: {
     fontSize: 30,
-    padding: 60,
+    padding: '5%',
     position:'relative'
   },
 });
