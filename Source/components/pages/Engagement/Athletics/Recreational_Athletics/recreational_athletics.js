@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
-=======
+
 import React , {Component} from 'react';
 import { TouchableHighlight, Button, Image, Text, StyleSheet, View } from 'react-native';
 
->>>>>>> 06fec950391b7f483a0c12f7ad39861ddacea615
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -34,7 +31,7 @@ export class Recreational_AthleticsScreen extends React.Component {
       {"\n"}
       </Text>
 
-      <Icon.Button 
+      <Icon.Button
             name="trophy"
             backgroundColor="#006aad"
             onPress={recreationPage}
@@ -43,8 +40,8 @@ export class Recreational_AthleticsScreen extends React.Component {
       </Icon.Button>
 
       <Text> {"\n"}</Text>
-      
-      <Icon.Button 
+
+      <Icon.Button
             name="trophy"
             backgroundColor="#ffcc33"
             onPress={() => navigate('Competitive_Athletics')}
@@ -54,7 +51,7 @@ export class Recreational_AthleticsScreen extends React.Component {
 
       <Text> {"\n"}</Text>
 
-      <Icon.Button 
+      <Icon.Button
             name="futbol-o"
             backgroundColor="#ffcc33"
             onPress={() => navigate('Intramural_Athletics')}
@@ -72,7 +69,7 @@ function recreationPage() {
   WebBrowser.openBrowserAsync(
     'https://opers.ucsc.edu/sport-clubs/competitive-clubs/index.html'
   );
-  
+
 }
 
 const styles = StyleSheet.create({

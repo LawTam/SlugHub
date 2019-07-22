@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
+import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View, BackHandler, ToastAndroid, } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export class HomePageScreen extends React.Component {
@@ -8,6 +8,19 @@ export class HomePageScreen extends React.Component {
     headerLeft: null,
     gesturesEnabled: false,
   };
+
+    componentDidMount() {
+         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+     }
+
+     componentWillUnmount() {
+         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+     }
+
+     handleBackButton() {
+         return true;
+     }
+
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -54,7 +67,7 @@ export class HomePageScreen extends React.Component {
               style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
-            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engagement</Text>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engage</Text>
             </View>
 
             <View style = {styles.atContainer}>
@@ -123,7 +136,7 @@ const styles = StyleSheet.create({
     enContainer: {
       position: "absolute",
       top: "22%",
-      right: "17%"
+      right: "19%"
     },
 
     atContainer: {
