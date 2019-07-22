@@ -47,14 +47,48 @@ export class AdvisingScreen extends React.Component {
                   onPress={() => navigate('JBE_Majors')}
                 />
               </View>
-              <View style= {styles.minorButton}>
+
+
+              {/* <View style= {styles.minorButton}>
                 <Button
                   title="Minors"
                   color = "black"
                   onPress={() => navigate('JBE_Minors')}
                 />
-              </View> 
-          </View> 
+              </View> */}
+
+      </View>
+
+        <View style= {styles.jbe_container}>
+
+
+            <View style = {styles.smallTouch_container}>
+              <TouchableHighlight onPress={pbsci_home}>
+                <Image
+                  source={require('../../../assets/images/pbsci_logo.png')}
+                   style={{height: '100%', width: '45%'}}
+                  resizeMode="contain"
+                />
+              </TouchableHighlight>
+            </View>
+
+            <View style= {styles.majorButton}>
+              <Button
+                title="PBSCI Majors"
+                color = "#FFFFFF"
+                //onPress={() => navigate('JBE_Majors')}
+              />
+            </View>
+
+            <View style= {styles.minorButton}>
+              <Button
+                title="PBSCI Minors"
+                color = "#FFFFFF"
+                //onPress={() => navigate('JBE_Minors')}
+              />
+            </View>
+
+                    
         </View>
       
         <View style= {styles.major_container}>
