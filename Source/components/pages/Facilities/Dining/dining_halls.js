@@ -1,7 +1,6 @@
-import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React , {} from 'react';
+import { ImageBackground, TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
+
 import * as WebBrowser from 'expo-web-browser';
 
 export class DiningHallsScreen extends React.Component {
@@ -23,6 +22,9 @@ export class DiningHallsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
+      <ImageBackground
+      source={require('../../../../assets/images/facilities/dining.jpg')} 
+      style={{width: '100%', height: '100%'}}>
       <Button
       title="Porter/Kresge"
       color = "#e6f542"
@@ -48,6 +50,7 @@ export class DiningHallsScreen extends React.Component {
       color = "#e6f542"
       onPress={() => navigate('Dining')}
       />
+      </ImageBackground>
       </View>
 
     );
@@ -64,8 +67,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
   },
 });
