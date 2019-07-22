@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     enContainer: {
       position: "absolute",
       top: "22%",
-      right: "16%"
+      right: "13%"
     },
 
     atContainer: {

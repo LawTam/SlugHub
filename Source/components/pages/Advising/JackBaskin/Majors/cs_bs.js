@@ -14,6 +14,7 @@ export class CS_BSScreen extends React.Component {
 	*/
   	static navigationOptions = ({ navigation }) => {
 		return{
+		
 		headerRight: (
 			<TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
 				<Image
@@ -22,6 +23,7 @@ export class CS_BSScreen extends React.Component {
 					resizeMode="contain"
 				/>
 			</TouchableHighlight>
+			
 		),
 		title: 'Computer Science B.S.',
     	};
@@ -98,6 +100,16 @@ export class CS_BSScreen extends React.Component {
                				Curriculum Chart
            				</Text>
        				</TouchableHighlight>
+
+					<TouchableHighlight
+					underlayColor= 'transparent' 
+					style={styles.buttonContainer}
+					onPress={cseChanges}>
+						<Text
+							style={styles.buttonText}>
+							CMPS -> CSE Changes
+						</Text>
+					</TouchableHighlight>
 
 					<View style={styles.lowerDivContainer}>
 
@@ -251,6 +263,12 @@ function csBSCurriculum() {
   );
 }
 
+function cseChanges() {
+	WebBrowser.openBrowserAsync(
+	  'https://undergrad.soe.ucsc.edu/bsoe-course-renumbering'
+	);
+  }
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -282,8 +300,8 @@ const styles = StyleSheet.create({
 		marginRight: 80,
 		marginTop: 5,
 		marginBottom: 0,
-		paddingTop: 15,
-		paddingBottom: 10,
+		paddingTop: 0,
+		paddingBottom: 0,
 },
 searchButtonContainer: {
 		backgroundColor: '#FFFFFF',
