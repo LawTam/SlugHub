@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import { TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
+=======
+import React , {Component} from 'react';
+import { TouchableHighlight, Button, Image, Text, StyleSheet, View } from 'react-native';
+
+>>>>>>> 06fec950391b7f483a0c12f7ad39861ddacea615
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 

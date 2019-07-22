@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import { ImageBackground, TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 
 export class DiningScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,32 +20,55 @@ export class DiningScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-
-      <Button
-      title="Dining Halls"
-      color = "#e6f542"
-      onPress={() => navigate('DiningHalls')}
-      />
-
-      <Button
-      title="Cafes, Restaurants and Coffee Bars"
-      color = "#e6f542"
-      onPress={() => navigate('Cafes')}
-      />
-
-
+      
+      <ImageBackground
+      source={require('../../../../assets/images/facilities/background.jpg')} 
+      style={{width: '100%', height: '100%'}}>
+      
+      <View style = {styles.diningHallsContainer}>
+      <TouchableHighlight onPress = {() => navigate('DiningHalls')}>
+       <Image
+       source={require('../../../../assets/images/facilities/diningHalls.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
       </View>
 
+      <View style = {styles.cafeContainer}>
+      <TouchableHighlight onPress = {() => navigate('Cafes')}>
+       <Image
+       source={require('../../../../assets/images/facilities/cafe.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
+      </View>
+      
+
+      </ImageBackground>
+      </View>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
-    flex: 1
+    justifyContent: "space-around",
+    flex: 1,
+    flexDirection: 'column',
   },
+
+  diningHallsContainer:{
+    top: 100,
+    left: 40,
+    position: "absolute"
+  },
+
+  cafeContainer:{
+    top: 300,
+    left: 40,
+    position: "absolute"
+  }
 });

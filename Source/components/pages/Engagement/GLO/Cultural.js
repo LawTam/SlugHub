@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
-//import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import {ImageBackground, TouchableHighlight, Button, Text, Image,StyleSheet, View, ScrollView, Animated } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import { FloatingAction } from "react-native-floating-action";
 
@@ -99,7 +97,7 @@ export class culturalScreen extends React.Component {
 <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/orgs/akappadeltaphi_1.jpg')}
+                source={require('../../../../assets/images/orgs/akappadeltaphi_1.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
@@ -126,7 +124,7 @@ export class culturalScreen extends React.Component {
 <View style= {styles.orgs_container}>
             <View style = {styles.image_container}>
               <Image
-                source={require('../../../../assets/images/orgs/DST2018.jpg')}
+                source={require('../../../../assets/images/orgs/DST2018.png')}
                 style={{height: 100, width: 180}}
                 resizeMode="contain"
               />
@@ -295,10 +293,6 @@ export class culturalScreen extends React.Component {
                 onPress={ZPB_ins}
               />
             </View>
-          </View>
-
-<View style= {styles.orgs_container}>
-            
           </View>
 
         

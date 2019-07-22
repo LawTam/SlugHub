@@ -1,7 +1,5 @@
-import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React , {} from 'react';
+import { TouchableHighlight, Button, Image, Text, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 
 export class FacilityScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -15,38 +13,62 @@ export class FacilityScreen extends React.Component {
         />
         </TouchableHighlight>
       ),
-      title: 'Clubs',
+      title: 'Facilities',
     };
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
-
-      <Button
-      title="Dining"
-      color = "#e6f542"
-      onPress={() => navigate('Dining')}
-      />
-
-      <Button
-      title="Fitness"
-      color = "#e6f542"
-      onPress={() => navigate('Fitness')}
-      />
-
+      
+      <ImageBackground
+      source={require('../../../assets/images/facilities/background.jpg')} 
+      style={{width: '100%', height: '100%'}}>
+      
+      <View style = {styles.diningContainer}>
+      <TouchableHighlight onPress = {() => navigate('Dining')}>
+       <Image
+       source={require('../../../assets/images/facilities/dining.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
       </View>
 
+      <View style = {styles.fitnessContainer}>
+      <TouchableHighlight onPress = {() => navigate('Fitness')}>
+       <Image
+       source={require('../../../assets/images/facilities/fitness.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
+      </View>
+      
+
+      </ImageBackground>
+      </View>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
-    flex: 1
+    justifyContent: "space-around",
+    flex: 1,
+    flexDirection: 'column',
   },
+
+  diningContainer:{
+    top: 100,
+    left: 40,
+    position: "absolute"
+  },
+
+  fitnessContainer:{
+    top: 300,
+    left: 40,
+    position: "absolute"
+  }
 });

@@ -1,149 +1,184 @@
-import React , {Component} from '../../../../../node_modules/react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React from '../../../../../node_modules/react';
+import { ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-//import ScrollPicker from '../../../../../node_modules/react-native-wheel-scroll-picker';
-// npm install styled-components
-// npm install react-native-wheel-scroll-picker --save
-// npm i react-native-wheel-picker --save
 import Picker from '../../../../../node_modules/react-native-wheel-picker'
 
-var PickerItem = Picker.Item;
-var PickerItem2 = Picker.Item;
-var dictionary = new Map();
-var dictionary2 = new Map();
+var PickerItem = Picker.Item;	// Creates the wheel picker that the dictionaries will be using
+var lowerDivDict = new Map();	// Creates the lowerDiv dictionary for storing lowerDiv courses
+var upperDivDict = new Map();	// Creates the upperDiv dictionary for storing upperDiv courses
 
 export class CS_BSScreen extends React.Component {
+
+	/*
+		Functionality: Establishes the top right home button on the top of the screen
+	*/
   	static navigationOptions = ({ navigation }) => {
 		return{
+		
 		headerRight: (
 			<TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
-			<Image
-			source={require('../../../../../assets/images/home_icon.png')}
-			style={{height: 35, width: 35, margin: 10}}
-			resizeMode="contain"
-			/>
+				<Image
+					source={require('../../../../../assets/images/home_icon.png')}
+					style={{height: 35, width: 35, margin: 10}}
+					resizeMode="contain"
+				/>
 			</TouchableHighlight>
+			
 		),
 		title: 'Computer Science B.S.',
     	};
 	};
 
-
+	/*
+		Functionality: Establishes state as the two wheel pickers and their components.
+			selectedLowerDiv: denotes the current index of the selected Lower Div course
+			lowerDivList: denotes the list of Lower Div courses (which is filled by the
+				function createDivList
+			selectedUpperDiv: denotes the current index of the selected Upper Div course
+			upperDivList: denotes the list of Upper Div courses (which is filled by the
+				function createDivList
+			data: stores the responseJSON (the dictionary in JSON format) in case it 
+				is needed for other functionality in the future
+			
+	*/
   	constructor(props) {
 		super(props);
 		this.state = {
-			selectedItem : 0,
-			itemList: [],
-			selectedItem1: 0,
-			itemList1: [],
+			selectedLowerDiv : 0,
+			lowerDivList: [],
+			selectedUpperDiv: 0,
+			upperDivList: [],
 			data:  null
 		};
 	}
-
-	onPickerSelect (index) {
+	/*
+		Functionality: Both onPickerSelect functions change the index of a wheel to
+			another index
+	*/
+	onPickerSelectLowerDiv (index) {
 		this.setState({
-			selectedItem: index,
+			selectedLowerDiv: index,
 		})
 	}
 
-	onPickerSelect1 (index) {
+	onPickerSelectUpperDiv (index) {
 			this.setState({
-				selectedItem1: index,
+				selectedUpperDiv: index,
 			})
 		}
 
-	onAddItem = () => {
-    console.log(this.state.itemList);
-    var key = this.state.itemList[this.state.selectedItem]
-    console.log(key);
-    console.log(dict.get(key));
-	}
-
-	select = () => {
-		console.log(this.state.itemList);
-		var key = this.state.itemList[this.state.selectedItem]
-		console.log(key);
-		return this.dict.key[this.setState.selectedItem];
-	}
-
-	get_SOE_Webpage(class_key) {
-		//console.log("JBE webpage for: ", class_key)
-		classKey = class_key.replace(/\s/g, '');	// remove spaces
+	/*
+		Functionality: Receives the class key as input (Ex. "CSE3") and parses
+			the url using the class key in order to generate the correct link to open 
+	*/
+	getSOEWebpage(classKey) {
+		classKey = classKey.replace(/\s/g, '');	// remove spaces
 		link = "https://courses.soe.ucsc.edu/courses/" + classKey
-		//console.log(link)
-
 		WebBrowser.openBrowserAsync(
 			link
 		);
 	}
-
+	/*
+		Functionality: Displays the curriculum chart button, the Lower Div courses wheel,
+		Upper Div courses wheel, the image background, as well as the search button for 
+		each wheel			
+	*/
 	render () {
-    const {navigate} = this.props.navigation;
 		return (
 			<View style={styles.container}>
+				
+				<ImageBackground 
+      				source={require('../../../../../assets/images/compsci_pic.png')}
+      				style={{width: '100%', height: '100%'}}>
+		  		
+					<TouchableHighlight
+        				underlayColor= 'transparent' 
+         				style={styles.buttonContainer}
+         				onPress={csBSCurriculum}>
+          				<Text
+             				style={styles.buttonText}>
+               				Curriculum Chart
+           				</Text>
+       				</TouchableHighlight>
 
-				<Button
-				title="Curriculum Chart"
-				style= {styles.button2}
-				color = "#e6f542"
-				onPress={cs_bs_curriculum}
-				/>
+					<TouchableHighlight
+					underlayColor= 'transparent' 
+					style={styles.buttonContainer}
+					onPress={cseChanges}>
+						<Text
+							style={styles.buttonText}>
+							CMPS -> CSE Changes
+						</Text>
+					</TouchableHighlight>
 
-				<View style={styles.lower_div_container}>
-						<Picker style={{width: 150, height: 180}}
-							selectedValue={this.state.selectedItem}
+					<View style={styles.lowerDivContainer}>
+
+						<Picker style={{width: 150, height: 180}} itemStyle={{height: 180}}
+							selectedValue={this.state.selectedLowerDiv}
 							itemStyle={{color:"white", fontSize:26}}
-							onValueChange={(index) => this.onPickerSelect(index)}>
-							{this.state.itemList.map((value, i) => (
+							onValueChange={(index) => this.onPickerSelectLowerDiv(index)}>
+							{this.state.lowerDivList.map((value, i) => (
 								<PickerItem label={value} value={i} key={"money"+value}/>
 							))}
 						</Picker>
 
-						<Text style={{margin: 20, color: '#ffffff'}}>
-							{dictionary.get(this.state.itemList[this.state.selectedItem])}
+						<Text style={{margin: 15, color: '#ffffff',flexWrap: 'wrap',flexDirection:'row',flexShrink: 0}}>
+							{lowerDivDict.get(this.state.lowerDivList[this.state.selectedLowerDiv])}
 						</Text>
 
-						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
-							onPress={() => this.get_SOE_Webpage(this.state.itemList[this.state.selectedItem])}>!
-						</Button>
-				</View>
+						<TouchableHighlight
+        					underlayColor= 'transparent' 
+         					style={styles.searchButtonContainer}
+         					onPress={() => this.getSOEWebpage(this.state.lowerDivList[this.state.selectedLowerDiv])}>
+           					<Text
+             					style={styles.buttonText}>
+               					Search
+           					</Text>
+       					</TouchableHighlight>
+
+					</View>
 
 
-				<View style={styles.upper_div_container}>
-						<Picker style={{width: 150, height: 180}}
-							selectedValue={this.state.selectedItem1}
+					<View style={styles.upperDivContainer}>
+
+						<Picker style={{width: 150, height: 180}} itemStyle={{height: 180}}
+							selectedValue={this.state.selectedUpperDiv}
 							itemStyle={{color:"white", fontSize:26}}
-							onValueChange={(index) => this.onPickerSelect1(index)}>
-							{this.state.itemList1.map((value, i) => (
+							onValueChange={(index) => this.onPickerSelectUpperDiv(index)}>
+							{this.state.upperDivList.map((value, i) => (
 								<PickerItem label={value} value={i} key={"money"+value}/>
 							))}
 						</Picker>
 
-						<Text style={{margin: 20, color: '#ffffff'}}>
-							{dictionary2.get(this.state.itemList1[this.state.selectedItem1])}
+						<Text style={{margin: 15, color: '#ffffff'}}>
+							{upperDivDict.get(this.state.upperDivList[this.state.selectedUpperDiv])}
 						</Text>
 
-						<Button title="Search" type="solid" style={{margin: 20, color: '#000000'}}
-							onPress={() => this.get_SOE_Webpage(this.state.itemList1[this.state.selectedItem1])}>
-						</Button>
-        		</View>
+						<TouchableHighlight
+        					underlayColor= 'transparent' 
+         					style={styles.searchButtonContainer}
+         					onPress={() => this.getSOEWebpage(this.state.upperDivList[this.state.selectedUpperDiv])}>
+           					<Text
+            					style={styles.buttonText}>
+               					Search
+           					</Text>
+       					</TouchableHighlight>
 
+        			</View>
+				</ImageBackground>						
 			</View>
 		);
 	}
-
+	/*
+		Functionality: Grabs the JSON dictionary from the server using the appropriate URL
+	*/
 	componentDidMount = () => {
 		fetch('https://people.ucsc.edu/~nmarkenz/Webscraping/lowerdiv_cse_classes.json', {
 		   method: 'GET'
 		})
 		.then((response) => response.json())
 		.then((responseJson) => {
-		   console.log(responseJson);
-		   this.create_dict(responseJson,dictionary,0)
-		   //console.log(dictionary)
-		   //dictionary = clean_up_dict(dictionary)
+		   this.createDict(responseJson,lowerDivDict,0)	// Creates the javascript dictionary from JSON
 		   this.setState({
 			  data: responseJson
 		   })
@@ -151,15 +186,13 @@ export class CS_BSScreen extends React.Component {
 		.catch((error) => {
 		   console.error(error);
 		});
+
 		fetch('https://people.ucsc.edu/~nmarkenz/Webscraping/upperdiv_cse_classes.json', {
 		   method: 'GET'
 		})
 		.then((response) => response.json())
 		.then((responseJson) => {
-		   console.log(responseJson);
-		   this.create_dict(responseJson,dictionary2,1)
-		   //console.log(dictionary)
-		   //dictionary = clean_up_dict(dictionary)
+		   this.createDict(responseJson,upperDivDict,1) // Creates the javascript dictionary from JSON
 		   this.setState({
 			  data: responseJson
 		   })
@@ -168,120 +201,131 @@ export class CS_BSScreen extends React.Component {
 		   console.error(error);
 		});
 	 }
-	 create_dict(result,dict,upper) {
-		console.log(typeof result);
-		console.log(result);
-		console.log(typeof dict);
-		   str_dict = JSON.stringify(result);
-		   //console.log(typeof str_dict);
-		  // console.log(str_dict);
-		   //console.log(new_dict.get("CMPS 5J"));
-		  var res = str_dict.split(" ,");
-		  // console.log(res);
-		  //var str_class = res[0].split(" \" ");
-		   //console.log(str_class);
-		  var str2 = res[0].match(/[^\s"']+|"([^"]*)"/gmi)
-		 // console.log("------------------------");
-		  //console.log(str2);
-		 // console.log(str2[1]);
-		  var start = 1
-		  var end = 3
-		  //console.log(Math.floor(str2.length/4));
-		  var num_items = Math.floor((str2.length)/4)
-		  console.log("---------------------------")
-		  console.log(str2[start]);
-		  var key = str2[start].split("\"");
-		  console.log(key)
-		  console.log(key[1])
-		  console.log("---------------------------")
+
+	 /*
+		Functionality: Parses the JSON dictionary received from the server and uses some logic
+	 		to recreate the dictionary in Javascript
+	 */
+	 createDict(result,dict,upper) {
+		  str_dict = JSON.stringify(result);
+		  var res = str_dict.split(" ,");	// Split by commas
+		  var str2 = res[0].match(/[^\s"']+|"([^"]*)"/gmi)	// Split by quotes (" ")
+		  /*
+				At this point the excerpt of the list looks like this
+				[0] = "{"
+				[1] = "\"CSE3\""  <------- Class Prefix
+				[2] = ":"
+				[3] = "\"CSE3: Personal Computer Concepts: Software and Hardware \"" <-------- Class Title
+				[4] = "{"
+				[5] = "\"CSE5J\"" <------- Class Prefix
+				.........
+		  */
+		  var start = 1		// Initial index of first class prefix
+		  var end = 3		// Initial index of first class title
+		  var num_items = Math.floor((str2.length)/4)	// Logic to account amount of (prefix,title) pairs
+		  /*
+				Generates the dictionary by establashing the proper key value pairs by splitting the "\"
+		  */
 		  for(var i = 0; i < num_items; i++) 
-	   {
-		  var key = str2[start].split("\"");
-		  var val = str2[end].split("\"");
-		  dict.set(key[1], val[1]);
-		  //console.log(dict.get(str2[start]));
-		  start += 4;
-		  end += 4;
+		  	{
+		  		var key = str2[start].split("\"");	// Class Prefix
+		  		var val = str2[end].split("\"");	// Class Title
+		  		dict.set(key[1], val[1]);			// Establishing entry in dictionary
+		  		start += 4;							// Increment by 4 to get next pair
+		  		end += 4;	
+	   		}
+		  this.createDivList(dict,upper);	   		// Creates the list of lower/upper div courses needed to generates the wheel picker items
 	   }
-	   console.log(dict);
-	   console.log("KILL ME");
-	   console.log(dict.get("\"CSE99\""))
-	   iterator1 = dict.keys()
-	   console.log(this.state.itemList1)
-	   if (upper == 0)
-			   myList = this.state.itemList
+
+	/*
+		Functionality: To use the dictionary created in createDict to 
+		generate the list of keys each Wheel Picker uses
+	*/
+	createDivList(dict,upper){
+		iterator1 = dict.keys()
+	   	if (upper == 0)
+			myList = this.state.lowerDivList
 		else
-		myList = this.state.itemList1
-	   for (var i = 0; i < dict.size;i++)
-	   {
-		   myList.push(iterator1.next().value)
-	   }
-	   console.log(iterator1.next().value)
-	   //this.state.itemList = 
-	   console.log(typeof dict)
-	   for (key in dict)
-			   console.log(key);
-			   
-	   }
+			myList = this.state.upperDivList
+	   	for (var i = 0; i < dict.size;i++)
+	   		{
+		   		myList.push(iterator1.next().value)
+	   		}
+	}
 	   
 }
-
-function cs_bs_curriculum() {
+	/*
+		Functionality: Opens up the Computer Science B.S. curriculum when the Curriculum Chart is selected
+	*/
+function csBSCurriculum() {
   WebBrowser.openBrowserAsync(
     'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-07/CS_BS_18-19.pdf'
   );
 }
 
+function cseChanges() {
+	WebBrowser.openBrowserAsync(
+	  'https://undergrad.soe.ucsc.edu/bsoe-course-renumbering'
+	);
+  }
 
-
-function clean_up_dict(dictionary) {
-	for (var key in dictionary) {
-		// check if the property/key is defined in the object itself, not in parent
-		if (dictionary.hasOwnProperty(key)) {           
-			console.log(key, dictionary[key]);
-		}
-	}
-	return dictionary
-
-
-}
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
-		backgroundColor: '#1962dd',
   },
-  lower_div_container: {
-    top: 0,
-    left: 0,
+  lowerDivContainer: {
+		top: 0,
+		left: 0,
 		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
   },
-  upper_div_container: {
-    top: 0,
-    left: 0,
+  upperDivContainer: {
+    	top: 0,
+    	left: 0,
 		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
 	},
-	welcome: {
-		fontSize: 20,
+  buttonContainer: {
+		backgroundColor: '#FFFFFF',
+		paddingVertical: 0,
+		borderWidth: 1,
+		borderRadius: 10,
+		borderColor: '#ddd',
+		borderBottomWidth: 0,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.8,
+		shadowRadius: 2,
+		elevation: 1,
+		marginLeft: 80,
+		marginRight: 80,
+		marginTop: 5,
+		marginBottom: 0,
+		paddingTop: 0,
+		paddingBottom: 0,
+},
+searchButtonContainer: {
+		backgroundColor: '#FFFFFF',
+		paddingVertical: 0,
+		borderWidth: 1,
+		borderRadius: 10,
+		borderColor: '#ddd',
+		borderBottomWidth: 0,
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.8,
+		shadowRadius: 2,
+		elevation: 1,
+		marginLeft: 80,
+		marginRight: 80,
+		marginTop: 0,
+		marginBottom: 0,
+		paddingTop: 5,
+		paddingBottom: 5,
+},
+  buttonText: {
 		textAlign: 'center',
-		margin: 10,
-		color: '#ffffff',
-	},
-	instructions: {
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
-  },
-  button2: {
-    justifyContent: "center",
-    flex: 0.3,
-    top: -120,
-    left: 120,
-    height:70,
-    width:180,
+		color: '#000000',
+		fontSize: 18,
+		fontWeight: 'bold',
   },
 });

@@ -1,7 +1,6 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-import { WorldAlignment } from 'expo/build/AR';
 
 export class HomePageScreen extends React.Component {
   static navigationOptions = {
@@ -19,7 +18,7 @@ export class HomePageScreen extends React.Component {
                   <Image
                   source={require('../../../assets/images/homepage/myucsc.png')}
                   resizeMode="contain"
-                  style = {{height: 96, width: 96}}
+                  style = {{height: 65, width: 65}}
                   />
                 </TouchableHighlight>
                 <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>myUCSC</Text> 
@@ -29,7 +28,7 @@ export class HomePageScreen extends React.Component {
                   <Image
                   source={require('../../../assets/images/homepage/canvas.png')}
                   resizeMode="contain"
-                  style = {{height: 96, width: 96}}
+                  style = {{height: 65, width: 65}}
                   /> 
                   </TouchableHighlight>
                   <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Canvas</Text>
@@ -40,7 +39,7 @@ export class HomePageScreen extends React.Component {
               <Image
               source={require('../../../assets/images/homepage/advising.png')}
               resizeMode="contain"
-              style = {{height: 96, width: 96}}
+              style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Advising</Text>
@@ -50,7 +49,7 @@ export class HomePageScreen extends React.Component {
               <Image
               source={require('../../../assets/images/homepage/engagement.png')}
               resizeMode="contain"
-              style = {{height: 96, width: 96}}
+              style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engagement</Text>
@@ -61,7 +60,7 @@ export class HomePageScreen extends React.Component {
               <Image
               source={require('../../../assets/images/homepage/athletics.png')}
               resizeMode="contain"
-              style = {{height: 96, width: 96}}
+              style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Athletics</Text>
@@ -71,7 +70,7 @@ export class HomePageScreen extends React.Component {
               <Image
               source={require('../../../assets/images/homepage/facilities.png')}
               resizeMode="contain"
-              style = {{height: 96, width: 96}}
+              style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Facility</Text>
@@ -99,9 +98,6 @@ function canvas() {
 const styles = StyleSheet.create({
     pageContainer: {
       fontSize: 30,
-      flex: 1,
-      flexDirection: "row",
-      justifyContent: "flex-start",
     },
 
     muContainer: {
@@ -125,7 +121,7 @@ const styles = StyleSheet.create({
     enContainer: {
       position: "absolute",
       top: "22%",
-      right: "19%"
+      right: "17%"
     },
 
     atContainer: {
