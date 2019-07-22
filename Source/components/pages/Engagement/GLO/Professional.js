@@ -82,7 +82,7 @@ export class professionalScreen extends React.Component {
     
           <View style= {styles.screen_container}>
           <ImageBackground 
-          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          source={require('../../../../assets/images/soar_1.jpg')}
           style={{width: '100%', height: '100%'}}>
             
           
@@ -102,7 +102,7 @@ export class professionalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Alpha Kappa Psi (ΑΚΨ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Alpha Kappa Psi (ΑΚΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -128,7 +128,7 @@ export class professionalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Delta Sigma Pi (ΔΣΠ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Delta Sigma Pi (ΔΣΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -154,7 +154,7 @@ export class professionalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Kappa Gamma Delta (KΓΔ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Kappa Gamma Delta (KΓΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -180,7 +180,7 @@ export class professionalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Phi Alpha Delta (ΦAΔ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Phi Alpha Delta (ΦAΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
@@ -206,7 +206,7 @@ export class professionalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Mu Delta (ΣΜΔ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Mu Delta (ΣΜΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"

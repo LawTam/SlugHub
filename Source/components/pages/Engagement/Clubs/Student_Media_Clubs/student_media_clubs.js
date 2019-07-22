@@ -22,7 +22,7 @@ export class Student_Media_ClubsScreen extends React.Component {
     return (
     <View style= {styles.container}>
     <ImageBackground 
-    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    source={require('../../../../../assets/images/soar_1.jpg')}
     style={{width: '100%', height: '100%'}}>
 
      <ScrollView 

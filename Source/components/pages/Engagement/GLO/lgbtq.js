@@ -83,7 +83,7 @@ export class lgbtqScreen extends React.Component {
           <View style= {styles.screen_container}>
             
           <ImageBackground 
-          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          source={require('../../../../assets/images/soar_1.jpg')}
           style={{width: '100%', height: '100%'}}>
             
             <ScrollView 
@@ -102,7 +102,7 @@ export class lgbtqScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Theta Pi Sigma (ΘΠΣ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Theta Pi Sigma (ΘΠΣ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"

@@ -82,7 +82,7 @@ export class serviceScreen extends React.Component {
     
           <View style= {styles.screen_container}>
           <ImageBackground 
-          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          source={require('../../../../assets/images/soar_1.jpg')}
           style={{width: '100%', height: '100%'}}>
             
           
@@ -102,7 +102,7 @@ export class serviceScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Alpha Phi Omega (ΑΦΩ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Alpha Phi Omega (ΑΦΩ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -128,7 +128,7 @@ export class serviceScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Pi Alpha Phi (ΠAΦ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Pi Alpha Phi (ΠAΦ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -154,7 +154,7 @@ export class serviceScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Lambda Beta International Fraternity, Inc. (ΣΛB)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Lambda Beta International Fraternity, Inc. (ΣΛB)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -180,7 +180,7 @@ export class serviceScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Phi Zeta (ΣΦZ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Phi Zeta (ΣΦZ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
