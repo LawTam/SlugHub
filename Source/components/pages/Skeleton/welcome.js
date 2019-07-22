@@ -1,8 +1,5 @@
 import React , {Component} from 'react';
 import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
-import HttpExample from './http_example.js'
 
 export class WelcomeScreen extends React.Component {
   static navigationOptions = {

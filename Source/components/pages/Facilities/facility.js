@@ -1,5 +1,5 @@
-import React , {} from 'react';
-import { TouchableHighlight, Button, Image, Text, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
+import React from 'react';
+import { TouchableHighlight, Image, StyleSheet, View, ImageBackground } from 'react-native';
 
 export class FacilityScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {

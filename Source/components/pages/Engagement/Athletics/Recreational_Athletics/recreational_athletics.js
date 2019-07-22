@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import { TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
-=======
-import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Text, StyleSheet, View } from 'react-native';
-
->>>>>>> 06fec950391b7f483a0c12f7ad39861ddacea615
+import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -27,50 +21,55 @@ export class Recreational_AthleticsScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
+      <ScrollView>
+        <Image
+        source={require('../../../../../assets/images/opers_field.png')}
+        style={{height: '50%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
+        />
+        <View style= {styles.container}>
 
-      <Text>
-      Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, Camp Kesem (camp for children with a parent who has cancer), cheer team, circus Slugs, dance team, grappling, judo, kayak, kendo, muay thai, ninjutsu, racquetball, table tennis, taekwondo, tango, track and field, triathlon, volleyball, and wushu.
-      {"\n"}
-      </Text>
+        <Text>
+        Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, Camp Kesem (camp for children with a parent who has cancer), cheer team, circus Slugs, dance team, grappling, judo, kayak, kendo, muay thai, ninjutsu, racquetball, table tennis, taekwondo, tango, track and field, triathlon, volleyball, and wushu.
+        {"\n"}
+        </Text>
 
-      <Icon.Button 
-            name="trophy"
-            backgroundColor="#006aad"
-            onPress={recreationPage}
-          >
-            Click here for to visit the official UCSC Recreational Sports page
-      </Icon.Button>
+        <Icon.Button 
+              name="pagelines"
+              backgroundColor="#006aad"
+              onPress={recreationPage}
+            >
+              Visit the Official Recreational Sports website
+        </Icon.Button>
 
-      <Text> {"\n"}</Text>
-      
-      <Icon.Button 
-            name="trophy"
-            backgroundColor="#ffcc33"
-            onPress={() => navigate('Competitive_Athletics')}
-          >
-            Click here for more on Competitive Sports
-      </Icon.Button>
+        <Text> {"\n"}</Text>
+        
+        <Icon.Button 
+              name="trophy"
+              backgroundColor="#ffcc33"
+              onPress={() => navigate('Competitive_Athletics')}
+            >
+              More on Competitive Sports
+        </Icon.Button>
 
-      <Text> {"\n"}</Text>
+        <Text> {"\n"}</Text>
 
-      <Icon.Button 
-            name="futbol-o"
-            backgroundColor="#ffcc33"
-            onPress={() => navigate('Intramural_Athletics')}
-          >
-            Click here for more on Intramural Competition
-      </Icon.Button>
+        <Icon.Button 
+              name="futbol-o"
+              backgroundColor="#ffcc33"
+              onPress={() => navigate('Intramural_Athletics')}
+            >
+            More on Intramural Competition
+        </Icon.Button>
 
-      </View>
-
+        </View>
+      </ScrollView>
     );
   }
 }
 
 function recreationPage() {
   WebBrowser.openBrowserAsync(
-    'https://opers.ucsc.edu/sport-clubs/competitive-clubs/index.html'
+    'https://recreation.ucsc.edu/'
   );
   
 }
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     fontSize: 30,
-    padding: '10%',
+    padding: '5%',
     backgroundColor: "white",
     flex: 1
   },
