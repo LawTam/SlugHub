@@ -20,41 +20,31 @@ export class FacilityScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
+      
       <ImageBackground
-      source={require('../../../assets/images/facilities/dining.jpg')} 
+      source={require('../../../assets/images/facilities/background.jpg')} 
       style={{width: '100%', height: '100%'}}>
       
-      <ScrollView 
-           scrollEventThrottle = { 16 }
-           contentContainerStyle = {{ paddingTop: 10}}
-           onScroll = { Animated.event(
-             [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
-          )}>
+      <View style = {styles.diningContainer}>
+      <TouchableHighlight onPress = {() => navigate('Dining')}>
+       <Image
+       source={require('../../../assets/images/facilities/dining.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
+      </View>
 
+      <View style = {styles.fitnessContainer}>
+      <TouchableHighlight onPress = {() => navigate('Fitness')}>
+       <Image
+       source={require('../../../assets/images/facilities/fitness.png')}
+       resizeMode="contain"
+       style={{width: 330, height: 150}}
+       />
+      </TouchableHighlight>
+      </View>
       
-      <TouchableHighlight
-        underlayColor= 'transparent'
-        style={styles.buttonContainer}
-        onPress={() => navigate('Dining')}>
-          <Text
-            style={styles.buttonText}>
-              Dining
-          </Text>
-      </TouchableHighlight>
-
-      <TouchableHighlight
-        underlayColor= 'transparent'
-        style={styles.buttonContainer}
-        onPress={() => navigate('Fitness')}>
-          <Text
-            style={styles.buttonText}>
-              Fitness
-          </Text>
-      </TouchableHighlight>
-
-      <View style= {styles.emptyContainer}/>
-
-      </ScrollView>
 
       </ImageBackground>
       </View>
@@ -65,39 +55,20 @@ export class FacilityScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    flex: 1
+    justifyContent: "space-around",
+    flex: 1,
+    flexDirection: 'column',
   },
-  buttonContainer: {
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 15,
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: '#ddd',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 30,
-    marginRight: 30,
-    marginTop: 10,
-    marginBottom: 10,
-    paddingTop: 15,
-    paddingBottom: 15,
-},
-  buttonText: {
-    textAlign: 'center',
-    color: '#000000',
-    fontSize: 18,
-    fontWeight: 'bold',
+
+  diningContainer:{
+    top: 100,
+    left: 40,
+    position: "absolute"
   },
-  emptyContainer: {
-    justifyContent: "center",
-    backgroundColor: "#4287f5",
-    flex: .2,
-    borderBottomWidth: 240,
-    opacity: 0,
-  },
+
+  fitnessContainer:{
+    top: 300,
+    left: 40,
+    position: "absolute"
+  }
 });

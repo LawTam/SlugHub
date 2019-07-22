@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import { ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
 
 export class FitnessScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,6 +20,10 @@ export class FitnessScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style= {styles.container}>
+       
+      <ImageBackground
+      source={require('../../../../assets/images/facilities/background.jpg')} 
+      style={{width: '100%', height: '100%'}}>
 
       <Button
       title="Fitness"
@@ -29,6 +31,7 @@ export class FitnessScreen extends React.Component {
       onPress={() => navigate('Fitness')}
       />
 
+      </ImageBackground>
       </View>
 
     );
@@ -39,8 +42,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     fontSize: 30,
-    padding: 60,
-    backgroundColor: "#4287f5",
     flex: 1
   },
 });
