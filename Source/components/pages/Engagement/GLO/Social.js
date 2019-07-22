@@ -85,7 +85,7 @@ export class socialScreen extends React.Component {
         <View style= {styles.container}>
           
           <ImageBackground 
-          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          source={require('../../../../assets/images/soar_1.jpg')}
           style={{width: '100%', height: '100%'}}>
             
           <ScrollView 
@@ -103,7 +103,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Gamma Phi Beta (ΓΦΒ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Gamma Phi Beta (ΓΦΒ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -130,7 +130,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Kappa Alpha Theta (ΚΑΘ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Kappa Alpha Theta (ΚΑΘ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -156,7 +156,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Kappa Kappa Gamma (KKΓ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Kappa Kappa Gamma (KKΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -182,7 +182,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Alpha Epsilon Pi (AEΠ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Alpha Epsilon Pi (AEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
@@ -208,7 +208,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Alpha Psi (AΨ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Alpha Psi (AΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -234,7 +234,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Alpha Epsilon Pi (ΣAEΠ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Alpha Epsilon Pi (ΣAEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -260,7 +260,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Pi Fraternity International (ΣΠ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Pi Fraternity International (ΣΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -286,7 +286,7 @@ export class socialScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Tau Kappa Epsilon (TKE)</Text>
+            <Text style={{color: '#FFFFFF'}}>Tau Kappa Epsilon (TKE)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"

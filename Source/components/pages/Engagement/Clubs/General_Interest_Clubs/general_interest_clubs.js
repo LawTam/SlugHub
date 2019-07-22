@@ -21,8 +21,9 @@ export class General_InterestClubsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
+
     <ImageBackground
-    source={require('../../../../../assets/images/JBE_back_temp.png')}
+    source={require('../../../../../assets/images/soar_1.jpg')}
     style={{width: '100%', height: '100%'}}>
 
      <ScrollView
