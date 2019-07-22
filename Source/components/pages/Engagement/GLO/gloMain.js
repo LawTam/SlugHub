@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import * as WebBrowser from 'expo-web-browser';
+import { TouchableHighlight, Image, Text,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 
 export class gloMainScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {

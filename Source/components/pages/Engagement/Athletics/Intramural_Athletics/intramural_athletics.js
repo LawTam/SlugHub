@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import { TouchableHighlight, Button, Image, Text,StyleSheet, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export class Intramural_AthleticsScreen extends React.Component {

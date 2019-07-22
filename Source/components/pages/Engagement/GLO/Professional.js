@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
-//import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import {ImageBackground, TouchableHighlight, Button, Image, Text,StyleSheet, View, ScrollView, Animated } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import { FloatingAction } from "react-native-floating-action";
 
@@ -226,9 +224,6 @@ export class professionalScreen extends React.Component {
             </View>
           </View>
 
-<View style= {styles.orgs_container}>
-            
-          </View>
         
           </ScrollView>
               

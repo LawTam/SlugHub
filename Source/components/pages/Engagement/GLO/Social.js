@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
-//import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import { TouchableHighlight, Text, Button, Image, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import { FloatingAction } from "react-native-floating-action";
   
@@ -304,10 +302,6 @@ export class socialScreen extends React.Component {
                 onPress={TKE_fb}
               />
             </View>
-          </View>
-
-<View style= {styles.orgs_container}>
-            
           </View>
 
 

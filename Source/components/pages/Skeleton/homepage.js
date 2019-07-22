@@ -1,7 +1,6 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-import { WorldAlignment } from 'expo/build/AR';
 
 export class HomePageScreen extends React.Component {
   static navigationOptions = {

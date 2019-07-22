@@ -1,7 +1,5 @@
 import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
-import AppNavigator from '../../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export class AcademicClubsScreen extends React.Component {
