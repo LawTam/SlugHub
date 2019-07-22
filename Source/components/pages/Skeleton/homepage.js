@@ -1,17 +1,32 @@
 import React , {Component} from 'react';
-import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
+import {ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View, BackHandler, ToastAndroid, } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export class HomePageScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    headerLeft: null,
+    gesturesEnabled: false,
   };
+
+    componentDidMount() {
+         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+     }
+
+     componentWillUnmount() {
+         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+     }
+
+     handleBackButton() {
+         return true;
+     }
+
   render() {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.pageContainer}>
-        <ImageBackground 
-          source={require('../../../assets/images/homepage/background.jpg')} 
+        <ImageBackground
+          source={require('../../../assets/images/homepage/background.jpg')}
           style={{width: '100%', height: '100%'}}>
               <View style = {styles.muContainer}>
                 <TouchableHighlight onPress={myUCSC}>
@@ -21,7 +36,7 @@ export class HomePageScreen extends React.Component {
                   style = {{height: 65, width: 65}}
                   />
                 </TouchableHighlight>
-                <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>myUCSC</Text> 
+                <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>myUCSC</Text>
               </View>
               <View style ={styles.cnContainer}>
                 <TouchableHighlight onPress={canvas}>
@@ -29,11 +44,11 @@ export class HomePageScreen extends React.Component {
                   source={require('../../../assets/images/homepage/canvas.png')}
                   resizeMode="contain"
                   style = {{height: 65, width: 65}}
-                  /> 
+                  />
                   </TouchableHighlight>
                   <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Canvas</Text>
               </View>
-           
+
             <View style = {styles.adContainer}>
             <TouchableHighlight onPress={() => navigate('Advising')}>
               <Image
@@ -52,7 +67,7 @@ export class HomePageScreen extends React.Component {
               style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
-            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engagement</Text>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engage</Text>
             </View>
 
             <View style = {styles.atContainer}>
@@ -75,10 +90,10 @@ export class HomePageScreen extends React.Component {
             </TouchableHighlight>
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Facility</Text>
             </View>
-          
-      </ImageBackground> 
+
+      </ImageBackground>
     </View>
-    
+
     );
   }
 }
@@ -121,7 +136,7 @@ const styles = StyleSheet.create({
     enContainer: {
       position: "absolute",
       top: "22%",
-      right: "17%"
+      right: "19%"
     },
 
     atContainer: {

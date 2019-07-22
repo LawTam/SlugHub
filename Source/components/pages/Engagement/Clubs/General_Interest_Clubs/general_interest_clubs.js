@@ -21,164 +21,165 @@ export class General_InterestClubsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
     <View style= {styles.container}>
-    <ImageBackground 
-    source={require('../../../../../assets/images/JBE_back_temp.png')}
+
+    <ImageBackground
+    source={require('../../../../../assets/images/soar_1.jpg')}
     style={{width: '100%', height: '100%'}}>
 
-     <ScrollView 
+     <ScrollView
          scrollEventThrottle = { 16 }
          contentContainerStyle = {{ paddingTop: 10}}
          onScroll = { Animated.event(
            [{ nativeEvent: { contentOffset: { y: this.AnimatedHeaderValue }}}]
         )}>
 
-      
-       
+
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Active Minds
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Anthropology Society
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Balloon Art Brigade
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Brain, Mind, Consciousness Society
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Cosplay Club
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                The Great Chess Club
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                League of Slugs (LOS)
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Medieval Club of UCSC
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Metal Slugs
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Santa Cruz Fighting Game Community
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Sisterhood in STEM
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Slug Anime & Manga Association
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Slug Gaming
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                SlugLug Linux Users' Group
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                The Ten Colleges Debate Union, Debate Team
            </Text>
        </TouchableHighlight>
-       
+
        <TouchableHighlight
-        underlayColor= 'transparent' 
+        underlayColor= 'transparent'
          style={styles.buttonContainer}>
            <Text
              style={styles.buttonText}>
                Warriors for Peace
            </Text>
        </TouchableHighlight>
-       
-       
+
+
 
        <View style= {styles.emptyContainer}/>
       </ScrollView>

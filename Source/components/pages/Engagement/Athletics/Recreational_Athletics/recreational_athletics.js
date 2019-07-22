@@ -71,7 +71,7 @@ function recreationPage() {
   WebBrowser.openBrowserAsync(
     'https://recreation.ucsc.edu/'
   );
-  
+
 }
 
 const styles = StyleSheet.create({

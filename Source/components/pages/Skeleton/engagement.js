@@ -24,7 +24,7 @@ export class EngagementScreen extends React.Component {
 
         
        <ImageBackground 
-      source={require('../../../assets/images/JBE_back_temp.png')}
+      source={require('../../../assets/images/bridge_ucsc.jpg')}
       style={{width: '100%', height: '100%'}}>
 
       <ScrollView 

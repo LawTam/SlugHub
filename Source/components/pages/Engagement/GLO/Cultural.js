@@ -83,7 +83,7 @@ export class culturalScreen extends React.Component {
           <View style= {styles.screen_container}>
             
           <ImageBackground 
-          source={require('../../../../assets/images/UCSC_stock.jpg')}
+          source={require('../../../../assets/images/soar_1.jpg')}
           style={{width: '100%', height: '100%'}}>
             
             <ScrollView 
@@ -102,7 +102,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>alpha Kappa Delta Phi (αKΔΦ)</Text>
+            <Text style={{color: '#FFFFFF'}}>alpha Kappa Delta Phi (αKΔΦ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -129,7 +129,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Delta Sigma Theta Sorority, Inc. (ΔΣΘ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Delta Sigma Theta Sorority, Inc. (ΔΣΘ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -155,7 +155,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Kappa Zeta (KZ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Kappa Zeta (KZ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -181,7 +181,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Lambda Theta Alpha {'\n'}Latin Sorority, Inc. (ΛΘA)</Text>
+            <Text style={{color: '#FFFFFF'}}>Lambda Theta Alpha {'\n'}Latin Sorority, Inc. (ΛΘA)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
@@ -207,7 +207,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Lambda Gamma {'\n'}National Sorority, Inc. (ΣΛΓ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Lambda Gamma {'\n'}National Sorority, Inc. (ΣΛΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -233,7 +233,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Omicron Pi (ΣOΠ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Omicron Pi (ΣOΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="Instagram"
@@ -259,7 +259,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Sigma Pi Alpha Sorority, Inc. (ΣΠA)</Text>
+            <Text style={{color: '#FFFFFF'}}>Sigma Pi Alpha Sorority, Inc. (ΣΠA)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
@@ -277,7 +277,7 @@ export class culturalScreen extends React.Component {
                 resizeMode="contain"
               />
             </View>
-            <Text>Zeta Phi Beta Sorority, Incorporated (ΖΦΒ)</Text>
+            <Text style={{color: '#FFFFFF'}}>Zeta Phi Beta Sorority, Incorporated (ΖΦΒ)</Text>
             <View style= {styles.OSButton}>
               <Button
                 title="official site"
