@@ -1,8 +1,7 @@
-import React , {Component} from 'react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import AppNavigator from '../../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React from 'react';
+import { TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import * as WebBrowser from 'expo-web-browser';
 
 export class Competitive_AthleticsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     fontSize: 30,
     padding: 60,
-    backgroundColor: "#4287f5",
+    backgroundColor: "white",
     flex: 1
   },
 });
