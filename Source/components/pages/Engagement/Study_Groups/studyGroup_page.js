@@ -1,5 +1,6 @@
-import React , {Component} from 'react';
-import { TouchableHighlight, Image, Text,StyleSheet, View } from 'react-native';
+import React from 'react';
+import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
 export class StudyGroup_Screen extends React.Component {
@@ -7,42 +8,46 @@ export class StudyGroup_Screen extends React.Component {
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
-          <Image
-            source={require('../../../../assets/images/home_icon.png')}
-            style={{height: 35, width: 35, margin: 10}}
-            resizeMode="contain"
-            />
+        <Image
+        source={require('../../../../assets/images/home_icon.png')}
+        style={{height: 35, width: 35, margin: 10}}
+        resizeMode="contain"
+        />
         </TouchableHighlight>
       ),
       title: 'Study Groups',
-      //titleText: "If you are new to our study groups, join our course using code 'UMDv7y1OTI' ",
     };
   };
-
-
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style= {styles.container}>
+      <ScrollView>
+        <Image
+        source={require('../../../../assets/images/grepthink_logo.png')}
+        style={{height: '50%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
+        />
+        <View style= {styles.container}>
 
-        <View style= {styles.top}>
+        <Text>
+      If you are new to our study groups, join our course using code 'UMDv7y1OTI' {"\n"}
+      By joining our course, you will be able to create and join study groups in order to fully succeed in your academic career.
+        {"\n"}
+        </Text>
 
-          <TouchableHighlight onPress={grepthink}>
-            <Image
-              source={require('../../../../assets/images/grepthink_logo.png')}
-              style={styles.gt_button}
-              resizeMode="contain"
-              />
-          </TouchableHighlight>
+        <Icon.Button
+              name="pagelines"
+              backgroundColor="#006aad"
+              onPress={grepthink}
+            >
+              Visit the GrepThink Website
+        </Icon.Button>
+
+        <Text> {"\n"}</Text>
+
+
 
         </View>
-
-        <Text style={{fontWeight: 'bold'}}>
-          If you are new to our study groups, join our course using code 'UMDv7y1OTI'
-      </Text>
-
-      </View>
-
+      </ScrollView>
     );
   }
 }
@@ -55,29 +60,10 @@ function grepthink() {
 
 const styles = StyleSheet.create({
   container: {
-    //justifyContent: "center",
-    fontSize: 30,
-    //padding: 60,
-    backgroundColor: "#4287f5",
-    flex: 1
-  },
-
-
-  top: {
     justifyContent: "center",
     fontSize: 30,
-    padding: 60,
-    backgroundColor: "#658725",
-    flex: .3
+    padding: '5%',
+    backgroundColor: "white",
+    flex: 1
   },
-
-  gt_button: {
-    top: '0%',
-    left: '0%',
-    bottom: '-10%',
-    //position: "absolute",
-    height: '70%',
-    width: '100%',
-  },
-
 });
