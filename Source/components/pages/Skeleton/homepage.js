@@ -70,15 +70,15 @@ export class HomePageScreen extends React.Component {
             <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Engage</Text>
             </View>
 
-            <View style = {styles.atContainer}>
-            <TouchableHighlight onPress={() => navigate('Athletics')}>
+            <View style = {styles.calContainer}>
+            <TouchableHighlight onPress={calendar}>
               <Image
               source={require('../../../assets/images/homepage/athletics.png')}
               resizeMode="contain"
               style = {{height: 65, width: 65}}
               />
             </TouchableHighlight>
-            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Athletics</Text>
+            <Text style={{fontWeight: 'bold', textAlign : 'center', color: '#ffffff'}}>Calendar</Text>
             </View>
             <View style = {styles.fcContainer}>
             <TouchableHighlight onPress={() => navigate('Facility')}>
@@ -107,6 +107,12 @@ function myUCSC() {
 function canvas() {
   WebBrowser.openBrowserAsync(
     'https://canvas.ucsc.edu'
+  );
+}
+
+function calendar() {
+  WebBrowser.openBrowserAsync(
+    'https://calendar.google.com/calendar/embed?src=ucsc.edu_ved3m98is1775j6tqdofmochhc@group.calendar.google.com&ctz=America/Los_Angeles&pli=1'
   );
 }
 
@@ -139,7 +145,7 @@ const styles = StyleSheet.create({
       right: "19%"
     },
 
-    atContainer: {
+    calContainer: {
       position: "absolute",
       top: "39%",
       right: "19%"
