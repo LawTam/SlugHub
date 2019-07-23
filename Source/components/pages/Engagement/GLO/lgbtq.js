@@ -11,6 +11,9 @@ export class lgbtqScreen extends React.Component {
         this.AnimatedHeaderValue = new Animated.Value(0);
  
     }  
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
   static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -22,9 +25,13 @@ export class lgbtqScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'lgbtq',
+          title: 'LGBTQ',
         };
       };
+    /* 
+    render() :
+      - Contains a link to Facebook/Ins/Official Site of Clubs
+    */
       render() {
         const AnimateHeaderBackgroundColor = this.AnimatedHeaderValue.interpolate({
           inputRange: [ 0, ( 10 )  ],
@@ -105,7 +112,7 @@ export class lgbtqScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Theta Pi Sigma (ΘΠΣ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={TPS_home}
               />

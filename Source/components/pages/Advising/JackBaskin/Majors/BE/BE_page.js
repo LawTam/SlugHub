@@ -2,6 +2,9 @@ import React from 'react';
 import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 
 export class BEScreen extends React.Component {
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,6 +19,10 @@ export class BEScreen extends React.Component {
       title: 'Bioengineering',
     };
   };
+  /* 
+    render() :
+      - Contains pages to bioengineering
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
