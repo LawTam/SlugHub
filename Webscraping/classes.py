@@ -62,7 +62,7 @@ def generate_classes_dict(dept, division):
     # Generates the required file with the appropriate name
     file = open(base_file, "w+")
     class_dict = {}
-    ################
+    ###################################################################
     # General structure of code:
     # 1. Iterate through all permutations of the numbers in range.
     # (ex. for 0-100, we would go from 0A -> 0B ... 0Z -> 1A ... 99Z)
@@ -70,7 +70,7 @@ def generate_classes_dict(dept, division):
     # contains a valid course, we add it to our dictionary
     # 3. A course is considered valid if it has a title, which we 
     # can confirm using BeautifulSoup webscraping.
-    ################
+    ###################################################################
     for num in range(class_range_start, class_range_end):
         for letter in alphabet:
             base_url = 'https://courses.soe.ucsc.edu/courses/'
