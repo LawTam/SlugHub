@@ -6,7 +6,9 @@ import * as WebBrowser from 'expo-web-browser';
 
 export class Competitive_AthleticsScreen extends React.Component {
 
-  // Navigation bar w/ touchable highlight to navigate home
+  /*
+    Navigation bar w/ touchable highlight to navigate home
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (

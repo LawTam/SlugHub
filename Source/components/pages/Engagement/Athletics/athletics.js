@@ -10,7 +10,9 @@ const BannerHeight = 260;
 
 export class AthleticsScreen extends React.Component {
   
-  // Navigation bar w/ touchable highlight to navigate home
+  /*
+    Navigation bar with touchable highlight to navigate home
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
