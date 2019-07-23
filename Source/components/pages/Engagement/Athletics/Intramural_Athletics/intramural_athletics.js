@@ -53,7 +53,7 @@ export class Intramural_AthleticsScreen extends React.Component {
                 name="trophy"
                 backgroundColor="#ffcc33"
                 onPress={() => navigate('Competitive_Athletics')}>
-              Click here for more on Competitive Sports
+              More on Competitive Sports
             </Icon.Button>
 
             <Text> {"\n"}</Text>
@@ -62,7 +62,7 @@ export class Intramural_AthleticsScreen extends React.Component {
                 name="pagelines"
                 backgroundColor="#ffcc33"
                 onPress={() => navigate('Recreational_Athletics')}>
-              Click here for more on Recreational Sports
+              More on Recreational Sports
             </Icon.Button>
 
         </View>

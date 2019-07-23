@@ -1,7 +1,5 @@
 import React , {Component} from '../../../../node_modules/react';
 import { ImageBackground, TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, ScrollView, Animated } from 'react-native';
-import AppNavigator from '../../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
 
 export class JBE_MinorsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {

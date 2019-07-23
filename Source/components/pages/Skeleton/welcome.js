@@ -1,12 +1,9 @@
 //npm install react-native-progress --save
 //npm i react-native-LoopAnimation
 
-import React , {Component} from 'react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View, Window, } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React from 'react';
+import { TouchableHighlight, Image, Text, StyleSheet, View, } from 'react-native';
 import * as Progress from 'react-native-progress';
-import { Constants } from 'expo';
 
 import LoopAnimation from 'react-native-LoopAnimation'
 
@@ -47,12 +44,12 @@ export class WelcomeScreen extends React.Component {
     this.setState({ progress });
       this.setState({ indeterminate: false });
       setInterval(() => {
-        progress += .1;
+        progress += .006;
         if (progress > 1) {
           progress = 1;
         }
         this.setState({ progress });
-      }, 350);
+      }, .001);
   }
 
 
@@ -66,26 +63,6 @@ export class WelcomeScreen extends React.Component {
       uri: "https://www.pngkit.com/png/full/237-2373114_slug-png.png"
     };
     return (
-
-      // <View style= {styles.container}>
-      //
-      //
-      //   <Image source={pic} style={{width: 253, height: 160}}/>
-      //   <Button
-      //     title="Enter the App!"
-      //     color = "#e6f542"
-      //     onPress={() => navigate('HomePage')}
-      //     />
-      //
-      //   <Progress.Bar
-      //     style={styles.progress}
-      //     progress={this.state.progress}
-      //     indeterminate={this.state.indeterminate}
-      //     />
-      //
-      // </View>
-
-
 
       <View style={{flex:1}}>
        {/*this is the background animation */}
@@ -102,11 +79,15 @@ export class WelcomeScreen extends React.Component {
 
 
            <Image source={pic} style={{width: 253, height: 160}}/>
-           <Button
-             title="Loading"
-             color = "#e6f542"
-             //onPress={() => navigate('HomePage')}
-             />
+             <TouchableHighlight
+               underlayColor= 'transparent'
+               style={styles.buttonContainer}
+               >
+                 <Text
+                   style={styles.buttonText}>
+                     Loading
+                 </Text>
+             </TouchableHighlight>
 
            <Progress.Bar
              style={styles.progress}
@@ -143,10 +124,35 @@ const styles = StyleSheet.create({
 
   progress: {
     marginLeft: '23%',
+    color : "#000000",
+    borderColor: "#000000",
   },
 
-  scrollingBackground: {
-   backgroundColor: "#0B7483"
- },
+  buttonContainer: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#ddd',
+    borderBottomWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
+},
+buttonText: {
+  textAlign: 'center',
+  color: '#000000',
+  fontSize: 18,
+  fontWeight: 'bold',
+},
+
 
 });
