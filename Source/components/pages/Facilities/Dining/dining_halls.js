@@ -1,4 +1,4 @@
-import React , {} from 'react';
+import React from 'react';
 import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 
 import * as WebBrowser from 'expo-web-browser';

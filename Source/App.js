@@ -1,7 +1,3 @@
-import React , {Component} from 'react';
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-import { AppLoading, Asset, Font, Icon } from 'expo';
-import AppNavigator from './navigation/AppNavigator';
 import {createStackNavigator} from 'react-navigation';
 import { createAppContainer } from 'react-navigation';
 

@@ -1,4 +1,4 @@
-import React from '../../../../../node_modules/react';
+import React from 'react';
 import { ImageBackground, TouchableHighlight, Image, Text, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import Picker from '../../../../../node_modules/react-native-wheel-picker'

@@ -1,5 +1,5 @@
-import React , {Component} from 'react';
-import { ImageBackground, TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
+import React from 'react';
+import { ImageBackground, TouchableHighlight, Image, StyleSheet, View } from 'react-native';
 
 export class DiningScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
