@@ -3,7 +3,7 @@ import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView } from 'r
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
-export class StudyGroup_Screen extends React.Component {
+export class StudyGroupScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (

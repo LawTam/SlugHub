@@ -46,7 +46,7 @@ export class ClubsScreen extends React.Component {
        <TouchableHighlight
         underlayColor= 'transparent' 
          style={styles.buttonContainer}
-         onPress={() => navigate('CulturalClubs')}>
+         onPress={() => navigate('Cultural_Clubs')}>
            <Text
              style={styles.buttonText}>
                Cultural & Identity
@@ -56,7 +56,7 @@ export class ClubsScreen extends React.Component {
        <TouchableHighlight
         underlayColor= 'transparent' 
          style={styles.buttonContainer}
-         onPress={() => navigate('EnvironmentalClubs')}>
+         onPress={() => navigate('Environmental_Clubs')}>
            <Text
              style={styles.buttonText}>
                Environmental & Sustainability
@@ -76,7 +76,7 @@ export class ClubsScreen extends React.Component {
        <TouchableHighlight
         underlayColor= 'transparent' 
          style={styles.buttonContainer}
-         onPress={() => navigate('Performing_ArtsClubs')}>
+         onPress={() => navigate('Performing_Arts_Clubs')}>
            <Text
              style={styles.buttonText}>
                Performing & Visual Arts
@@ -106,7 +106,7 @@ export class ClubsScreen extends React.Component {
        <TouchableHighlight
         underlayColor= 'transparent' 
          style={styles.buttonContainer}
-         onPress={() => navigate('ReligousClubs')}>
+         onPress={() => navigate('Religous_Clubs')}>
            <Text
              style={styles.buttonText}>
                Religious & Spiritual
@@ -116,7 +116,7 @@ export class ClubsScreen extends React.Component {
        <TouchableHighlight
         underlayColor= 'transparent' 
          style={styles.buttonContainer}
-         onPress={() => navigate('ServiceClubs')}>
+         onPress={() => navigate('Service_Clubs')}>
            <Text
              style={styles.buttonText}>
                Service

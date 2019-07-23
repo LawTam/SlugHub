@@ -26,7 +26,7 @@ export class DiningScreen extends React.Component {
       style={{width: '100%', height: '100%'}}>
       
       <View style = {styles.diningHallsContainer}>
-      <TouchableHighlight onPress = {() => navigate('DiningHalls')}>
+      <TouchableHighlight onPress = {() => navigate('Dining_Halls')}>
        <Image
        source={require('../../../../assets/images/facilities/diningHalls.png')}
        resizeMode="contain"

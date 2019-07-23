@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 
-export class BE_Screen extends React.Component {
+export class BEScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (

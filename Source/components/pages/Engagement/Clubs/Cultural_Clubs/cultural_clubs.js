@@ -3,7 +3,7 @@ import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated
 import * as WebBrowser from 'expo-web-browser';
 
 
-export class CulturalClubsScreen extends React.Component {
+export class Cultural_ClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
