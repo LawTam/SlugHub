@@ -1,6 +1,7 @@
 import paramiko
 import sys
 
+# Command Line argument inputs
 host = sys.argv[1]
 port = sys.argv[2]
 user = sys.argv[3]
@@ -10,7 +11,7 @@ dest = sys.argv[6]
 
 s = paramiko.SSHClient()
 s.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-s.connect(host,port,username=user,password=passw,timeout=4)
+s.connect(host,port,username=user,password=passw,timeout=4)     # Connects to the server
 
-sftp = s.open_sftp()
-sftp.put(src,dest)
+sftp = s.open_sftp()    
+sftp.put(src,dest)      # Moves the files

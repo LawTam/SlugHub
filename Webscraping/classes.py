@@ -59,14 +59,22 @@ def generate_classes_dict(dept, division):
         class_range_end = 300
 
     base_file = str(div) + "_" + str(dept) + "_" + "classes.json"
-
+    # Generates the required file with the appropriate name
     file = open(base_file, "w+")
     class_dict = {}
+    ###################################################################
+    # General structure of code:
+    # 1. Iterate through all permutations of the numbers in range.
+    # (ex. for 0-100, we would go from 0A -> 0B ... 0Z -> 1A ... 99Z)
+    # 2. For every permutation, we generate a link, and if that link
+    # contains a valid course, we add it to our dictionary
+    # 3. A course is considered valid if it has a title, which we 
+    # can confirm using BeautifulSoup webscraping.
+    ###################################################################
     for num in range(class_range_start, class_range_end):
         for letter in alphabet:
             base_url = 'https://courses.soe.ucsc.edu/courses/'
             base_url += str(dept)+str(num)+str(letter)+'.html'
-            #print(base_url)
 
             raw_link = simple_get(base_url)
             html = BeautifulSoup(raw_link, 'html.parser')
@@ -74,22 +82,20 @@ def generate_classes_dict(dept, division):
                 new_class = title.text
                 split_string = new_class.split("|")
                 class_name = split_string[0]
-                #print(class_name)
                 if class_name != 'Course ':
                     full_name = class_name
                     split_class = class_name.split(":")
                     class_prefix = split_class[0]
                     class_dict.update({class_prefix: full_name})
-                    #print(full_name)
-                    #print("LOWER DIVS DONE")
     file.write(json.dumps(class_dict, indent=4))
     file.close()
 
 
 if __name__ == "__main__":
-    #depts = ['am','bme','cmpm','cse','ece','game','tim','stat']
-    depts = ['cse']
+    # Currently only contains JBE course prefixes
+    depts = ['am','bme','cmpm','cse','ece','game','stat']
+    #depts = ['cse']
 
     for dept in depts:
         generate_classes_dict(dept, 0)  # Lower Div Courses
-        #generate_classes_dict(dept, 1)  # Upper Div Courses
+        generate_classes_dict(dept, 1)  # Upper Div Courses

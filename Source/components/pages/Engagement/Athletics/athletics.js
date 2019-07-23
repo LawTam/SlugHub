@@ -1,17 +1,16 @@
 import React from 'react';
 import { ScrollView, TouchableHighlight, Image, Text, StyleSheet, View, Dimensions} from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-
-// npm install --save react-native-vector-icons
-import Icon from 'react-native-vector-icons/FontAwesome';
-
-// npm i react-native-whc-banner --save
-import Banner, {IndicaterAlign, IndicaterType} from 'react-native-whc-banner'
+import Icon from 'react-native-vector-icons/FontAwesome'; // npm install --save react-native-vector-icons
+import Banner, {IndicaterAlign, IndicaterType} from 'react-native-whc-banner';  // npm i react-native-whc-banner --save
 
 const BannerWidth = Dimensions.get('window').width;
 const BannerHeight = 260;
 
+
 export class AthleticsScreen extends React.Component {
+  
+  // Navigation bar w/ touchable highlight to navigate home
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -26,11 +25,25 @@ export class AthleticsScreen extends React.Component {
       title: 'Athletics / Recreational Sports',
     };
   };
+  
+/*  
+  Order of items in render() on the screen, from top to bottom
+    - Slideshow banner [intramural.png, athletic_slug.png, SammyAthletics.png]
+    - Official UCSC Athletics website Icon.Button
+    - Text on sports
+    - competitive_athletics nav button
+    - Recreation text
+    - recreational_athletics nav button
+    - Intramural text
+    - intramural_athletics nav button
+*/
   render() {
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>
+
         <View style = {styles.page}>
+
           <Banner style = {styles.banner}
             indicaterType={IndicaterType.number_title}
             indicaterAlign={IndicaterAlign.right}
@@ -38,9 +51,9 @@ export class AthleticsScreen extends React.Component {
             autoLoop = {true}
             autoPlay = {true}
             duration = {1000}>
-              <View >< Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/athletic_slug.jpg')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.jpg')} /></View>
+              <View>< Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')}/></View>
+              <View><Image style = {styles.img} source = {require('../../../../assets/images/athletic_slug.png')}/></View>
+              <View><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.png')} /></View>
           </Banner> 
 
           <View style= {styles.container}>
@@ -50,7 +63,7 @@ export class AthleticsScreen extends React.Component {
                   wordWrap = "break-word"
                   onPress={goSlugs}
                 >
-                  Visit the UCSC Official Athletics website
+                  Visit the Official UCSC Athletics website
             </Icon.Button>
 
             <Text style="center">
@@ -101,9 +114,10 @@ export class AthleticsScreen extends React.Component {
                 >
                   More on Intramural Competition
             </Icon.Button>
-
           </View>
+
         </View>
+
       </ScrollView>
     );
   }

@@ -3,6 +3,10 @@ import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-nativ
 import * as WebBrowser from 'expo-web-browser';
 
 export class TIM_BS_Screen extends React.Component {
+
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -17,6 +21,11 @@ export class TIM_BS_Screen extends React.Component {
       title: 'TIM B.S.',
     };
   };
+
+  /*
+    render():
+      - Contains a link to the TIM BS curriculum chart
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -24,7 +33,7 @@ export class TIM_BS_Screen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={TIM_BS_curriculum}
+        onPress={timBSCurriculum}
         />
     </View>
 
@@ -33,7 +42,7 @@ export class TIM_BS_Screen extends React.Component {
 }
 
 
-function TIM_BS_curriculum() {
+function timBSCurriculum() {
   WebBrowser.openBrowserAsync(
     'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/TIM_18-19.pdf'
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import { TouchableHighlight, Image, StyleSheet, View, ImageBackground } from 'react-native';
 
+import * as WebBrowser from 'expo-web-browser';
+
 export class FacilityScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
@@ -36,7 +38,7 @@ export class FacilityScreen extends React.Component {
       </View>
 
       <View style = {styles.fitnessContainer}>
-      <TouchableHighlight onPress = {() => navigate('Fitness')}>
+      <TouchableHighlight onPress = {fitness}>
        <Image
        source={require('../../../assets/images/facilities/fitness.png')}
        resizeMode="contain"
@@ -51,6 +53,12 @@ export class FacilityScreen extends React.Component {
       
     );
   }
+}
+
+function fitness() {
+  WebBrowser.openBrowserAsync(
+    'https://opers.ucsc.edu/'
+  );
 }
 
 const styles = StyleSheet.create({
