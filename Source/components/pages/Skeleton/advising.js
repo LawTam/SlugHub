@@ -3,12 +3,13 @@ import {ImageBackground, TouchableHighlight, Button, Image, StyleSheet, View } f
 import * as WebBrowser from 'expo-web-browser';
 
 export class AdvisingScreen extends React.Component {
-  // AppNavigator
+  
+  /*
+    AppNavigator with home navigation button
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
-
-        // Home button
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
           <Image
             source={require('../../../assets/images/home_icon.png')}
@@ -20,13 +21,37 @@ export class AdvisingScreen extends React.Component {
       title: 'Advising',
     };
   };
-  render() { 
 
+/*
+  render(): (top to bottom)
+    - ImageBackground creates ucsc front picture
+    - Jack Baskin Engineering department container
+        > TouchableHighlight: logo image, directs to department website
+        > jbe_major nav link
+        > jbe_minor nav link
+    - Physical and Biological Sciences + Math department container
+        > TouchableHighlight: logo image, directs to department website
+        > jbe_major nav link
+        > jbe_minor nav link
+    - Art department container
+        > TouchableHighlight: logo image, directs to department website
+        > jbe_major nav link
+        > jbe_minor nav link
+    - Humanities department container
+        > TouchableHighlight: logo image, directs to department website
+        > jbe_major nav link
+        > jbe_minor nav link
+    - Social Sciences department container
+        > TouchableHighlight: logo image, directs to department website
+        > jbe_major nav link
+        > jbe_minor nav link
+*/
+  render() { 
     const {navigate} = this.props.navigation; 
     return (
       <View style= {styles.screen_container}>
         
-       <ImageBackground     // Create screen background
+       <ImageBackground
         source = {require('../../../assets/images/homepage/background.jpg')}
         style={{width: '100%', height: '100%', flex: 1}}>
 

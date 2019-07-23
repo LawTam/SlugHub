@@ -87,9 +87,9 @@ export class CS_BSScreen extends React.Component {
 		return (
 			<View style={styles.container}>
 				
-				<ImageBackground 
+				{/* <ImageBackground 
       				source={require('../../../../../assets/images/compsci_pic.png')}
-      				style={{width: '100%', height: '100%'}}>
+      				style={{width: '100%', height: '100%'}}> */}
 		  		
 					<TouchableHighlight
         				underlayColor= 'transparent' 
@@ -165,7 +165,7 @@ export class CS_BSScreen extends React.Component {
        					</TouchableHighlight>
 
         			</View>
-				</ImageBackground>						
+				{/* </ImageBackground>						 */}
 			</View>
 		);
 	}
@@ -273,6 +273,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
+		backgroundColor: '#343d46'
   },
   lowerDivContainer: {
 		top: 0,
