@@ -22,12 +22,12 @@ export class EngagementScreen extends React.Component {
     return (
       <View style= {styles.container}>
 
-        
-       <ImageBackground 
+
+       <ImageBackground
       source={require('../../../assets/images/bridge_ucsc.jpg')}
       style={{width: '100%', height: '100%'}}>
 
-      <ScrollView 
+      <ScrollView
            scrollEventThrottle = { 16 }
            contentContainerStyle = {{ paddingTop: 10}}
            onScroll = { Animated.event(
@@ -93,11 +93,11 @@ export class EngagementScreen extends React.Component {
               Greek Letter Organization
           </Text>
       </TouchableHighlight>
-        
+
        <View style= {styles.emptyContainer}/>
-       
+
       </ScrollView>
-      </ImageBackground> 
+      </ImageBackground>
 
       </View>
 
@@ -156,4 +156,3 @@ const styles = StyleSheet.create({
     opacity: 0,
   },
 });
-
