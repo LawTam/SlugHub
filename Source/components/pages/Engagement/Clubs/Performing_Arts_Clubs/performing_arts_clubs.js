@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
-export class Performing_ArtsClubsScreen extends React.Component {
+export class Performing_Arts_ClubsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
