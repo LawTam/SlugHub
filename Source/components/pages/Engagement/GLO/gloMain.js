@@ -2,6 +2,9 @@ import React , {Component} from 'react';
 import { TouchableHighlight, Image, Text,StyleSheet, View, ScrollView, Animated, ImageBackground } from 'react-native';
 
 export class gloMainScreen extends React.Component {
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,6 +19,10 @@ export class gloMainScreen extends React.Component {
       title: 'Greek Letter Organization',
     };
   };
+  /* 
+    render() :
+      - Contains a link to page of different type of Clubs
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (

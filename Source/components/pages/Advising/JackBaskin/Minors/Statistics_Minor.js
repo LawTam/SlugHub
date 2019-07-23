@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
-export class Statistics_Minor_Screen extends React.Component {
+export class Statistics_MinorScreen extends React.Component {
 
   /*
     Renders the top bar navigator and home navigation icon

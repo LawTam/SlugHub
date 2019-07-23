@@ -1,7 +1,10 @@
 import React from 'react';
 import { ImageBackground, TouchableHighlight, ScrollView, Image, Text, StyleSheet, View } from 'react-native';
 
-export class BE_Screen extends React.Component {
+export class BEScreen extends React.Component {
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -16,6 +19,10 @@ export class BE_Screen extends React.Component {
       title: 'Bioengineering',
     };
   };
+  /* 
+    render() :
+      - Contains pages to bioengineering
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
-export class EE_BS_Screen extends React.Component {
+export class EE_BSScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (

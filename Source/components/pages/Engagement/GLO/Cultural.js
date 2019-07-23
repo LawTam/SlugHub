@@ -11,6 +11,9 @@ export class culturalScreen extends React.Component {
         this.AnimatedHeaderValue = new Animated.Value(0);
  
     }  
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
   static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -22,9 +25,13 @@ export class culturalScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'cultural',
+          title: 'Cultural',
         };
       };
+    /* 
+    render() :
+      - Contains a link to Facebook/Ins/Official Site of Clubs
+    */
       render() {
         const AnimateHeaderBackgroundColor = this.AnimatedHeaderValue.interpolate({
           inputRange: [ 0, ( 10 )  ],
@@ -105,7 +112,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>alpha Kappa Delta Phi (αKΔΦ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={AKDP_home}
               />
@@ -132,7 +139,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Delta Sigma Theta Sorority, Inc. (ΔΣΘ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={DST_home}
               />
@@ -158,7 +165,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Kappa Zeta (KZ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={KZ_home}
               />
@@ -210,7 +217,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Lambda Gamma {'\n'}National Sorority, Inc. (ΣΛΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={SLG_home}
               />
@@ -262,7 +269,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Pi Alpha Sorority, Inc. (ΣΠA)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={SPA_home}
               />
@@ -280,7 +287,7 @@ export class culturalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Zeta Phi Beta Sorority, Incorporated (ΖΦΒ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={ZPB_home}
               />

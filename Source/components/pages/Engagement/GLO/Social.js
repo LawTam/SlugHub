@@ -13,6 +13,9 @@ export class socialScreen extends React.Component {
         this.AnimatedHeaderValue = new Animated.Value(0);
  
     }
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
     static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -24,9 +27,13 @@ export class socialScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'social',
+          title: 'Social',
         };
       };
+    /* 
+    render() :
+      - Contains a link to Facebook/Ins/Official Site of Clubs
+    */
       render() {
         const AnimateHeaderBackgroundColor = this.AnimatedHeaderValue.interpolate({
           inputRange: [ 0, ( 10 )  ],
@@ -106,7 +113,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Gamma Phi Beta (ΓΦΒ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={GPB_home}
               />
@@ -133,7 +140,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Kappa Alpha Theta (ΚΑΘ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={KAT_home}
               />
@@ -159,7 +166,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Kappa Kappa Gamma (KKΓ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={KKG_home}
               />
@@ -211,7 +218,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Alpha Psi (AΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={AP_home}
               />
@@ -237,7 +244,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Alpha Epsilon Pi (ΣAEΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={SAEP_home}
               />
@@ -263,7 +270,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Pi Fraternity International (ΣΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={SP_home}
               />
@@ -289,7 +296,7 @@ export class socialScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Tau Kappa Epsilon (TKE)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={TKE_home}
               />

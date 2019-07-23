@@ -3,6 +3,9 @@ import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-nativ
 import * as WebBrowser from 'expo-web-browser';
 
 export class BE_ATScreen extends React.Component {
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -17,6 +20,10 @@ export class BE_ATScreen extends React.Component {
       title: 'Bioengineering: Assistive Technology (Motor)',
     };
   };
+  /* 
+    render() :
+      - Contains a link to the Bioengineering: Assistive Technology (Motor) curriculum chart
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (

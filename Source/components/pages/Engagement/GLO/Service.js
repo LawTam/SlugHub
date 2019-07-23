@@ -11,6 +11,9 @@ export class serviceScreen extends React.Component {
         this.AnimatedHeaderValue = new Animated.Value(0);
  
     }  
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
   static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -22,9 +25,13 @@ export class serviceScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'service',
+          title: 'Service',
         };
       };
+    /* 
+    render() :
+      - Contains a link to Facebook/Ins/Official Site of Clubs
+    */
       render() {
         const AnimateHeaderBackgroundColor = this.AnimatedHeaderValue.interpolate({
           inputRange: [ 0, ( 10 )  ],
@@ -105,7 +112,7 @@ export class serviceScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Alpha Phi Omega (ΑΦΩ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('APO_home')}
               />
@@ -131,7 +138,7 @@ export class serviceScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Pi Alpha Phi (ΠAΦ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('PAP_home')}
               />
@@ -157,7 +164,7 @@ export class serviceScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Lambda Beta International Fraternity, Inc. (ΣΛB)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('SLB_home')}
               />

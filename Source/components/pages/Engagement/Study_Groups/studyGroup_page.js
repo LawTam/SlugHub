@@ -3,7 +3,7 @@ import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView } from 'r
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
-export class StudyGroup_Screen extends React.Component {
+export class StudyGroupScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -22,10 +22,14 @@ export class StudyGroup_Screen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>
+
+        {/*GrepThink Logo*/}
         <Image
         source={require('../../../../assets/images/grepthink_logo.png')}
         style={{height: '50%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
         />
+
+    
         <View style= {styles.container}>
 
         <Text>
@@ -34,6 +38,7 @@ export class StudyGroup_Screen extends React.Component {
         {"\n"}
         </Text>
 
+        {/*Button that goes to the GrepThink page*/}
         <Icon.Button
               name="pagelines"
               backgroundColor="#006aad"

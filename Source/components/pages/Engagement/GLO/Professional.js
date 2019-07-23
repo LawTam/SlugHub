@@ -11,6 +11,9 @@ export class professionalScreen extends React.Component {
         this.AnimatedHeaderValue = new Animated.Value(0);
  
     }  
+    /*
+    Renders the top bar navigator and home navigation icon
+    */
   static navigationOptions = ({ navigation }) => {
         return{
           headerRight: (
@@ -22,9 +25,13 @@ export class professionalScreen extends React.Component {
               />
             </TouchableHighlight>
           ),
-          title: 'professional',
+          title: 'Professional',
         };
       };
+    /* 
+    render() :
+      - Contains a link to Facebook/Ins/Official Site of Clubs
+    */
       render() {
         const AnimateHeaderBackgroundColor = this.AnimatedHeaderValue.interpolate({
           inputRange: [ 0, ( 10 )  ],
@@ -105,7 +112,7 @@ export class professionalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Alpha Kappa Psi (ΑΚΨ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('AKP_home')}
               />
@@ -131,7 +138,7 @@ export class professionalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Delta Sigma Pi (ΔΣΠ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('DSP_home')}
               />
@@ -157,7 +164,7 @@ export class professionalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Kappa Gamma Delta (KΓΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('KGD_home')}
               />
@@ -209,7 +216,7 @@ export class professionalScreen extends React.Component {
             <Text style={{color: '#FFFFFF'}}>Sigma Mu Delta (ΣΜΔ)</Text>
             <View style= {styles.OSButton}>
               <Button
-                title="official site"
+                title="Official Site"
                 color = "#3b5998"
                 onPress={() => navigate('SMD_home')}
               />

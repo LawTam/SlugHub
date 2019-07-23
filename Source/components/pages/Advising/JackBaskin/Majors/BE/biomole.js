@@ -3,6 +3,9 @@ import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-nativ
 import * as WebBrowser from 'expo-web-browser';
 
 export class BE_BiomoleScreen extends React.Component {
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -17,6 +20,10 @@ export class BE_BiomoleScreen extends React.Component {
       title: 'Biomolecular',
     };
   };
+  /* 
+    render() :
+      - Contains a link to the Biomolecular curriculum chart
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (

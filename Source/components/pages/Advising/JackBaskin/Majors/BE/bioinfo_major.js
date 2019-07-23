@@ -3,6 +3,9 @@ import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-nativ
 import * as WebBrowser from 'expo-web-browser';
 
 export class BioInfo_MajorScreen extends React.Component {
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
 		return{
 		headerRight: (
@@ -16,7 +19,11 @@ export class BioInfo_MajorScreen extends React.Component {
 		),
 		title: 'Bioinformatics',
     	};
-	};
+  };
+  /* 
+    render() :
+      - Contains a link to the Bioinformatics curriculum chart
+  */
   render() {
     return (
     <View style= {styles.container}>
