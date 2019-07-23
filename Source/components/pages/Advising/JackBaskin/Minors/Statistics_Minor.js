@@ -3,6 +3,10 @@ import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-nativ
 import * as WebBrowser from 'expo-web-browser';
 
 export class Statistics_Minor_Screen extends React.Component {
+
+  /*
+    Renders the top bar navigator and home navigation icon
+  */
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -17,6 +21,11 @@ export class Statistics_Minor_Screen extends React.Component {
       title: 'Statistics Minor',
     };
   };
+
+  /* 
+    render():
+      - Contains the statistics minor curriculum chart
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -24,9 +33,8 @@ export class Statistics_Minor_Screen extends React.Component {
         <Button
         title="Curriculum Chart"
         color = "#e6f542"
-        onPress={Statistics_Minor_curriculum}
+        onPress={statisticsMinorCurriculum}
         />
-
     </View>
 
     );
@@ -34,7 +42,7 @@ export class Statistics_Minor_Screen extends React.Component {
 }
 
 
-function Statistics_Minor_curriculum() {
+function statisticsMinorCurriculum() {
   WebBrowser.openBrowserAsync(
     'https://undergrad.soe.ucsc.edu/sites/default/files/curriculum-charts/2018-08/Stats-Minor_18-19.pdf'
   );

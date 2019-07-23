@@ -3,9 +3,10 @@ import { TouchableHighlight, Dimensions, Image, ScrollView, Text, StyleSheet, Vi
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
-var {windowHeight, windowWidth} = Dimensions.get('window')
 
 export class Intramural_AthleticsScreen extends React.Component {
+
+  // Navigation bar w/ touchable highlight to navigate home
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -20,13 +21,17 @@ export class Intramural_AthleticsScreen extends React.Component {
       title: 'Intramural Competition',
     };
   };
+
+/*  
+  Order of items in render() displayed on the screen, from top to bottom
+    - Intramural banner image
+    - Intramural sports information text
+    - Navigation buttons using Icon.Button
+        > Official Intramural website link
+        > competitive_athletics nav button
+        > recreational_athletics nav button
+*/
   render() {
-    /*  Order of items rendered on the screen, from top to bottom
-          1. navigation bar w/ touchable highlight to navigate home
-          2. Intramural banner image
-          3. Intramural sports information text
-          4. Navigation buttons using Icon.Button
-    */
     const {navigate} = this.props.navigation;
     return (
       <View style = {styles.handleLayout}>

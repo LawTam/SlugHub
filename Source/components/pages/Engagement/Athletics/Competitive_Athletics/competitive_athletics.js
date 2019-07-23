@@ -3,7 +3,10 @@ import { TouchableHighlight, Image, Text, ScrollView, View, StyleSheet} from 're
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as WebBrowser from 'expo-web-browser';
 
+
 export class Competitive_AthleticsScreen extends React.Component {
+
+  // Navigation bar w/ touchable highlight to navigate home
   static navigationOptions = ({ navigation }) => {
     return{
       headerRight: (
@@ -18,19 +21,23 @@ export class Competitive_AthleticsScreen extends React.Component {
       title: 'Competitive Athletics',
     };
   };
+
+/*  
+  Order of items in render() on the screen, from top to bottom
+    - Competitive RUGBY banner image
+    - Competitive athletics information text
+    - Navigation buttons using Icon.Button
+          > Official website
+          > recreational_athletics nav button
+          > intramural_athletics nav button
+*/
   render() {
-    /*  Order of items rendered on the screen, from top to bottom
-          1. navigation bar w/ touchable highlight to navigate home
-          2. Competitive RUGBY banner image
-          3. Competitive athletics information text
-          4. Navigation buttons using Icon.Button
-    */
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>
           <Image
           source={require('../../../../../assets/images/rugby.png')}
-          style={{height: '50%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
+          style={{height: '30%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
           />
 
           <View style= {styles.container}>
