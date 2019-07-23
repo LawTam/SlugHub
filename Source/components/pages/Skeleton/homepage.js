@@ -73,7 +73,7 @@ export class HomePageScreen extends React.Component {
             <View style = {styles.calContainer}>
             <TouchableHighlight onPress={calendar}>
               <Image
-              source={require('../../../assets/images/homepage/athletics.png')}
+              source={require('../../../assets/images/homepage/calendar.png')}
               resizeMode="contain"
               style = {{height: 65, width: 65}}
               />
