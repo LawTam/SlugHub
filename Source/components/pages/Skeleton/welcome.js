@@ -1,21 +1,12 @@
 //npm install react-native-progress --save
 //npm i react-native-LoopAnimation
 
-import React , {Component} from 'react';
-<<<<<<< HEAD
-import { Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
-=======
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View, Window, } from 'react-native';
-import AppNavigator from '../../../navigation/AppNavigator';
-import { createAppContainer } from 'react-navigation';
+import React from 'react';
+import { TouchableHighlight, Image, Text, StyleSheet, View, } from 'react-native';
 import * as Progress from 'react-native-progress';
-import { Constants } from 'expo';
-
-import ProgressBar from 'react-native-progress/Bar'
 
 import LoopAnimation from 'react-native-LoopAnimation'
 
->>>>>>> 052a44f1de2e021e7b1eb56e968d18220853b959
 
 export class WelcomeScreen extends React.Component {
   static navigationOptions = {

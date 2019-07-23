@@ -29,6 +29,7 @@ export class Recreational_AthleticsScreen extends React.Component {
         <View style= {styles.container}>
 
         <Text>
+        Recreational Sport Clubs typically have less than two competitions per year, or the club's focus is entirely at the recreational level. 
         Recreational sports clubs at UCSC include aikido, backpacking, badminton, breakdance, Camp Kesem (camp for children with a parent who has cancer), cheer team, circus Slugs, dance team, grappling, judo, kayak, kendo, muay thai, ninjutsu, racquetball, table tennis, taekwondo, tango, track and field, triathlon, volleyball, and wushu.
         {"\n"}
         </Text>
@@ -71,7 +72,6 @@ function recreationPage() {
   WebBrowser.openBrowserAsync(
     'https://recreation.ucsc.edu/'
   );
-
 }
 
 const styles = StyleSheet.create({
