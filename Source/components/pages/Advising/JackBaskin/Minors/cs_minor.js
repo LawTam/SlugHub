@@ -1,5 +1,5 @@
 import React from '../../../../../node_modules/react';
-import { TouchableHighlight, Button, Image, Platform, Text, StatusBar,StyleSheet, View } from 'react-native';
+import { TouchableHighlight, Button, Image, StyleSheet, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 export class CS_MinorScreen extends React.Component {
