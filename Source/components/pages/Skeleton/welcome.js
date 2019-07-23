@@ -15,12 +15,14 @@ export class WelcomeScreen extends React.Component {
   constructor(props) {
     super(props);
 
+    /*constructor for the progress bar*/
     this.state = {
       progress: 0,
       indeterminate: true,
     };
   }
 
+  /*Timer for page transition*/
   loadupTask = async() => {
     return new Promise((resolve) =>
       setTimeout(
@@ -30,6 +32,7 @@ export class WelcomeScreen extends React.Component {
     )
   }
 
+/*Transitions to the next page*/
   async componentDidMount() {
     this.animate();
     const data = await this.loadupTask();
@@ -39,6 +42,7 @@ export class WelcomeScreen extends React.Component {
    }
   }
 
+/*Animates the progress bar and increments the progress*/
   animate() {
     let progress = 0;
     this.setState({ progress });
@@ -65,6 +69,7 @@ export class WelcomeScreen extends React.Component {
     return (
 
       <View style={{flex:1}}>
+
        {/*this is the background animation */}
        <LoopAnimation source={require('../../../assets/images/forest.jpg')} duration={8000} />
        <View style={{
@@ -89,6 +94,7 @@ export class WelcomeScreen extends React.Component {
                  </Text>
              </TouchableHighlight>
 
+            {/*Renders the progress bar*/}
            <Progress.Bar
              style={styles.progress}
              progress={this.state.progress}
@@ -114,7 +120,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     fontSize: 30,
     padding: 60,
-    //backgroundColor: "#4287f5",
     flex: 1
   },
 
@@ -146,6 +151,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingTop: 15,
     paddingBottom: 15,
+    opacity: .7,
 },
 buttonText: {
   textAlign: 'center',
