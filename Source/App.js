@@ -74,6 +74,7 @@ import { EngagementScreen} from './components/pages/Skeleton/engagement';
 
 
   import {StudyGroup_Screen} from './components/pages/Engagement/Study_Groups/studyGroup_page';
+  import {CalendarScreen} from './components/pages/Skeleton/calendar';
 
 // Every screen we have in our program must be in this stack,
 // following this format
@@ -171,6 +172,8 @@ const FunStack = createStackNavigator({
       lgbtq_page: {screen: lgbtqScreen},
       social_page: {screen: socialScreen},
       service_page: {screen: serviceScreen},
+      calendarPage: {screen: CalendarScreen},
+
 
 });
 
