@@ -19,6 +19,13 @@ export class Recreational_AthleticsScreen extends React.Component {
     };
   };
   render() {
+    /*  Order of items rendered on the screen, from top to bottom
+          1. navigation bar w/ touchable highlight to navigate home
+          2. Opers field banner image
+          3. Recreational athletics information text
+          4. Navigation buttons using Icon.Button
+    */
+    
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>

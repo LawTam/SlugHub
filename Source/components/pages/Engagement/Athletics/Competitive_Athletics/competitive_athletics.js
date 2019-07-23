@@ -19,6 +19,12 @@ export class Competitive_AthleticsScreen extends React.Component {
     };
   };
   render() {
+    /*  Order of items rendered on the screen, from top to bottom
+          1. navigation bar w/ touchable highlight to navigate home
+          2. Competitive RUGBY banner image
+          3. Competitive athletics information text
+          4. Navigation buttons using Icon.Button
+    */
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>

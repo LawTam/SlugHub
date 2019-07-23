@@ -27,6 +27,18 @@ export class AthleticsScreen extends React.Component {
     };
   };
   render() {
+    /*  Order of items rendered on the screen, from top to bottom
+          1. navigation bar w/ touchable highlight to navigate home
+          2. Slideshow banner [intramural.png, athletic_slug.png, SammyAthletics.png]
+          3. Official UCSC Athletics website Icon.Button
+          4. Text on sports
+          5. competitive_athletics nav button
+          6. Recreation text
+          7. recreational_athletics nav button
+          8. Intramural text
+          9. intramural_athletics nav button
+    */
+
     const {navigate} = this.props.navigation;
     return (
       <ScrollView>
@@ -38,9 +50,9 @@ export class AthleticsScreen extends React.Component {
             autoLoop = {true}
             autoPlay = {true}
             duration = {1000}>
-              <View >< Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/athletic_slug.jpg')}/></View>
-              <View ><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.jpg')} /></View>
+              <View>< Image style = {styles.img} source = {require('../../../../assets/images/Intramural.png')}/></View>
+              <View><Image style = {styles.img} source = {require('../../../../assets/images/athletic_slug.png')}/></View>
+              <View><Image style = {styles.img} source = {require('../../../../assets/images/SammyAthletics.png')} /></View>
           </Banner> 
 
           <View style= {styles.container}>
@@ -50,7 +62,7 @@ export class AthleticsScreen extends React.Component {
                   wordWrap = "break-word"
                   onPress={goSlugs}
                 >
-                  Visit the UCSC Official Athletics website
+                  Visit the Official UCSC Athletics website
             </Icon.Button>
 
             <Text style="center">
