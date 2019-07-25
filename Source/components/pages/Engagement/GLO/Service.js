@@ -114,7 +114,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('APO_home')}
+                onPress={APO_home}
               />
             </View>
 
@@ -122,7 +122,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Instagram"
                 color = "#3b5998"
-                onPress={() => navigate('APO_ins')}
+                onPress={APO_ins}
               />
             </View>
           </View>
@@ -140,7 +140,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('PAP_home')}
+                onPress={PAP_home}
               />
             </View>
 
@@ -148,7 +148,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('PAP_fb')}
+                onPress={PAP_fb}
               />
             </View>
           </View>
@@ -166,7 +166,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('SLB_home')}
+                onPress={SLB_home}
               />
             </View>
 
@@ -174,7 +174,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Instagram"
                 color = "#3b5998"
-                onPress={() => navigate('SLB_ins')}
+                onPress={SLB_ins}
               />
             </View>
           </View>
@@ -192,7 +192,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Instagram"
                 color = "#3b5998"
-                onPress={() => navigate('SPZ_ins')}
+                onPress={SPZ_ins}
               />
             </View>
 
@@ -200,7 +200,7 @@ export class serviceScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('SPZ_fb')}
+                onPress={SPZ_fb}
               />
             </View>
           </View>            

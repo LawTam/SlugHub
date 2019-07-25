@@ -114,7 +114,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('AKP_home')}
+                onPress={AKP_home}
               />
             </View>
 
@@ -122,7 +122,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('AKP_fb')}
+                onPress={AKP_fb}
               />
             </View>
           </View>
@@ -140,7 +140,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('DSP_home')}
+                onPress={DSP_home}
               />
             </View>
 
@@ -148,7 +148,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('DSP_fb')}
+                onPress={DSP_fb}
               />
             </View>
           </View>
@@ -166,7 +166,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('KGD_home')}
+                onPress={KGD_home}
               />
             </View>
 
@@ -174,7 +174,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Instagram"
                 color = "#3b5998"
-                onPress={() => navigate('KGD_ins')}
+                onPress={KGD_ins}
               />
             </View>
           </View>
@@ -192,7 +192,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Instagram"
                 color = "#3b5998"
-                onPress={() => navigate('PAD_ins')}
+                onPress={PAD_ins}
               />
             </View>
 
@@ -200,7 +200,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('PAD_fb')}
+                onPress={PAD_fb}
               />
             </View>
           </View>
@@ -218,7 +218,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Official Site"
                 color = "#3b5998"
-                onPress={() => navigate('SMD_home')}
+                onPress={SMD_home}
               />
             </View>
 
@@ -226,7 +226,7 @@ export class professionalScreen extends React.Component {
               <Button
                 title="Facebook"
                 color = "#3b5998"
-                onPress={() => navigate('SMD_fb')}
+                onPress={SMD_fb}
               />
             </View>
           </View>
