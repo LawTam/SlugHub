@@ -3,9 +3,11 @@ import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated
 
 import * as WebBrowser from 'expo-web-browser';
 
+//exporting the Screen for stack to fetch
 export class Dining_HallsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
+      //creating the home button in navigation bar
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
@@ -18,6 +20,11 @@ export class Dining_HallsScreen extends React.Component {
       title: 'Dining Halls',
     };
   };
+  /* Structure:
+      First add the image background in
+      Create buttons for all dining halls
+      Buttons will open a browser with the google map navigation to that correspond cafe
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -93,6 +100,7 @@ export class Dining_HallsScreen extends React.Component {
   }
 }
 
+//All the browser opening functions
 function porterLocation() {
   WebBrowser.openBrowserAsync(
     'https://www.google.com/maps/place/Porter%2FKresge+Dining+Hall/@36.9942691,-122.0681352,17z/data=!3m1!4b1!4m5!3m4!1s0x808e419e8ff298a9:0xc0cc7592fcea39a0!8m2!3d36.9942691!4d-122.0659465'
@@ -123,11 +131,13 @@ function c9Location() {
   );
 }
 
+//styles for the page container
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     flex: 1
   },
+  //style for all buttons
   buttonContainer: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 15,
@@ -147,12 +157,14 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
 },
+//style for text inside buttons
   buttonText: {
     textAlign: 'center',
     color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
   },
+  //create the empty space at the bottom half of our page
   emptyContainer: {
     justifyContent: "center",
     backgroundColor: "#4287f5",

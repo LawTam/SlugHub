@@ -1,8 +1,10 @@
 import React from 'react';
 import { ImageBackground, TouchableHighlight, Image, StyleSheet, View } from 'react-native';
 
+//exporting the Screen for stack to fetch
 export class DiningScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
+    //creating the home button in navigation bar
     return{
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
@@ -16,6 +18,10 @@ export class DiningScreen extends React.Component {
       title: 'Dining',
     };
   };
+  /* Structure:
+      First add the image background in
+      Create buttons for dining halls and cafes
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -53,6 +59,7 @@ export class DiningScreen extends React.Component {
   }
 }
 
+//styles for background and button
 const styles = StyleSheet.create({
   container: {
     justifyContent: "space-around",

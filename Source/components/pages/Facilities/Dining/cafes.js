@@ -3,9 +3,11 @@ import { TouchableHighlight, Image, Text, StyleSheet, View, ScrollView, Animated
 
 import * as WebBrowser from 'expo-web-browser';
 
+//exporting the Screen for stack to fetch
 export class CafesScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return{
+      //creating the home button in navigation bar
       headerRight: (
         <TouchableHighlight onPress = {() => navigation.navigate('HomePage')}>
         <Image
@@ -18,6 +20,11 @@ export class CafesScreen extends React.Component {
       title: 'Cafes, Restaurants and Coffee Bars',
     };
   };
+  /* Structure:
+      First add the image background in
+      Create buttons for all Cafes
+      Buttons will open a browser with the google map navigation to that correspond cafe
+  */
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -173,6 +180,7 @@ export class CafesScreen extends React.Component {
   }
 }
 
+//All the browser opening functions
 function bjLocation() {
   WebBrowser.openBrowserAsync(
     "https://www.google.com/maps/place/Banana+Joe's/@36.9999953,-122.0566177,17z/data=!3m1!4b1!4m5!3m4!1s0x808e41a744ec8751:0x5618ffd70e784ec1!8m2!3d36.999991!4d-122.054429"
@@ -251,11 +259,14 @@ function vivasLocation() {
   );
 }
 
+
+//styles for the page container
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     flex: 1
   },
+  //style for all buttons
   buttonContainer: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 15,
@@ -275,12 +286,14 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
 },
+  //style for text inside buttons
   buttonText: {
     textAlign: 'center',
     color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
   },
+  //create the empty space at the bottom half of our page
   emptyContainer: {
     justifyContent: "center",
     backgroundColor: "#4287f5",
