@@ -29,7 +29,7 @@ export class StudyGroupScreen extends React.Component {
         style={{height: '50%', width: '100%', backgroundColor: "white", resizeMode: 'cover'}}
         />
 
-    
+
         <View style= {styles.container}>
 
         <Text>
@@ -57,6 +57,7 @@ export class StudyGroupScreen extends React.Component {
   }
 }
 
+/*link to the GrepThink page*/
 function grepthink() {
   WebBrowser.openBrowserAsync(
     'https://www.grepthink.com/course/fall-2019-study-grou/'
@@ -64,6 +65,7 @@ function grepthink() {
 }
 
 const styles = StyleSheet.create({
+  /*container for the page*/
   container: {
     justifyContent: "center",
     fontSize: 30,

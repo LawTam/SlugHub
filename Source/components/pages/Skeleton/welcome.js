@@ -127,12 +127,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 
+  /*style for the progress bar*/
   progress: {
     marginLeft: '23%',
     color : "#000000",
     borderColor: "#000000",
   },
 
+  /*style for the buttons*/
   buttonContainer: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 15,
