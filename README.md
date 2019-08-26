@@ -7,10 +7,10 @@ Summer 2019, Summer Session 1
 
 Professor Richard Jullig
 
-#Team Members:
+# Team Members:
 Lawrence Tam, Mason Nguyen, Naum Markenzon, Xuhua Feng, Zhelin Li
 
-#Technologies Used:
+# Technologies Used:
 1. React Native Framework (Cross Platform between iPhone + Android)
 
 2. Javascript
