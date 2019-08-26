@@ -1,4 +1,6 @@
 # SlugHub
+Mobile Platform for all things UC Santa Cruz
+
 UC Santa Cruz - CMPS 115 Software Engineering Project
 
 Summer 2019, Summer Session 1
