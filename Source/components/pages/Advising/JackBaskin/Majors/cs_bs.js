@@ -88,7 +88,7 @@ export class CS_BSScreen extends React.Component {
 			<View style={styles.container}>
 				
 				<ImageBackground 
-      				source={require('../../../../../assets/images/compsci_pic.png')}
+      				source={require('../../../../../assets/images/compsci_pic.jpg')}
       				style={{width: '100%', height: '100%'}}>
 		  		
 					<TouchableHighlight

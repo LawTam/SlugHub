@@ -107,7 +107,7 @@ export class EngagementScreen extends React.Component {
 
 function tutoring() {
   WebBrowser.openBrowserAsync(
-    'https://sserc.ucsc.edu/slug-success'
+    'https://ucsc.campus.eab.com/'
   );
 }
 
