@@ -1,11 +1,20 @@
 # SlugHub
-Mobile Platform for all things UC Santa Cruz
+Mobile Platform for all things UC Santa Cruz.
+(Developed in a 4 week timeline using Agile/Scrum software engineering methodology.)
 
 UC Santa Cruz - CMPS 115 Software Engineering Project
-
 Summer 2019, Summer Session 1
-
 Professor Richard Jullig
+
+# Features
+- logic for an interactive course selection using algorithmically webscraped information
+- a sleek user interface using mixed digital media, and a smoothly designed user experience (Adobe XD)
+- GUI for attaining information for resources anyone who visits the UC Santa Cruz campus should know
+    > such as facility hours (dining hall, library, gym, etc)
+    > student organizations (clubs, Greek Letter organizations, teams)
+    > UCSC is a research I division university, meaning we are one of the most productive university in expanding human knowledge
+        > SlugHub offers a GUI resource for connecting with professors to learn about labs and open positions
+
 
 # Team Members:
 Lawrence Tam, Mason Nguyen, Naum Markenzon, Xuhua Feng, Zhelin Li
