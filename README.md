@@ -6,10 +6,10 @@ UC Santa Cruz - CMPS 115 Software Engineering Project
 Summer 2019, Summer Session 1
 Professor Richard Jullig
 
-# Team Members:
+## Team Members:
 Lawrence Tam, Mason Nguyen, Naum Markenzon, Xuhua Feng, Zhelin Li
 
-# Features
+## Features
 - logic for an interactive course selection using algorithmically webscraped information
 - a sleek user interface using mixed digital media, and a smoothly designed user experience (Adobe XD)
 - GUI for attaining information for resources anyone who visits the UC Santa Cruz campus should know
@@ -18,7 +18,7 @@ Lawrence Tam, Mason Nguyen, Naum Markenzon, Xuhua Feng, Zhelin Li
 -  A GUI resource for connecting with professors to learn about labs and open positions
 > UCSC is a Research Division 1 university, meaning we are one of the most productive universities in expanding human knowledge
 
-# Technologies Used:
+## Technologies Used:
 1. React Native Framework (Cross Platform between iPhone + Android)
 2. Javascript
 3. Node.js
